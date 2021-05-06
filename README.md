@@ -1,3 +1,3 @@
 # Quote MUJ
 
-this is the repository for frontend
+this is the branch for backend
