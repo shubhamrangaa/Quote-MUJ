@@ -1,0 +1,38 @@
+$scrollbar-bg : rgb(17, 17, 17);
+$scrollbar-thumb: rgba(49, 49, 49, 1);
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body{
+	overflow:auto;
+
+	&::-webkit-scrollbar-track {
+		border-radius: 10px;
+		background: inherit;
+	}
+
+	&::-webkit-scrollbar {
+		width: 6px;
+		background: $scrollbar-bg;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background:$scrollbar-thumb;
+	}
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
