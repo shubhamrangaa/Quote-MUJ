@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
 $title-color: #0070f3;
+
+
 
 .container {
   min-height: 100vh;
@@ -131,15 +135,14 @@ $title-color: #0070f3;
 }
 
 .left {
-  text-align: center;
   display: flex;
-  flex-grow: 0.5;
+  flex-grow: 1;
 }
 
 .right {
   position: absolute;
-  right: 0px;
-}
+  right: 6px;
+  }
 
 .left ul {
   margin: 0px 30px;
@@ -155,6 +158,8 @@ $title-color: #0070f3;
 }
 
 .footerHeading {
+  font-family: 'Merriweather', serif;
+  margin-top: 50px;
 }
 
 @media (max-width: 600px) {
@@ -167,5 +172,12 @@ $title-color: #0070f3;
   }
   .right {
     position: static;
+  }
+  .footerHeading{
+    margin-top: 0px;
+  }
+  .left{
+    display: flex;
+    flex-direction:column;
   }
 }
