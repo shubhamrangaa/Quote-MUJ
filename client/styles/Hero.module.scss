@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.hero {
+	width: 100%;
+	min-height: 80vh;
+	height:100%;
+	font-family: "Inter", sans-serif;
+	background-image: url(../public/assets/Hero_Background.png);
+	background-color: #0f0f0f;
+	color: white;
+	display: flex;
+	padding:0 6rem;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	@media (max-width:1224px) {
+		padding: 0 3rem;
+	}
+}
+
+#title{
+	font-style: normal;
+	font-weight: 600;
+	font-size: 4rem;
+	line-height: 77px;
+	color: #ebebeb;
+	width: 50%;
+	@media (max-width:1224px){
+		width:90%;
+		font-size: 2rem;
+		line-height: inherit;
+	}
+}
+
+#intro{
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 29px;
+	color: #d1d1d1;
+	width: 50%;
+	padding: 2rem 0;
+	@media (max-width:1224px) {
+		width: 90%;
+		font-size: 1.5rem;
+		line-height: inherit;
+	}
+}
+
+#explore{
+	padding: 0.75rem 2.25rem;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 21px;
+	line-height: 25px;
+	color: #000000;
+	border:none;
+	border-radius: 0.2rem;
+}
+
+#title,
+#intro {
+	margin: 0;
+}
+
