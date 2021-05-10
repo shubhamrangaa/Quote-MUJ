@@ -7,10 +7,12 @@ const devConfig = {
   host: process.env.PG_HOST,
   port: process.env.PG_PORT,
   database: process.env.PG_DATABASE,
+  ssl: true,
 };
 
 const prodConfig = {
   connectionString: process.env.DATABASE_URL,
+  ssl: true,
 };
 const pool = new Pool(
   process.env.NODE_ENV === "production" ? prodConfig : devConfig
