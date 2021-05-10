@@ -1,15 +1,21 @@
 {
-	"scripts": {
-		"start": "node index",
-		"dev": "nodemon index"
-	},
-	"dependencies": {
-		"cors": "^2.8.5",
-		"dotenv": "^9.0.1",
-		"express": "^4.17.1",
-		"helmet": "^4.6.0",
-		"morgan": "^1.10.0",
-		"nodemon": "^2.0.7",
-		"pg": "^8.6.0"
-	}
+  "name": "quote-muj",
+  "description": "a really cool app",
+  "version": "1.0.0",
+  "engines": {
+    "node": "14.15.3"
+  },
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.1",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7",
+    "pg": "^8.6.0"
+  }
 }
