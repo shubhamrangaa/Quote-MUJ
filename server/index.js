@@ -3,7 +3,6 @@ const morgan = require("morgan");
 const helmet = require("helmet");
 const cors = require("cors");
 const blog = require("./blog");
-
 const app = express();
 
 // Middlewares
@@ -18,7 +17,7 @@ app.use(
 );
 
 app.use(express.json());
-app.use("/api", blog);
+app.use("/api/blogs", blog);
 
 // Base Route
 
@@ -28,6 +27,10 @@ app.get("/", (req, res) => {
     user: req.user,
   });
 });
+
+// ROUTES
+
+// CREATE BLOG
 
 // Error Handling
 
