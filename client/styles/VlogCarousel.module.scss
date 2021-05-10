@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+
+.carousel {
+  color: #585858;
+  font-family: "Merriweather", serif;
+  justify-content: center;
+  text-align: center;
+  padding: 3% 10%;
+}
+.carousel p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 50px;
+}
+.CarouselItem {
+  padding: 10%;
+}
+.player {
+  margin: auto;
+  width: 70% !important;
+  min-height: 180px;
+}

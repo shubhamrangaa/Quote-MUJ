@@ -1,60 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 
-.TopStories{
-    justify-content: center;
-    text-align: center;
-    padding: 3% 10%;
-}
-
-.TopStories h1{
-    color: #585858;
-    font-family: 'Merriweather', serif;
+.TopStories {
+  justify-content: center;
+  text-align: center;
+  padding: 3% 10%;
 }
 
-.decorated{
-    overflow: hidden;
-    text-align: center;
+.TopStories h1 {
+  color: #585858;
+  font-family: "Merriweather", serif;
 }
-.decorated > span{
-   position: relative;
-   display: inline-block;
+
+.decorated {
+  overflow: hidden;
+  text-align: center;
 }
-.decorated > span:before, .decorated > span:after{
-   content: '';
-   position: absolute;
-   top: 50%;
-   border-bottom: 2px solid;
-   width: 100vw;
-   margin: 0 20px;
+.decorated > span {
+  position: relative;
+  display: inline-block;
 }
-.decorated > span:before{
-   right: 100%;
+.decorated > span:before,
+.decorated > span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  border-bottom: 2px solid;
+  width: 100vw;
+  margin: 0 20px;
 }
-.decorated > span:after{
-   left: 100%;
+.decorated > span:before {
+  right: 100%;
+}
+.decorated > span:after {
+  left: 100%;
 }
 
 .paper {
-    padding: 4%;
-    text-align: left;
-    font-size: 14px;
-    font-family: 'Merriweather', serif;
-    height: 85vh;
-  }
-
-  .userName{
-      font-size: 18px;
-      line-height: 40px;
-  }
-
-  .elementmain{
-     text-align: center;
-  }
-
-  .elementmain p{
-    font-size: 16px;
+  padding: 4%;
+  text-align: left;
+  font-size: 14px;
+  font-family: "Merriweather", serif;
+  height: 85vh;
 }
 
-  .elementmain2 p{
-      font-size: 16px;
-  }
+.userName {
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.elementmain {
+  text-align: center;
+}
+
+.elementmain p {
+  font-size: 16px;
+}
+
+.elementmain2 p {
+  font-size: 16px;
+}
