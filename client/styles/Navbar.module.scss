@@ -1,32 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
-.header{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 1rem 1.25rem;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
 }
 
-.header a{
-	color: black;
-	text-align: center;
-	padding: 0.8rem 1rem;
-	text-decoration: none;
-	font-size: 1.2rem;
-	border-radius: 0.4rem;
-	transition: all 0.2s ease;
-	&:hover{
-		background-color: #ddd;
-		color: black;
-	}
-	&:active{
-		background-color: rgb(190, 190, 190);
-	}
+.header a {
+  color: black;
+  text-align: center;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  transition: all 0.2s ease;
+  &:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  &:active {
+    background-color: rgb(190, 190, 190);
+  }
 }
 
-@media (max-width:1224px) {
-	.header a{
-		font-size: 1rem;
-		padding: 0.4rem 0.5rem;
-	}
+@media (max-width: 1224px) {
+  .header a {
+    font-size: 1rem;
+    padding: 0.4rem 0.5rem;
+  }
 }
