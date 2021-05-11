@@ -3,11 +3,15 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Image from "next/image";
 import Divider from '@material-ui/core/Divider';
+import React from 'react';
+import TextMobileStepper from '../components/Carousel'
+
 
 
 export default function TopStories(){
     return (
         <div className={styles.TopStories}>
+        <div className={styles.fullSection}>
             <h1 class={styles.decorated}><span>Top Stories</span></h1>
             <Grid container spacing={3}>
                 <Grid item xs={3}>
@@ -67,17 +71,21 @@ export default function TopStories(){
                         <div className={styles.element}>
                             
                             <h3>Journey of a young Businesswoman</h3>
-                            <p>Dept of Economics and Dept of Arts, organized a guest lecture. <br></br> <span className={styles.userName}>by random user</span></p>
+                            <p>Dept of Economics and Dept of Arts, organized a guest lecture which was very informative. <br></br> <span className={styles.userName}>by random user</span></p>
                         </div>
                         <Divider />
                         <div className={styles.element}>
                             
                             <h3>Webinar on Art of Mind Control</h3>
-                            <p>Abhigya Club of Manipal University Jaipur organized a one hour webinar. <br></br> <span className={styles.userName}>by random user</span></p>
+                            <p>Dept of Economics and Dept of Arts, organized a guest lecture which was very informative. <br></br> <span className={styles.userName}>by random user</span></p>
                         </div>
                     </Paper>
                 </Grid>
             </Grid>
+            </div>
+
+            <TextMobileStepper />
+            
         </div>
         
     )
