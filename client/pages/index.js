@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Hero from "../components/Hero";
 import TopStories from "../components/TopStories";
-import VlogCarousel from "../components/VlogCarousel";
+// import VlogCarousel from "../components/VlogCarousel";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <Hero />
       <TopStories />
-      <VlogCarousel />
+      {/* <VlogCarousel /> */}
     </div>
   );
 }

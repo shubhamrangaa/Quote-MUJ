@@ -11,8 +11,9 @@ import TextMobileStepper from '../components/Carousel'
 export default function TopStories(){
     return (
         <div className={styles.TopStories}>
+        <h1 class={styles.decorated}><span>Top Stories</span></h1>
         <div className={styles.fullSection}>
-            <h1 class={styles.decorated}><span>Top Stories</span></h1>
+            
             <Grid container spacing={3}>
                 <Grid item xs={3}>
                     <Paper className={styles.paper}>    
