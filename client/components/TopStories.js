@@ -45,7 +45,7 @@ export default function TopStories(){
                             <Image src="/me.png"
                                     alt="Picture required"
                                     width={300}
-                                    height={300} />
+                                    height={280} />
                             <h3>International Virtual Conference on Physical Education and Sports Science</h3>
                             <p>Manipal University Jaipur organized the International Virtual Conference on Physical Education and Sports Science (IVCPESS-2021) from 30-31 March 2021. <br></br> <span className={styles.userName}>by random user</span></p>
                         </div>
