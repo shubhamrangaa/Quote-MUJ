@@ -15,13 +15,12 @@ export const Navbar = () => {
       </Link>
       <div>
         <Link href="/editorial">Editorial</Link>
-        <Link href="/academics">Academics</Link>
+        <Link href="/learners-point">Learner's Point</Link>
         <Link href="/research">Research</Link>
-        <Link href="/sports">Sports</Link>
-        <Link href="/culturual">Cultural</Link>
-        <Link href="/events">Events</Link>
-        <Link href="/news">News</Link>
-        <Link href="/gallery">Gallery</Link>
+        <Link href="/stalwart-speaks">Stalwart Speaks</Link>
+        <Link href="/bulletin">Bulletin</Link>
+        <Link href="/achievers">Achievers</Link>
+        <Link href="/upcoming">Upcoming</Link>
       </div>
     </div>
   );
