@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+.community {
+  background-color: #f5f5f5;
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+}
+.nav {
+  display: flex;
+  padding-left: 1.5rem;
+}
+#title {
+  font-size: 25px;
+  margin-top: 15px;
+  padding-left: 10%;
+}
+.categories {
+  display: flex;
+  overflow-x: scroll;
+}
+.categories::-webkit-scrollbar {
+  display: none;
+}
+.line {
+  margin-left: 10px;
+  border-left: 2px solid #585858;
+  height: 40px;
+}
+.container {
+  color: #585858;
+  justify-content: center;
+  text-align: center;
+  padding: 3% 10%;
+}
+.button {
+  background-color: #f5f5f5;
+  border: none;
+  color: black;
+  padding: 0.3rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 20px 10px;
+  cursor: pointer;
+  border-radius: 16px;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+}
+.button:hover {
+  background-color: #070707;
+  color: white;
+}
+@media (max-width: 768px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+  #title {
+    margin: 5px 0 0 10px;
+    font-size: 1.3rem;
+    padding: 0;
+  }
+  .line {
+    margin: 5px 0 -35px 10px;
+    border-left: 0;
+    border-top: 2px solid #585858;
+    width: 2.5rem;
+  }
+}
