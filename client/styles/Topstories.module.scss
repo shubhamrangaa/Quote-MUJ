@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
 
 .TopStories{
     justify-content: center;
@@ -8,7 +9,7 @@
 
 .TopStories h1{
     color: #585858;
-    font-family: 'Merriweather', serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .decorated{
@@ -38,7 +39,7 @@
     padding: 4%;
     text-align: left;
     font-size: 14px;
-    font-family: 'Merriweather', serif;
+    font-family: 'Noto Sans JP', sans-serif;
     display: inline-block;
     height: 650px;
   }
