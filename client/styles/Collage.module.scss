@@ -1,0 +1,39 @@
+.collage {
+  display: flex;
+  position: relative;
+  @media (max-width: 768px) {
+    visibility: hidden;
+  }
+}
+#img1,
+#img2,
+#img3,
+#img4,
+#img5,
+#img6 {
+  position: absolute;
+}
+#img1 {
+  top: 30px !important;
+  left: 10px !important;
+}
+#img2 {
+  top: 30px !important;
+  left: 200px !important;
+}
+#img3 {
+  top: 230px !important;
+  left: 120px !important;
+}
+#img4 {
+  top: 190px !important;
+  left: 290px !important;
+}
+#img5 {
+  left: -50px !important;
+  top: 310px !important;
+}
+#img6 {
+  top: 450px !important;
+  left: 150px !important;
+}
