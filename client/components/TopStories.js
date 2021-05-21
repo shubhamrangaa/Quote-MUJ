@@ -13,10 +13,10 @@ export default function TopStories(){
                 <Grid item xs={3}>
                     <Paper className={styles.paper}>    
                         <div className={styles.element}>
-                            <Image src="/me.png"
-                                    alt="Picture required"
-                                    width={100}
-                                    height={100} />
+                            <img src={'../assets/image1.png'}
+                                    alt="Image 1"
+                                    width={256}
+                                    height={147} />
                             <h3>Organized expert lecture</h3>
                             <p>An online Expert Lecture was organized on Life and Literature through MS Teams. <br></br> <span className={styles.userName}>by random user</span></p>
                         </div>
@@ -37,10 +37,10 @@ export default function TopStories(){
                 <Grid item xs={6}>
                 <Paper className={styles.paper}>    
                         <div className={styles.elementmain}>
-                            <Image src="/me.png"
-                                    alt="Picture required"
-                                    width={300}
-                                    height={300} />
+                            <img src={'../assets/image2.png'}
+                                    alt="Image 2"
+                                    width={523}
+                                    height={320} />
                             <h3>International Virtual Conference on Physical Education and Sports Science</h3>
                             <p>Manipal University Jaipur organized the International Virtual Conference on Physical Education and Sports Science (IVCPESS-2021) from 30-31 March 2021. <br></br> <span className={styles.userName}>by random user</span></p>
                         </div>
@@ -56,10 +56,10 @@ export default function TopStories(){
                 <Grid item xs={3}>
                 <Paper className={styles.paper}>    
                         <div className={styles.element}>
-                            <Image src="/me.png"
-                                    alt="Picture required"
-                                    width={100}
-                                    height={100} />
+                            <img src={'../assets/image3.png'}
+                                    alt="Image 3"
+                                    width={260}
+                                    height={161} />
                             <h3>Workshop on The Art of Story Telling</h3>
                             <p>An online workshop cum interactive session on The Art of Story Telling and Getting Published. <br></br> <span className={styles.userName}>by random user</span></p>
                         </div>
