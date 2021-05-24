@@ -15,10 +15,10 @@ export default function TopStories(){
 		description:"An online Expert Lecture was organized on Life and Literature through MS Teams.",
 		author:"random user",
 		imageMetaData:{
-			src:"/me.png",
-			alt:"Picture required",
-			width:100,
-			height:100
+			src:"/assets/image1.png",
+			alt:"Image 1",
+			width:256,
+			height:147
 		}
 	},{
 		headline:"Healthy lifestyle for Healthy heart.",
@@ -33,10 +33,10 @@ export default function TopStories(){
 		description:"Manipal University Jaipur organized the International Virtual Conference on Physical Education and Sports Science (IVCPESS-2021) from 30-31 March 2021.",
 		author:"random user",
 		imageMetaData:{
-			src:"/me.png",
-			alt:"Picture required",
-			width:300,
-			height:300
+			src:"/assets/image2.png",
+			alt:"Image 2",
+			width:523,
+			height:320
 		}
 	},{
 		headline:"Webinar on Trends in food Blogs",
@@ -47,10 +47,10 @@ export default function TopStories(){
 		description:"An online workshop cum interactive session on The Art of Story Telling and Getting Published",
 		author:"random user",
 		imageMetaData:{
-			src:"/me.png",
-			alt:"Picture required",
-			width:100,
-			height:100
+			src:"/assets/image3.png",
+			alt:"Image 3",
+			width:260,
+			height:160
 		}
 	},{
 		headline:"Journey of a young Businesswoman",
