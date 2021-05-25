@@ -4,6 +4,7 @@ $title-color: #0070f3;
 $body-color: #151515;
 
 .footer {
+	position:sticky;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -26,6 +27,7 @@ $body-color: #151515;
 }
 
 .FontAwesomeIcon {
+	flex:1;
 	height: 3rem;
 	width: 3rem;
 }
@@ -104,7 +106,6 @@ $body-color: #151515;
 }
 
 .icon{
-	filter: invert(1);
 	vertical-align: top;
 }
 

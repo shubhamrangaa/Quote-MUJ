@@ -1,0 +1,41 @@
+.header,
+.content {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding: 5% 0;
+}
+.content {
+  padding: 5% 10%;
+  text-align: left;
+}
+.user {
+  text-align: left;
+  display: grid;
+}
+#username {
+  font-size: 1.3rem;
+  margin: 0;
+}
+#designation {
+  font-size: 0.9rem;
+  margin: 0;
+}
+.FontAwesomeIcon {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+.FontAwesomeIconProfile {
+  height: 2rem;
+  width: 2rem;
+}
+.buttons {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 15% 15% 70%;
+}

@@ -45,7 +45,7 @@ function Footer() {
 			</div>
 			<div className={styles.right}>
 				<div>
-					<p className={styles.footerpara} p>
+					<p className={styles.footerpara}>
 						Follow us on social media to continue <br></br> recieving updates
 					</p>
 				</div>

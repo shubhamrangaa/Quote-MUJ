@@ -5,12 +5,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1.25rem;
+  background-color: black;
+  color: white;
+  background-image: url(../public/assets/Hero_Background.png);
 }
 
 .header a {
-  color: black;
   text-align: center;
-  padding: 0.8rem 1rem;
+  padding: 0.5rem 0.8rem;
+  margin: 0.2rem;
   text-decoration: none;
   font-size: 1.2rem;
   border-radius: 0.4rem;
