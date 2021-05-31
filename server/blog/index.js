@@ -1,16 +1,25 @@
 const express = require("express");
 const router = express.Router();
 const pool = require("../db.js");
-const { customAlphabet } = require('nanoid')
+const { customAlphabet } = require("nanoid");
 
 // CREATE BLOG
 router.post("/new", async (req, res) => {
   try {
-    const { categories, author, heading, caption, article_data, likes } = req.body;
+    const { categories, author, heading, caption, article_data, likes } =
+      req.body;
     // add nano id logic
-	const nanoid = customAlphabet('1234567890abcdefghijklmnopqrstuvqxyzABCDEFGHIJKLMNOPQRSTUVQXYZ', 5);
-    let slug = `${heading.toLowerCase().split(" ").slice(0, 5).join("-")}-${nanoid()}` ;
-	let date_created = new Date().toISOString()
+    const nanoid = customAlphabet(
+      "1234567890abcdefghijklmnopqrstuvqxyzABCDEFGHIJKLMNOPQRSTUVQXYZ",
+      5
+    );
+    // console.log(heading);
+    let slug = `${heading
+      .toLowerCase()
+      .split(" ")
+      .slice(0, 5)
+      .join("-")}-${nanoid()}`;
+    let date_created = [new Date().toISOString()];
     // add date create logic
 
     const newBlog = await pool.query(
