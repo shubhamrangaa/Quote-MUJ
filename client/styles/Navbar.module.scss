@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 .header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1.25rem;
   background-color: black;
   color: white;
-  background-image: url(../public/assets/Hero_Background.png);
 }
 
 .header a {
@@ -26,10 +26,25 @@
     background-color: rgb(190, 190, 190);
   }
 }
-
-@media (max-width: 1224px) {
+.container {
+  display: flex;
+}
+.mobileContainer {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .header {
+    display: block;
+  }
   .header a {
     font-size: 1rem;
     padding: 0.4rem 0.5rem;
+  }
+  .container {
+    display: none;
+  }
+  .mobileContainer {
+    flex-direction: column;
   }
 }

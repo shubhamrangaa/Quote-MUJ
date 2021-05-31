@@ -2,7 +2,8 @@ import Head from "next/head";
 import Hero from "../components/Hero";
 import TopStories from "../components/TopStories";
 import Community from "../components/Community";
-// import VlogCarousel from "../components/VlogCarousel";
+import VlogCarousel from "../components/VlogCarousel";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -13,8 +14,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
-      <TopStories />
-      {/* <VlogCarousel /> */}
+        <Link href="/stories">
+            <a>All Stories</a>
+        </Link>
+        <TopStories />
+        <VlogCarousel />
       <Community />
     </div>
   );
