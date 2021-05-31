@@ -36,14 +36,13 @@ const SubmissionForm = () => {
 				...content
 			})
 		})
-		.then(res=>res.json()
-			.then(response=>{
-				console.log(response)
-			})
-			.catch(err=>{
-				console.log(err)
-			})
-		)
+		.then(res=>res.json())
+		.then(response=>{
+			console.log(response)
+		})
+		.catch(err=>{
+			console.log(err)
+		});
     //   axios
     //     .post("https://quote-muj.herokuapp.com/api/blogs/new", {
     //       ...content,
