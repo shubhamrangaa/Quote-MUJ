@@ -44,7 +44,7 @@ const SubmissionForm = () => {
 		// 	console.log(err)
 		// });
       axios
-        .post("/api/blogs/new", {
+        .post("/api/create", {
           ...content,
         })
         .then((res) => {
