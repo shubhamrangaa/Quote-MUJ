@@ -10,11 +10,7 @@ const app = express();
 app.set("trust proxy", 1);
 app.use(morgan("dev"));
 app.use(helmet());
-// app.use(
-//   cors({
-//     origin: "*",
-//   })
-// );
+app.use(cors());
 
 app.use(express.json());
 app.use("/api/blogs", blog);
