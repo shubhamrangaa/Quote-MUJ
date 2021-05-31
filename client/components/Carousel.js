@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: 50,
     alignItems: 'center',
-    maxWidth: 400,
+    maxWidth: 500,
   },
   header: {
     display: 'flex',
