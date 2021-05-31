@@ -44,7 +44,7 @@ const SubmissionForm = () => {
 		// 	console.log(err)
 		// });
       axios
-        .post("/api/create", {
+        .post("https://quote-muj.herokuapp.com/api/blogs/new", {
           ...content,
         })
         .then((res) => {
