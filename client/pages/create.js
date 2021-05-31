@@ -64,7 +64,7 @@ const SubmissionForm = () => {
     author: "",
     caption: "",
     categories: [],
-    article_data: "",
+    article_data: {},
     likes: 2,
   });
   const { CKEditor, ClassicEditor } = editorRef.current || {};
@@ -131,9 +131,8 @@ const SubmissionForm = () => {
           onChange={(event, editor) => {
             setContent({
               ...content,
-              article_data: editor.getData(),
+              article_data: {data:editor.getData()},
             });
-            console.log(editor.getData());
           }}
         />
       ) : (
