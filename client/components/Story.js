@@ -1,22 +1,35 @@
 import mainstyles from "../styles/AllStories.module.scss";
 import Image from "next/image";
-import { AiOutlineLike } from "react-icons/ai";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
+import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 
 export default function Story(props) {
   return (
     <div className={mainstyles.story}>
-      <div>
-        <h3>{props.heading}</h3>
-        <p>{props.caption}</p>
-        <div className={mainstyles.likesection}>
+      <div className={mainstyles.container}>
+        <p className={mainstyles.heading}>{props.heading}</p>
+        <p className={mainstyles.caption}>{props.caption}</p>
+        <div className={mainstyles.details}>
           <ul>
-            <li>Author: {props.author}</li>
-            <li>Category: {props.categories}</li>
-            <li>{props.date_created}</li>
             <li>
-              <AiOutlineLike className={mainstyles.likeicon} size="1.5em" />
+              <FontAwesomeIcon
+                className={mainstyles.FontAwesomeIcon}
+                icon={faUserCircle}
+              />{" "}
+              {props.author}
             </li>
-            <li>{props.likes} Likes</li>
+            <li>
+              <button className={mainstyles.button}>{props.categories}</button>
+            </li>
+            <li>{props.date_created.toString().substring(0, 10)}</li>
+            <li>
+              <FontAwesomeIcon
+                className={mainstyles.FontAwesomeIconLike}
+                icon={faThumbsUp}
+              />{" "}
+              {props.likes} Likes
+            </li>
           </ul>
         </div>
       </div>
@@ -25,8 +38,8 @@ export default function Story(props) {
           className={mainstyles.image}
           src="/img.png"
           alt="Picture of the author"
-          width={200}
-          height={200}
+          width={150}
+          height={150}
         />
       </div>
     </div>

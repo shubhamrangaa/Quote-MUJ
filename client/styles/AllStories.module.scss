@@ -5,12 +5,66 @@
 .story {
   background-color: #f8f8f8;
   border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  margin: 1rem 0;
 }
-
+.container {
+  display: grid;
+  grid-template-rows: auto;
+  padding: 1rem 2rem;
+}
+.heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+.caption {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+.details {
+  text-align: center;
+}
+.details ul {
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+.button {
+  border: none;
+  padding: 0.3rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 16px;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+}
+.button:hover {
+  background-color: #070707;
+  color: white;
+}
+.heading,
+.caption,
+.details ul li {
+  padding: 0 0.3rem;
+}
+.FontAwesomeIcon {
+  font-size: 1.5rem;
+  width: auto;
+}
+.FontAwesomeIconLike {
+  font-size: 1.5rem;
+  width: auto;
+  transition: 0.3s;
+  &:hover {
+    transform: translateY(-5px);
+    color: #4267b2;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+}
 .loader {
   text-align: center;
 }
@@ -20,30 +74,22 @@
   padding: 0;
 }
 
-.likesection ul li {
-  margin: 0 10px;
-}
-
-.likesection ul li:nth-of-type(1) {
-  margin-left: 0;
-}
-
-.likesection ul li:nth-of-type(3) {
-  margin: auto;
-}
-
-.likesection ul li:nth-of-type(4) {
-  margin-left: auto;
-}
-
-.likeicon:hover {
-  background-color: black;
-  color: white;
-  border-radius: 50%;
-  cursor: pointer;
-}
 @media screen and(max-width:768px) {
   .story {
     padding: 0 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1fr;
+  }
+  .container {
+    padding: 0.5rem;
+  }
+  .details {
+    text-align: left;
+  }
+  .details ul {
+    flex-direction: column;
+  }
+  .details ul li {
+    margin: 0.5rem 0;
   }
 }
