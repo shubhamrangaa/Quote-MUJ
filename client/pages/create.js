@@ -119,7 +119,6 @@ const SubmissionForm = () => {
 							...content,
 							article_data:editor.getData()
 						})
-						console.log(editor.getData())
 					}}
 				/>
 			) : (
