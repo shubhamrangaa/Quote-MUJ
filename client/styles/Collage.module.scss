@@ -2,7 +2,27 @@
   display: flex;
   position: relative;
   @media (max-width: 768px) {
-    visibility: hidden;
+    #img2,
+    #img3,
+    #img6 {
+      display: none;
+    }
+    #img1 {
+      width: 25%;
+      top: -70% !important;
+      left: 65% !important;
+      filter: brightness(4);
+    }
+    #img5 {
+      width: 50%;
+      top: -20% !important;
+      left: 20% !important;
+    }
+    #img4 {
+      width: 25%;
+      top: 10% !important;
+      left: 65% !important;
+    }
   }
 }
 #img1,
@@ -30,10 +50,10 @@
   left: 290px !important;
 }
 #img5 {
-  left: -50px !important;
-  top: 310px !important;
+  left: -20px !important;
+  top: 180px !important;
 }
 #img6 {
-  top: 450px !important;
-  left: 150px !important;
+  top: 230px !important;
+  left: 80px !important;
 }

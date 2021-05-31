@@ -23,24 +23,14 @@ export const Collage = () => {
       <div id={styles.img3}>
         <Image src="/assets/image 3.png" alt="img3" width={128} height={160} />
       </div>
-      <div id={styles.img4}>
-        <Image src="/assets/image 4.png" alt="img4" width={163} height={246} />
+      <div>
+        <img id={styles.img4} src="/assets/image 4.png" alt="img4"></img>
       </div>
       <div id={styles.img5}>
-        <Image
-          src="/assets/UfgeNK-KCuU.png"
-          alt="img5"
-          width={135}
-          height={196}
-        />
+        <img id={styles.img5} src="/assets/UfgeNK-KCuU.png" alt="img5"></img>
       </div>
       <div id={styles.img6}>
-        <Image
-          src="/assets/Rectangle.png"
-          alt="img6"
-          width={236}
-          height={141}
-        />
+        <img id={styles.img6} src="/assets/Rectangle.png" alt="img6"></img>
       </div>
     </div>
   );
