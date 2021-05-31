@@ -28,7 +28,7 @@ const SubmissionForm = () => {
   const submitHandler = () => {
     if (checkContent()) {
       axios
-        .post(`${process.env.SERVER_URL}/api/blogs/new`, {
+        .post("https://quote-muj.herokuapp.com/api/blogs/new", {
           ...content,
         })
         .then((res) => {
