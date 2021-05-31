@@ -55,4 +55,17 @@ router.get("/:slug", async (req, res) => {
   }
 });
 
+// GET A CATEGORY
+router.get("/categories/:category", async (req, res) => {
+  try {
+    const { category } = req.params;
+    const blog = await pool.query("SELECT * FROM blog WHERE categories = $1", [
+      category,
+    ]);
+    res.json(blog.rows[0]);
+  } catch (err) {
+    console.error(err);
+  }
+});
+
 module.exports = router;
