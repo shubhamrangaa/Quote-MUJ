@@ -1,21 +1,17 @@
 const express = require("express");
 const router = express.Router();
 const pool = require("../db.js");
+const { nanoid } = require("nanoid");
 
 // CREATE BLOG
 router.post("/new", async (req, res) => {
   try {
-    const {
-      slug,
-      categories,
-      author,
-      heading,
-      caption,
-      article_data,
-      date_created,
-      likes,
-    } = req.body;
-    console.log(slug);
+    const { categories, author, heading, caption, article_data, likes } =
+      req.body;
+    // add nano id logic
+    heading.toLowerCase().split(" ").slice(0, 5).join("-");
+    // add date create logic
+
     const newBlog = await pool.query(
       `INSERT INTO 
 			blog(slug , categories, author, heading, caption, article_data, date_created, likes) 
