@@ -3,7 +3,7 @@
   "description": "a really cool app",
   "version": "1.0.0",
   "engines": {
-    "node": "14.17.0"
+    "node": "16.1.0"
   },
   "scripts": {
     "start": "node index",
