@@ -4,6 +4,7 @@ import mainstyles from "../styles/AllStories.module.scss";
 import Story from "../components/Story";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Link from 'next/link';
 
 export default function AllStories() {
   const [articles, setArticles] = useState([]);
@@ -46,6 +47,9 @@ export default function AllStories() {
 
   return (
     <div className={mainstyles.storieswrapper}>
+      <Link href="/story-page">
+        <a>Single story</a>
+      </Link>
       <h1 className={styles.decorated}>
         <span>All Stories</span>
       </h1>
