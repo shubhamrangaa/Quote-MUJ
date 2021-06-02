@@ -27,22 +27,6 @@ const SubmissionForm = () => {
   };
   const submitHandler = () => {
     if (checkContent()) {
-		// fetch("https://quote-muj.herokuapp.com/api/blogs/new",{
-		// 	method: "POST",
-		// 	headers: {
-		// 		'Content-Type': 'application/json'
-		// 	},
-		// 	body:JSON.stringify({
-		// 		...content
-		// 	})
-		// })
-		// .then(res=>res.json())
-		// .then(response=>{
-		// 	console.log(response)
-		// })
-		// .catch(err=>{
-		// 	console.log(err)
-		// });
       axios
         .post("https://quote-muj.herokuapp.com/api/blogs/new", {
           ...content,
@@ -131,7 +115,7 @@ const SubmissionForm = () => {
           onChange={(event, editor) => {
             setContent({
               ...content,
-              article_data: {data:editor.getData()},
+              article_data: { data: editor.getData() },
             });
           }}
         />
