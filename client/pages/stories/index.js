@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import styles from "../styles/Topstories.module.scss";
-import mainstyles from "../styles/AllStories.module.scss";
-import Story from "../components/Story";
+import styles from "../../styles/Topstories.module.scss";
+import mainstyles from "../../styles/AllStories.module.scss";
+import Story from "../../components/Story";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import Link from 'next/link';
+import Link from "next/link";
 
 export default function AllStories() {
   const [articles, setArticles] = useState([]);
@@ -15,9 +15,8 @@ export default function AllStories() {
   }, []);
 
   const fetchArticles = async () => {
-    fetch("https://quote-muj.herokuapp.com/api/blogs/all")
-	.then((res) => res.json()
-		.then((data) => {
+    fetch("https://quote-muj.herokuapp.com/api/blogs/all").then((res) =>
+      res.json().then((data) => {
         setArticles(data);
         setLoading(false);
       })
@@ -35,6 +34,7 @@ export default function AllStories() {
             likes={el.likes}
             date_created={el.date_created}
             categories={el.categories}
+            slug={el.slug}
           />
         ))}
       </div>

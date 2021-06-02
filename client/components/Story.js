@@ -1,5 +1,6 @@
 import mainstyles from "../styles/AllStories.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
@@ -8,7 +9,9 @@ export default function Story(props) {
   return (
     <div className={mainstyles.story}>
       <div className={mainstyles.container}>
-        <p className={mainstyles.heading}>{props.heading}</p>
+        <Link href={`/stories/${props.slug}`}>
+          <p className={mainstyles.heading}>{props.heading}</p>
+        </Link>
         <p className={mainstyles.caption}>{props.caption}</p>
         <div className={mainstyles.details}>
           <ul>
@@ -37,7 +40,7 @@ export default function Story(props) {
         <Image
           className={mainstyles.image}
           src="/img.png"
-          alt="Picture of the author"
+          alt="story picture"
           width={150}
           height={150}
         />
