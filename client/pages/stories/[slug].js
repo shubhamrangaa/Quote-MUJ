@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import Image from "next/image";
+import ReactHtmlParser from "react-html-parser";
 
 export const getStaticPaths = async () => {
   const res = await fetch("https://quote-muj.herokuapp.com/api/blogs/all");
@@ -53,7 +54,7 @@ function FullStory({ story }) {
 
       <div className={styles.text}>{story.caption}</div>
       <div className={styles.text}>
-        <>{story.article_data.data}</>
+        <>{ReactHtmlParser(story.article_data.data)}</>
       </div>
     </div>
   );
