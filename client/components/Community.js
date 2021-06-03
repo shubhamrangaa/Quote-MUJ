@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import CommunityPost from "./CommunityPost";
@@ -25,7 +26,7 @@ const Community = () => {
   return (
     <div className={styles.community}>
       <div className={styles.nav}>
-        <p id={styles.title}>Community</p>
+        <p id={styles.title}>Categories</p>
         <p className={styles.line}></p>
         <div className={styles.categories}>
           <button className={styles.button}>Latest</button>
