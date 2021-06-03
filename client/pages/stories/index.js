@@ -47,9 +47,6 @@ export default function AllStories() {
 
   return (
     <div className={mainstyles.storieswrapper}>
-      <Link href="/story-page">
-        <a>Single story</a>
-      </Link>
       <h1 className={styles.decorated}>
         <span>All Stories</span>
       </h1>
