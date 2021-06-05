@@ -1,5 +1,6 @@
 import Collage from "./Collage";
 import styles from "../styles/Hero.module.scss";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
@@ -10,7 +11,9 @@ export const Hero = () => {
           Welcome to the Official Newsletter website of Manipal University
           Jaipur. Find everything latest in our May newsletter!
         </p>
-        <button id={styles.explore}>Explore May Newsletter</button>
+        <Link href="/monthly/2021/may" id={styles.explore}>
+          Explore May Newsletter
+        </Link>
       </div>
 
       <Collage />
