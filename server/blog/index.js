@@ -78,4 +78,17 @@ router.get("/categories/:category", async (req, res) => {
   }
 });
 
+// POST A LIKE
+router.post("/add-like", async (req, res) => {
+  try {
+    const { slug } = req.body;
+    const addLike = await pool.query(
+      `UPDATE blog SET likes = likes + 1 WHERE slug = $1 RETURNING *`,
+      [slug]
+    );
+    res.json(addLike.rows[0]);
+  } catch (err) {
+    console.log(err);
+  }
+});
 module.exports = router;
