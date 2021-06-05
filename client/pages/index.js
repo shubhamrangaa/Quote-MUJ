@@ -11,7 +11,7 @@ export default function Home() {
       <Head>
         <title>MUJ Blog</title>
         <meta name="description" content="MUJ BLOG" />
-        <link rel="icon" href="../img/img.png" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
       <TopStories />

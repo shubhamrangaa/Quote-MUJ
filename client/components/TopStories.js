@@ -82,7 +82,7 @@ export default function TopStories() {
   const sectionThree = newsElements.slice(5, 8);
   return (
     <div className={styles.TopStories}>
-      <h1 class={styles.decorated}>
+      <h1 className={styles.decorated}>
         <span>Top Stories</span>
       </h1>
       <div className={styles.fullSection}>

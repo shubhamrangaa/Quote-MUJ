@@ -35,7 +35,7 @@ export default function AllStories() {
             date_created={el.date_created}
             categories={el.categories}
             slug={el.slug}
-            id={id}
+            key={id}
           />
         ))}
       </div>
