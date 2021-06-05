@@ -6,13 +6,13 @@ export const Hero = () => {
   return (
     <div className={styles.hero}>
       <div className={styles.main}>
-        <p id={styles.title}>We believe in the power of stories</p>
+        <h1 id={styles.title}>We believe in the power of stories</h1>
         <p id={styles.intro}>
           Welcome to the Official Newsletter website of Manipal University
           Jaipur. Find everything latest in our May newsletter!
         </p>
-        <Link href="/monthly/2021/may" id={styles.explore}>
-          Explore May Newsletter
+        <Link href="/monthly/2021/may">
+          <a id={styles.explore}>Explore May Newsletter</a>
         </Link>
       </div>
 
