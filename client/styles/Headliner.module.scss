@@ -1,0 +1,36 @@
+.headlinerMainContainer {
+  h2 {
+    font-size: 46px;
+    font-family: "Merriweather", serif;
+  }
+  img {
+    width: 100%;
+  }
+  .content {
+    color: #4e4e4e;
+    // styles change to content text
+  }
+  .tags {
+    display: inline-block;
+    margin-right: 1rem;
+    background-color: rgb(223, 223, 223);
+    border-radius: 16px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+// headliner aside
+.headlinerAsideContainer {
+  display: flex;
+  gap: 1.5rem;
+  h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  img {
+    width: 100%;
+  }
+  .author {
+    font-style: italic;
+  }
+}
