@@ -14,21 +14,21 @@ export const Navbar = () => {
   return (
     <div className={styles.header}>
       <Link href="/">
-        <Image
-          src="/assets/Quote.png"
-          alt="logo"
-          width={48}
-          height={44}
-        ></Image>
+        <a>
+          <Image
+            src="/assets/Quote.png"
+            alt="logo"
+            width={48}
+            height={44}
+          ></Image>
+        </a>
       </Link>
       <div className={styles[active ? "mobileContainer" : "container"]}>
-        <Link href="/editorial">Editorial</Link>
-        <Link href="/learners-point">Learner's Point</Link>
-        <Link href="/research">Research</Link>
-        <Link href="/stalwart-speaks">Stalwart Speaks</Link>
-        <Link href="/bulletin">Bulletin</Link>
-        <Link href="/achievers">Achievers</Link>
-        <Link href="/upcoming">Upcoming</Link>
+        <Link href="/">Home</Link>
+        <Link href="/blogs">Editorial</Link>
+        <Link href="/category/categories">Categories</Link>
+        <Link href="/category/upcoming">Events</Link>
+        <Link href="/monthly/2021/may">Monthly Newsletter</Link>
       </div>
       <button
         className={

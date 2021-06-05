@@ -1,14 +1,22 @@
+import React, { useState } from "react";
 import Paper from "@material-ui/core/Paper";
 import styles from "../styles/CommunityPost.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookmark, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import Share from "../components/Share";
 
 const CommunityPost = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClick = () => {
+    setShow(!show);
+  };
+
   return (
     <div>
-      <Paper elevation={1}>
+      <Paper elevation={1} className={styles.main}>
         <div className={styles.header}>
           <div className={styles.profile}>
             <FontAwesomeIcon
@@ -35,7 +43,9 @@ const CommunityPost = () => {
           <FontAwesomeIcon
             className={styles.FontAwesomeIcon}
             icon={faShareAlt}
+            onClick={handleClick}
           />
+          <Share display={show} url={" "} />
         </div>
       </Paper>
     </div>

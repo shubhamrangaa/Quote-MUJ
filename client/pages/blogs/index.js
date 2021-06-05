@@ -25,7 +25,7 @@ export default function AllStories() {
   const DisplayArticles = () => {
     return articles.length > 0 ? (
       <div>
-        {articles.map((el) => (
+        {articles.map((el, id) => (
           <Story
             heading={el.heading}
             article_data={el.article_data}
@@ -35,6 +35,7 @@ export default function AllStories() {
             date_created={el.date_created}
             categories={el.categories}
             slug={el.slug}
+            key={id}
           />
         ))}
       </div>
@@ -47,9 +48,6 @@ export default function AllStories() {
 
   return (
     <div className={mainstyles.storieswrapper}>
-      <Link href="/story-page">
-        <a>Single story</a>
-      </Link>
       <h1 className={styles.decorated}>
         <span>All Stories</span>
       </h1>

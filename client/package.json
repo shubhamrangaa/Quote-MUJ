@@ -28,6 +28,7 @@
     "react-multi-carousel": "^2.6.3",
     "react-player": "^2.9.0",
     "react-select": "^4.3.1",
+    "react-share": "^4.4.0",
     "sass": "^1.32.12"
   },
   "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",

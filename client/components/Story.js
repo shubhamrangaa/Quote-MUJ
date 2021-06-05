@@ -4,13 +4,31 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
+import React, { useState } from "react";
 
 export default function Story(props) {
+  const slug = props.slug;
+  const [likes, setLikes] = useState(props.likes);
+
+  const addLike = () => {
+    axios
+      .post("https://quote-muj.herokuapp.com/api/blogs/add-like", {
+        slug,
+      })
+      .then((res) => {
+        setLikes(res.data.likes);
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div className={mainstyles.story}>
       <div className={mainstyles.container}>
         <Link href={`/stories/${props.slug}`}>
-          <p className={mainstyles.heading}>{props.heading}</p>
+          <a className={mainstyles.heading}>{props.heading}</a>
         </Link>
         <p className={mainstyles.caption}>{props.caption}</p>
         <div className={mainstyles.details}>
@@ -26,12 +44,12 @@ export default function Story(props) {
               <button className={mainstyles.button}>{props.categories}</button>
             </li>
             <li>{props.date_created.toString().substring(0, 10)}</li>
-            <li>
+            <li onClick={addLike}>
               <FontAwesomeIcon
                 className={mainstyles.FontAwesomeIconLike}
                 icon={faThumbsUp}
               />{" "}
-              {props.likes} Likes
+              {likes} Likes
             </li>
           </ul>
         </div>
@@ -39,7 +57,7 @@ export default function Story(props) {
       <div>
         <Image
           className={mainstyles.image}
-          src="/img.png"
+          src="/images/img.png"
           alt="story picture"
           width={150}
           height={150}
