@@ -5,7 +5,7 @@ import Select from "react-select";
 
 const SubmissionForm = () => {
   const options = [
-    { value: "news", label: "News" },
+    { value: "News", label: "News" },
     { value: "Sports", label: "Sports" },
     { value: "Events", label: "Events" },
     { value: "Research", label: "Research" },
@@ -49,7 +49,7 @@ const SubmissionForm = () => {
     caption: "",
     categories: [],
     article_data: {},
-    likes: 2,
+    likes: 0,
   });
   const { CKEditor, ClassicEditor } = editorRef.current || {};
 

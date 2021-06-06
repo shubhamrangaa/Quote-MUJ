@@ -3,6 +3,25 @@ import styles from "../styles/Hero.module.scss";
 import Link from "next/link";
 
 export const Hero = () => {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const date = new Date();
+  const currentMonth = months[date.getMonth()];
+  const currentYear = date.getFullYear();
+  const url = `/monthly/${currentYear}/${currentMonth}`;
+
   return (
     <div className={styles.hero}>
       <div className={styles.main}>
@@ -11,8 +30,8 @@ export const Hero = () => {
           Welcome to the Official Newsletter website of Manipal University
           Jaipur. Find everything latest in our May newsletter!
         </p>
-        <Link href="/monthly/2021/may">
-          <a id={styles.explore}>Explore May Newsletter</a>
+        <Link href={url}>
+          <a id={styles.explore}>Explore {currentMonth} Newsletter</a>
         </Link>
       </div>
 

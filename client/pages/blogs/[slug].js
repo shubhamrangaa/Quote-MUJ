@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../styles/StoryPage.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import { faBookmark } from "@fortawesome/free-regular-svg-icons";
-import Image from "next/image";
+import axios from "axios";
 import ReactHtmlParser from "react-html-parser";
 
 export const getStaticPaths = async () => {
@@ -32,6 +32,26 @@ export const getStaticProps = async (context) => {
 };
 
 function FullStory({ story }) {
+  const [likes, setLikes] = useState(story.likes);
+  const slug = story.slug;
+  const addLike = () => {
+    axios
+      .post("https://quote-muj.herokuapp.com/api/blogs/add-like", {
+        slug,
+      })
+      .then((res) => {
+        setLikes(res.data.likes);
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  let categories = story.categories
+    .substring(1, story.categories.length - 1)
+    .split(/(?!^)".*?"/g)
+    .toString();
+  let categoriesArr = categories.substring(1, categories.length - 1).split(",");
   return (
     <div>
       <div className={styles.heading}>
@@ -39,18 +59,26 @@ function FullStory({ story }) {
         <h1>{story.heading}</h1>
         <ul>
           <li>{story.author}</li>
-          <li>{story.categories}</li>
+          {categoriesArr.map((el) => (
+            <li>{el}</li>
+          ))}
           <li>{story.date_created.toString().substring(0, 10)}</li>
           <li>5 mins Read</li>
-          <li>
-            <FontAwesomeIcon icon={faThumbsUp} />
+          <li onClick={addLike}>
+            <FontAwesomeIcon
+              className={styles.FontAwesomeIcon}
+              icon={faThumbsUp}
+            />{" "}
+            {likes} Likes
           </li>
           <li>
             <FontAwesomeIcon icon={faBookmark} />
           </li>
         </ul>
       </div>
-      <Image src="/img.png" alt="story picture" width="100vw" height="100vh" />
+      <div className={styles.storypic}>
+        <img src="/images/img.png" alt="story-picture"></img>
+      </div>
 
       <div className={styles.text}>{story.caption}</div>
       <div className={styles.text}>

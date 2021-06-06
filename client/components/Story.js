@@ -11,6 +11,12 @@ export default function Story(props) {
   const slug = props.slug;
   const [likes, setLikes] = useState(props.likes);
 
+  let categories = props.categories
+    .substring(1, props.categories.length - 1)
+    .split(/(?!^)".*?"/g)
+    .toString();
+  let categoriesArr = categories.substring(1, categories.length - 1).split(",");
+
   const addLike = () => {
     axios
       .post("https://quote-muj.herokuapp.com/api/blogs/add-like", {
@@ -27,7 +33,7 @@ export default function Story(props) {
   return (
     <div className={mainstyles.story}>
       <div className={mainstyles.container}>
-        <Link href={`/stories/${props.slug}`}>
+        <Link href={`/blogs/${props.slug}`}>
           <a className={mainstyles.heading}>{props.heading}</a>
         </Link>
         <p className={mainstyles.caption}>{props.caption}</p>
@@ -41,7 +47,9 @@ export default function Story(props) {
               {props.author}
             </li>
             <li>
-              <button className={mainstyles.button}>{props.categories}</button>
+              {categoriesArr.map((el) => (
+                <button className={mainstyles.button}>{el}</button>
+              ))}
             </li>
             <li>{props.date_created.toString().substring(0, 10)}</li>
             <li onClick={addLike}>

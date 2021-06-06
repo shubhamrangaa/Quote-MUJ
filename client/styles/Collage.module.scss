@@ -3,25 +3,30 @@
   position: relative;
   @media (max-width: 768px) {
     #img2,
-    #img3,
-    #img6 {
+    #img6,
+    #img4 {
       display: none;
     }
+    #img1,
+    #img3,
+    #img5 {
+      top: -10% !important;
+    }
     #img1 {
-      width: 25%;
-      top: -70% !important;
-      left: 65% !important;
+      left: 2rem !important;
       filter: brightness(4);
     }
-    #img5 {
-      width: 50%;
-      top: -20% !important;
-      left: 20% !important;
+    #img1 img,
+    #img3 img,
+    #img5 img {
+      max-height: 130px;
+      width: auto;
     }
-    #img4 {
-      width: 25%;
-      top: 10% !important;
-      left: 65% !important;
+    #img3 {
+      left: 37% !important;
+    }
+    #img5 {
+      left: 68% !important;
     }
   }
 }
@@ -32,28 +37,49 @@
 #img5,
 #img6 {
   position: absolute;
+  opacity: 0;
+  @keyframes pop {
+    0% {
+      opacity: 0;
+      transform: scale(0.75);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  animation: pop 1s forwards ease-in-out;
 }
 #img1 {
   top: 30px !important;
   left: 10px !important;
 }
+#img1 img {
+  max-height: 190px;
+  width: 153px;
+}
 #img2 {
+  animation-delay: 0.1s;
   top: 30px !important;
   left: 200px !important;
 }
 #img3 {
+  animation-delay: 0.2s;
   top: 230px !important;
   left: 120px !important;
 }
 #img4 {
+  animation-delay: 0.3s;
   top: 190px !important;
   left: 290px !important;
 }
 #img5 {
-  left: -20px !important;
-  top: 180px !important;
+  animation-delay: 0.4s;
+  left: -40px !important;
+  top: 360px !important;
 }
 #img6 {
+  animation-delay: 0.5s;
   top: 230px !important;
   left: 80px !important;
 }

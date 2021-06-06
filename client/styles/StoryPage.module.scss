@@ -1,37 +1,48 @@
-.body{
+.body {
   margin: 0;
 }
 
-.heading{
+.heading {
   padding: 3% 30%;
 
-    h1{
-      font-family: Arial;
-      margin: 0;
-      padding: 10px 0px;
-      font-size: 60px;
-    }
-  h6{
+  h1 {
+    font-family: Arial;
+    margin: 0;
+    padding: 10px 0px;
+    font-size: 60px;
+  }
+  h6 {
     margin: 0;
     font-size: 18px;
   }
-  ul{
+  ul {
     list-style: none;
     display: flex;
     gap: 10px;
     padding: 0;
   }
 
-  li:nth-of-type(1){
+  li:nth-of-type(1) {
     margin-left: 0;
   }
 
-  li:nth-of-type(5){
+  li:nth-of-type(5) {
     margin-left: auto;
   }
 }
-
-
-.text{
+.FontAwesomeIcon {
+  transition: 0.4s;
+  &:hover {
+    transform: translateY(-5px);
+    color: #4267b2;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+}
+.storypic {
+  width: 100%;
+  text-align: center;
+}
+.text {
   padding: 3% 30%;
 }

@@ -169,11 +169,7 @@ export default function TopStories() {
           </Grid>
         </Grid>
       </div>
-
       <TextMobileStepper />
-      <div className={styles.stories}>
-        <Link href="/stories">All Stories</Link>
-      </div>
     </div>
   );
 }
