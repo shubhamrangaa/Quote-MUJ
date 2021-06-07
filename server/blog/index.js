@@ -6,7 +6,7 @@ const { customAlphabet } = require("nanoid");
 // CREATE BLOG
 router.post("/new", async (req, res) => {
   try {
-    const { categories, author, heading, caption, article_data, likes } =
+    const { categories, author, heading, caption, article_data, likes, imageURL } =
       req.body;
     // add nano id logic
     const nanoid = customAlphabet(
@@ -21,7 +21,15 @@ router.post("/new", async (req, res) => {
       .join("-")}-${nanoid()}`;
     let date_created = [new Date().toISOString()];
     // add date create logic
-
+	console.log([slug,
+        categories,
+        author,
+        heading,
+        caption,
+        article_data,
+        date_created,
+        likes,
+		imageURL])
     const newBlog = await pool.query(
       `INSERT INTO 
 			blog(slug , categories, author, heading, caption, article_data, date_created, likes) 
@@ -36,9 +44,15 @@ router.post("/new", async (req, res) => {
         article_data,
         date_created,
         likes,
+		imageURL
       ]
     );
-    res.json(newBlog.rows[0]);
+	let result = newBlog.rows[0];
+	let category = result.categories.startsWith("{")?JSON.parse(result.categories.replace("{","[").replace("}","]")):[result.categories];
+    res.json({
+		...result,
+		categories: category,
+	});
   } catch (error) {
     console.error(error);
   }
@@ -48,7 +62,13 @@ router.post("/new", async (req, res) => {
 router.get("/all", async (req, res) => {
   try {
     const allBlogs = await pool.query("SELECT * FROM blog");
-    res.json(allBlogs.rows);
+    res.json(allBlogs.rows.map((item)=>{
+		let category = item.categories.startsWith("{")?JSON.parse(item.categories.replace("{","[").replace("}","]")):[item.categories];
+		return({
+			...item,
+			categories: category
+		})
+	}));
   } catch (err) {
     console.error(err);
   }
@@ -59,7 +79,12 @@ router.get("/:slug", async (req, res) => {
   try {
     const { slug } = req.params;
     const blog = await pool.query("SELECT * FROM blog WHERE slug = $1", [slug]);
-    res.json(blog.rows[0]);
+	let result = blog.rows[0];
+	let category = result.categories.startsWith("{")?JSON.parse(result.categories.replace("{","[").replace("}","]")):[result.categories];
+    res.json({
+		...result,
+		categories: category,
+	});
   } catch (err) {
     console.error(err);
   }
@@ -69,8 +94,12 @@ router.get("/:slug", async (req, res) => {
 router.get("/categories/:category", async (req, res) => {
   try {
     const { category } = req.params;
+	let changedCategory = JSON.stringify(category).replace("[","{").replace("]","}");
+	changedCategory.map((item)=>{
+		return (item.charAt(0).toUpperCase()+item.slice(1).toLowerCase())
+	})
     const blog = await pool.query("SELECT * FROM blog WHERE categories = $1", [
-      category,
+      changedCategory,
     ]);
     res.json(blog.rows[0]);
   } catch (err) {

@@ -58,9 +58,11 @@ textarea {
 
 .ck.ck-editor{
 	width: 100% !important;
+	max-width: 45vw !important;
 	margin: 0.5rem 0!important;
 	@media (max-width:1224px){
-		width: 80vw !important;
+		width: 90vw !important;
+		max-width: 90vw !important;
 	}
 }
 

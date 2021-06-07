@@ -1,6 +1,58 @@
 $text-color: hsl(0, 0%, 13%);
 $border-color: hsl(214, 13%, 90%);
 $border-active-color: hsl(209, 98%, 48%);
+$button-disabled-color: hsl(0, 0%, 81%);
+$success-color: hsl(120, 90%, 40%);
+$error-color: hsl(0, 100%, 64%);
+
+.label{
+	font-size:1.25rem;
+	font-weight: 700;
+}
+
+.loading{
+	background: $button-disabled-color !important;
+	cursor:auto !important;
+}
+
+.text{
+	margin: 0;
+	padding: 0 2rem;
+	color: #AFAAB0;
+	font-size:1.25rem;
+	font-weight: 700;
+}
+
+.successText{
+	color: $success-color;
+}
+.errorText {
+	color: $error-color;
+}
+
+.selectedText{
+	margin-bottom: 0;
+	font-size: 1rem;
+	font-weight: 700;
+	color: silver;
+	user-select: none;
+}
+
+.dropzone {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	margin: 2rem;
+	width: 100%;
+	height: 100%;
+	border:2px $border-color dashed;
+	border-radius: 0.5rem;
+	background: #FAFAFA;
+	outline: none;
+	cursor: pointer;
+	user-select: none;
+}
 
 .container{
 	display: flex;
