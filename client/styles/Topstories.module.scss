@@ -42,12 +42,15 @@
   font-size: 14px;
   font-family: "Noto Sans JP", sans-serif;
   display: inline-block;
+  min-height: 720px;
 }
 
 .userName {
   font-size: 18px;
   line-height: 40px;
 }
+
+
 
 .elementmain {
   text-align: center;
@@ -75,6 +78,10 @@
 @media (max-width: 600px) {
   .root {
     display: block;
+  }
+
+  .paper{
+    min-height: 500px;
   }
   .fullSection {
     display: none;
