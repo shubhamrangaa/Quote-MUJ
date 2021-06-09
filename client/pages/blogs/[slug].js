@@ -6,8 +6,10 @@ import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import axios from "axios";
 import ReactHtmlParser from "react-html-parser";
 
+const apiURL = process.env.SERVER_URL || "https://quote-muj.herokuapp.com";
+
 export const getStaticPaths = async () => {
-  const res = await fetch("https://quote-muj.herokuapp.com/api/blogs/all");
+  const res = await fetch(`${apiURL}/api/blogs/all`);
   const data = await res.json();
 
   const paths = data.map((article) => {
@@ -23,7 +25,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const slug = context.params.slug;
-  const res = await fetch(`https://quote-muj.herokuapp.com/api/blogs/${slug}`);
+  const res = await fetch(`${apiURL}/api/blogs/${slug}`);
   const data = await res.json();
 
   return {
@@ -36,7 +38,7 @@ function FullStory({ story }) {
   const slug = story.slug;
   const addLike = () => {
     axios
-      .post("https://quote-muj.herokuapp.com/api/blogs/add-like", {
+      .post(`${apiURL}/api/blogs/add-like`, {
         slug,
       })
       .then((res) => {
@@ -47,11 +49,12 @@ function FullStory({ story }) {
         console.log(err);
       });
   };
-  let categories = story.categories
-    .substring(1, story.categories.length - 1)
-    .split(/(?!^)".*?"/g)
-    .toString();
-  let categoriesArr = categories.substring(1, categories.length - 1).split(",");
+  let categories = story.categories;
+  // .substring(1, story.categories.length - 1)
+  // .split(/(?!^)".*?"/g)
+  // .toString();
+  let categoriesArr = categories;
+  // let categoriesArr = categories.substring(1, categories.length - 1).split(",");
   return (
     <div>
       <div className={styles.heading}>
