@@ -13,49 +13,52 @@ router.post("/new", async (req, res) => {
       caption,
       article_data,
       likes,
-      imageURL,
+      images,
     } = req.body;
-    // add nano id logic
+
+    // NANO ID LOGIC
     const nanoid = customAlphabet(
       "1234567890abcdefghijklmnopqrstuvqxyzABCDEFGHIJKLMNOPQRSTUVQXYZ",
       5
     );
-    // console.log(heading);
     let slug = `${heading
       .toLowerCase()
       .split(" ")
       .slice(0, 5)
       .join("-")}-${nanoid()}`;
+
+    // DATE LOGIC
     let date_created = [new Date().toISOString()];
-    // add date create logic
-    console.log([
-      slug,
-      categories,
-      author,
-      heading,
-      caption,
-      article_data,
-      date_created,
-      likes,
-      imageURL,
-    ]);
+
+    // ADDING TO DATABASE QUERY
     const newBlog = await pool.query(
       `INSERT INTO 
-			blog(slug , categories, author, heading, caption, article_data, date_created, likes, images) 
+			blog(slug , author, heading, caption, article_data, date_created, likes, images, categories) 
 			VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9) 
 		  RETURNING *`,
       [
         slug,
-        categories,
         author,
         heading,
         caption,
         article_data,
         date_created,
         likes,
-        imageURL,
+        images,
+        categories,
       ]
     );
+    // TO ADD TO CATEGORY TABLE
+    // categories.forEach((element) => {
+    //   pool.query(
+    //     `INSERT INTO
+    //      categories( name, slug)
+    //      VALUES($1, $2)
+    //      `,
+    //     [element, slug]
+    //   );
+    // });
+
     let result = newBlog.rows[0];
     let category = result.categories.startsWith("{")
       ? JSON.parse(result.categories.replace("{", "[").replace("}", "]"))
@@ -111,18 +114,28 @@ router.get("/:slug", async (req, res) => {
 router.get("/categories/:category", async (req, res) => {
   try {
     const { category } = req.params;
-    console.log(category);
-    // let changedCategory = JSON.stringify(category)
-    //   .replace("[", "{")
-    //   .replace("]", "}");
-    // console.log(changedCategory);
-    // changedCategory.map((item) => {
-    //   return item.charAt(0).toUpperCase() + item.slice(1).toLowerCase();
-    // });
-    const blog = await pool.query("SELECT * FROM blog WHERE categories = $1 ", [
-      category,
-    ]);
-    res.json(blog.rows);
+    const blog = await pool.query("SELECT * FROM blog ");
+    let filteredBlogs = [];
+
+    // POPULATION filteredBlogs WITH SIMILAR CATEGORY BLOGS
+    blog.rows.forEach((element) => {
+      const tempCategoryArray = element.categories;
+      if (tempCategoryArray.includes(`${category}`)) {
+        filteredBlogs.push(element);
+      }
+    });
+    // CLEANING UP CATEGORY FORMAT AND SEND
+    res.json(
+      filteredBlogs.map((item) => {
+        let category = item.categories.startsWith("{")
+          ? JSON.parse(item.categories.replace("{", "[").replace("}", "]"))
+          : [item.categories];
+        return {
+          ...item,
+          categories: category,
+        };
+      })
+    );
   } catch (err) {
     console.error(err);
   }

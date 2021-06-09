@@ -13,3 +13,10 @@ CREATE TABLE blog(
     likes int DEFAULT 0
 );
 
+CREATE TABLE categories(
+    c_id INT UNIQUE NOT NULL PRIMARY KEY,
+    name varchar(255) NOT NULL,
+    slug text NOT NULL,
+    FOREIGN KEY (slug) REFERENCES blog(slug)
+);
+
