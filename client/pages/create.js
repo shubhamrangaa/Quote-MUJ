@@ -7,8 +7,7 @@ import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 const SubmissionForm = () => {
-  const apiURL =
-    process.env.SERVER_URL || "https://quote-muj.herokuapp.com/api/blogs/new";
+  const apiURL = process.env.SERVER_URL || "https://quote-muj.herokuapp.com";
   const [loading, setLoading] = useState(false);
   const [resultText, setResultText] = useState({
     type: "",
