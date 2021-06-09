@@ -74,27 +74,51 @@ const Community = () => {
           </button>
           <button
             className={styles.button}
-            onClick={(e) => fetchCategory("news")}
+            onClick={(e) => fetchCategory("News")}
           >
             News
           </button>
           <button
             className={styles.button}
-            onClick={(e) => fetchCategory("sports")}
+            onClick={(e) => fetchCategory("Sports")}
           >
             Sports
           </button>
           <button
             className={styles.button}
-            onClick={(e) => fetchCategory("events")}
+            onClick={(e) => fetchCategory("Events")}
           >
             Events
           </button>
           <button
             className={styles.button}
-            onClick={(e) => fetchCategory("research")}
+            onClick={(e) => fetchCategory("Research")}
           >
             Research
+          </button>
+          <button
+            className={styles.button}
+            onClick={(e) => fetchCategory("Placements")}
+          >
+            Placements
+          </button>
+          <button
+            className={styles.button}
+            onClick={(e) => fetchCategory("Academics")}
+          >
+            Academics
+          </button>
+          <button
+            className={styles.button}
+            onClick={(e) => fetchCategory("Leadership")}
+          >
+            Leadership
+          </button>
+          <button
+            className={styles.button}
+            onClick={(e) => fetchCategory("Accreditation")}
+          >
+            Accreditation
           </button>
         </div>
       </div>
@@ -107,34 +131,32 @@ const Community = () => {
             height={100}
             width={100}
           />
-        ) : (
+        ) : articles.length > 0 ? (
           <Carousel responsive={responsive} showDots={true}>
-            {articles.length > 0 ? (
-              articles.map((el, id) => (
-                <CommunityPost
-                  heading={el.heading}
-                  article_data={el.article_data}
-                  caption={el.caption}
-                  author={el.author}
-                  likes={el.likes}
-                  date_created={el.date_created}
-                  categories={el.categories}
-                  slug={el.slug}
-                  key={id}
-                />
-              ))
-            ) : (
-              <div>
-                <h3>
-                  No articles!{" "}
-                  <FontAwesomeIcon
-                    className={styles.FontAwesomeIcon}
-                    icon={faFrown}
-                  />
-                </h3>
-              </div>
-            )}
+            {articles.map((el, id) => (
+              <CommunityPost
+                heading={el.heading}
+                article_data={el.article_data}
+                caption={el.caption}
+                author={el.author}
+                likes={el.likes}
+                date_created={el.date_created}
+                categories={el.categories}
+                slug={el.slug}
+                key={id}
+              />
+            ))}
           </Carousel>
+        ) : (
+          <div>
+            <h3>
+              No articles!{" "}
+              <FontAwesomeIcon
+                className={styles.FontAwesomeIcon}
+                icon={faFrown}
+              />
+            </h3>
+          </div>
         )}
       </div>
     </div>
