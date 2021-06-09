@@ -6,6 +6,8 @@ CREATE TABLE blog(
     author varchar(255) NOT NULL, 
     heading text NOT NULL, 
     caption text NOT NULL,
+    images text,
+    videos text, 
     article_data json NOT NULL,
     date_created timestamptz  [0], 
     likes int DEFAULT 0
