@@ -111,16 +111,18 @@ router.get("/:slug", async (req, res) => {
 router.get("/categories/:category", async (req, res) => {
   try {
     const { category } = req.params;
-    let changedCategory = JSON.stringify(category)
-      .replace("[", "{")
-      .replace("]", "}");
-    changedCategory.map((item) => {
-      return item.charAt(0).toUpperCase() + item.slice(1).toLowerCase();
-    });
-    const blog = await pool.query("SELECT * FROM blog WHERE categories = $1", [
-      changedCategory,
+    console.log(category);
+    // let changedCategory = JSON.stringify(category)
+    //   .replace("[", "{")
+    //   .replace("]", "}");
+    // console.log(changedCategory);
+    // changedCategory.map((item) => {
+    //   return item.charAt(0).toUpperCase() + item.slice(1).toLowerCase();
+    // });
+    const blog = await pool.query("SELECT * FROM blog WHERE categories = $1 ", [
+      category,
     ]);
-    res.json(blog.rows[0]);
+    res.json(blog.rows);
   } catch (err) {
     console.error(err);
   }
