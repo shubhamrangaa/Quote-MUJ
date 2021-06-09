@@ -41,7 +41,7 @@ router.post("/new", async (req, res) => {
     ]);
     const newBlog = await pool.query(
       `INSERT INTO 
-			blog(slug , categories, author, heading, caption, article_data, date_created, likes, imageURL) 
+			blog(slug , categories, author, heading, caption, article_data, date_created, likes, images) 
 			VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9) 
 		  RETURNING *`,
       [
