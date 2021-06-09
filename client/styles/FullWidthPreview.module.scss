@@ -7,7 +7,9 @@
 	width: 90%;
 	padding: 1.5rem;
 }
-
+.heading {
+	font-family: "Merriweather";
+}
 .textContainer {
 	width: 70%;
 	padding-right: 8rem;
@@ -40,13 +42,23 @@
 @media (max-width: 768px) {
 	.container {
 		flex-direction: column-reverse;
+		margin: 0.5rem auto 0.5rem auto;
+		width: 90%;
+		padding: 0.5rem;
 	}
 	.textContainer {
 		width: 100%;
 		padding: 0;
 	}
+	.textHeading {
+		font-weight: 700;
+		font-size: 26px;
+		margin: 0.5rem 0.5rem 1rem 0.5rem;
+		max-height: calc(33px * 4);
+		overflow: hidden;
+	}
 	.imageContainer {
 		width: 100%;
-		margin: auto;
+		margin: 0.5rem;
 	}
 }
