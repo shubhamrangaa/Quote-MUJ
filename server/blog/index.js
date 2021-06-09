@@ -154,4 +154,40 @@ router.post("/add-like", async (req, res) => {
     console.log(err);
   }
 });
+
+// GET A MONTH
+router.get("/monthly/:month", async (req, res) => {
+  try {
+    let { month } = req.params;
+    month = month.toLowerCase().substring(0, 3);
+    const blog = await pool.query("SELECT * FROM blog ");
+    let filteredBlogs = [];
+
+    // POPULATION filteredBlogs WITH MONTH
+    blog.rows.forEach((article) => {
+      let articleDate = article.date_created
+        .toString()
+        .substring(4, 7)
+        .toLowerCase();
+      if (articleDate === month) {
+        filteredBlogs.push(article);
+      }
+    });
+    // CLEANING UP CATEGORY FORMAT AND SEND
+    res.json(
+      filteredBlogs.map((item) => {
+        let category = item.categories.startsWith("{")
+          ? JSON.parse(item.categories.replace("{", "[").replace("}", "]"))
+          : [item.categories];
+        return {
+          ...item,
+          categories: category,
+        };
+      })
+    );
+  } catch (err) {
+    console.error(err);
+  }
+});
+
 module.exports = router;

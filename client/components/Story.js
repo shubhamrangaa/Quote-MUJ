@@ -26,7 +26,7 @@ export default function Story(props) {
       });
   };
   return (
-    <div className={mainstyles.story}>
+    <div className={mainstyles.story} key={props.id}>
       <div className={mainstyles.container}>
         <Link href={`/blogs/${props.slug}`}>
           <a className={mainstyles.heading}>{props.heading}</a>
@@ -42,8 +42,8 @@ export default function Story(props) {
               {props.author}
             </li>
             <li>
-              {props.categories.map((el) => (
-                <button className={mainstyles.button}>
+              {props.categories.map((el, id) => (
+                <button className={mainstyles.button} key={id}>
                   {el.charAt(0).toUpperCase() + el.slice(1)}
                 </button>
               ))}
@@ -60,9 +60,9 @@ export default function Story(props) {
         </div>
       </div>
       <div>
-        <Image
+        <img
           className={mainstyles.image}
-          src="/images/img.png"
+          src={props.image ? props.image : "/images/img.png"}
           alt="story picture"
           width={150}
           height={150}

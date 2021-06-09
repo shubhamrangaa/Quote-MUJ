@@ -36,6 +36,8 @@ export default function AllStories() {
             categories={el.categories}
             slug={el.slug}
             key={id}
+            id={id}
+            image={el.images}
           />
         ))}
       </div>
