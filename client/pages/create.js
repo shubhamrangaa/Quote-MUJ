@@ -62,7 +62,7 @@ const SubmissionForm = () => {
             axios
               .post(`${apiURL}/api/blogs/new`, {
                 ...content,
-                imageURL: imageURL,
+                images: imageURL,
               })
               .then((res) => {
                 setResultText({
@@ -98,7 +98,7 @@ const SubmissionForm = () => {
         axios
           .post(`${apiURL}/api/blogs/new`, {
             ...content,
-            imageURL: imageURL,
+            images: imageURL,
           })
           .then((res) => {
             console.log(res);
