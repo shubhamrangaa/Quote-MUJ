@@ -19,7 +19,7 @@ import {
 import styles from "../styles/CommunityPost.module.scss";
 
 const Share = ({ display, url }) => {
-  const website = `https://quote-muj.vercel.app/stories/${url}`;
+  const website = `https://quote-muj.vercel.app/blogs/${url}`;
   return (
     <div className={styles["socials"] + " " + styles[display ? null : "hide"]}>
       <FacebookShareButton

@@ -10,12 +10,7 @@ import React, { useState } from "react";
 export default function Story(props) {
   const slug = props.slug;
   const [likes, setLikes] = useState(props.likes);
-
-  let categories = props.categories
-    .substring(1, props.categories.length - 1)
-    .split(/(?!^)".*?"/g)
-    .toString();
-  let categoriesArr = categories.substring(1, categories.length - 1).split(",");
+  const date = new Date(props.date_created).toString().substring(3, 15);
 
   const addLike = () => {
     axios
@@ -47,11 +42,13 @@ export default function Story(props) {
               {props.author}
             </li>
             <li>
-              {categoriesArr.map((el) => (
-                <button className={mainstyles.button}>{el}</button>
+              {props.categories.map((el) => (
+                <button className={mainstyles.button}>
+                  {el.charAt(0).toUpperCase() + el.slice(1)}
+                </button>
               ))}
             </li>
-            <li>{props.date_created.toString().substring(0, 10)}</li>
+            <li>{date}</li>
             <li onClick={addLike}>
               <FontAwesomeIcon
                 className={mainstyles.FontAwesomeIconLike}

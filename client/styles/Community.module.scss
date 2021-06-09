@@ -51,6 +51,13 @@
   background-color: #070707;
   color: white;
 }
+.FontAwesomeIcon {
+  height: 2rem;
+  width: auto;
+}
+.loader {
+  text-align: center;
+}
 @media (max-width: 768px) {
   .nav {
     display: flex;
