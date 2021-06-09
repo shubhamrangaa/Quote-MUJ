@@ -5,7 +5,7 @@ import styles from "../../../styles/MonthlyNewsletter.module.scss";
 // components
 import HeadlinerMain from "../../../components/HeadlinerMain";
 import HeadlinerAside from "../../../components/HeadlinerAside";
-import OtherNews from "../../../components/OtherNews";
+import FullWidthPreview from "../../../components/FullWidthPreview";
 
 // fetch top 5 posts and pass them to components
 
@@ -171,12 +171,18 @@ const Newsletter = () => {
 
 			{/* Other News Section */}
 			<section>
+				<div className={styles.subHeadingContainer}>
+					<div className={styles.subHeadingLine} />
+					<div className={styles.subHeadingText}>Other News</div>
+					<div className={styles.subHeadingLine} />
+				</div>
 				{/* todo: style heading */}
 				{otherNewsData.map((data, i) => (
 					<div key={i.toString()}>
-						<OtherNews heading={data.heading} body={data.body} image={data.image} type={data.type} />
+						<FullWidthPreview heading={data.heading} body={data.body} image={data.image} type={data.type} />
 					</div>
 				))}
+				<div className={styles.viewAllButton}>Explore all topics</div>
 			</section>
 		</>
 	);

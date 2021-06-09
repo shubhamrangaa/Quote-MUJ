@@ -90,6 +90,38 @@ $anim-type: cubic-bezier(0.01, 1.13, 0.74, 0.97);
 	grid-template-columns: repeat(3, 3fr);
 }
 
+.viewAllButton {
+	font-family: "Merriweather";
+	cursor: pointer;
+	background-color: black;
+	color: white;
+	width: fit-content;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 5rem 0rem 5rem 0rem;
+	padding: 1rem 3rem 1rem 3rem;
+}
+
+.subHeadingContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.subHeadingLine {
+	height: 3px;
+	background-color: black;
+	flex-grow: 1;
+}
+.subHeadingText {
+	font-size: 2.5rem;
+	font-family: "Merriweather";
+	font-weight: 700;
+	padding: 2rem;
+}
+
 @media screen and(max-width:768px) {
 	.headlinerContainer {
 		grid-template-columns: auto;

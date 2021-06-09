@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "../styles/OtherNews.module.scss";
+import styles from "../styles/FullWidthPreview.module.scss";
 
-const OtherNews = (props) => {
+const FullWidthPreview = (props) => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.textContainer}>
@@ -16,4 +16,4 @@ const OtherNews = (props) => {
 	);
 };
 
-export default OtherNews;
+export default FullWidthPreview;
