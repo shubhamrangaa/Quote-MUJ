@@ -49,12 +49,6 @@ function FullStory({ story }) {
         console.log(err);
       });
   };
-  let categories = story.categories;
-  // .substring(1, story.categories.length - 1)
-  // .split(/(?!^)".*?"/g)
-  // .toString();
-  let categoriesArr = categories;
-  // let categoriesArr = categories.substring(1, categories.length - 1).split(",");
   return (
     <div>
       <div className={styles.heading}>
@@ -62,8 +56,8 @@ function FullStory({ story }) {
         <h1>{story.heading}</h1>
         <ul>
           <li>{story.author}</li>
-          {categoriesArr.map((el) => (
-            <li>{el}</li>
+          {story.categories.map((el) => (
+            <li>{el.charAt(0).toUpperCase() + el.slice(1)}</li>
           ))}
           <li>{story.date_created.toString().substring(0, 10)}</li>
           <li>5 mins Read</li>
