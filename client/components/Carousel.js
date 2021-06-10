@@ -73,6 +73,23 @@ export default function TextMobileStepper() {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
+  const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchArticles();
+  }, []);
+
+  const fetchArticles = async () => {
+    fetch("https://quote-muj.herokuapp.com/api/blogs/all").then((res) =>
+      res.json().then((data) => {
+        setArticles(data);
+        setLoading(false);
+        console.log(data)
+      })
+    );
+  };
+
   return (
     <div className={classes.root} className={styles.root}>
       

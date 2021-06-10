@@ -119,11 +119,11 @@ export default function TopStories() {
                       />
                     )}
                     <h3>{item.heading}</h3>
-                    <p>
+                    <p className={styles.caption}>
                       {item.caption}
                       <br></br>
-                      <span className={styles.userName}>by {item.author}</span>
                     </p>
+                    <span className={styles.userName}>by {item.author}</span>
                   </div>
                   {index !== 2  && <Divider />}
                 </>
@@ -133,6 +133,7 @@ export default function TopStories() {
           <Grid item xs={6}>
             <Paper className={styles.paper}>
               {articles.map((item, index) => (
+                index <2  &&
                 <>
                   <div
                     key={index}
@@ -148,14 +149,14 @@ export default function TopStories() {
                         height={item.imageMetaData.height}
                       />
                     )}
-                    <h3>{item.headline}</h3>
-                    <p>
-                      {item.description}
+                    <h3>{item.heading}</h3>
+                    <p >
+                      {item.caption}
                       <br />
                       <span className={styles.userName}>by {item.author}</span>
                     </p>
                   </div>
-                  {index !== articles.length - 1 && <Divider />}
+                  {index !== 1  && <Divider />}
                 </>
               ))}
             </Paper>
@@ -163,6 +164,7 @@ export default function TopStories() {
           <Grid item xs={3}>
             <Paper className={styles.paper}>
               {articles.map((item, index) => (
+                index <3 &&
                 <>
                   <div key={index} className={styles.element}>
                     {item.imageMetaData && (
@@ -173,14 +175,15 @@ export default function TopStories() {
                         height={item.imageMetaData.height}
                       />
                     )}
-                    <h3>{item.headline}</h3>
-                    <p>
-                      {item.description}
+                    <h3>{item.heading}</h3>
+                    <p className={styles.caption}>
+                      {item.caption}
                       <br />
-                      <span className={styles.userName}>by {item.author}</span>
+                      
                     </p>
+                    <span className={styles.userName}>by {item.author}</span>
                   </div>
-                  {index !== articles.length - 1 && <Divider />}
+                  {index !== 2 && <Divider />}
                 </>
               ))}
             </Paper>
