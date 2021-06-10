@@ -112,10 +112,10 @@ export default function TopStories() {
                   <div key={index} className={styles.element}>
                     {item.imageMetaData && (
                       <Image
-                        src="/assets/image3.png"
+                        src={item.images}
                         alt="img"
-                        width="100"
-                        height="100"
+                        width={100}
+                        height={100}
                       />
                     )}
                     <h3>{item.heading}</h3>
