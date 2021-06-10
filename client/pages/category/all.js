@@ -12,7 +12,7 @@ const all = () => {
   const [categoryWiseArticles, setCategoryWiseArticles] = useState([]);
 
   // list of categories
-  const categoryList = ["sports", "research", "news", "events"];
+  const categoryList = ["Sports", "Research", "News", "Events"];
 
   const fetchCategoryWisePosts = async (category) => {
     fetch(
@@ -90,9 +90,7 @@ const all = () => {
                         <p>{el.category}</p>
 
                         {/* Link to all posts from the category */}
-                        <Link href={"/categories/" + el.category}>
-                          View all
-                        </Link>
+                        <Link href={"/category/" + el.category}>View all</Link>
                       </div>
 
                       {/* if n>1 > use map */}
