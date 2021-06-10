@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "../../styles/StoryPage.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
-import { faBookmark } from "@fortawesome/free-regular-svg-icons";
 import axios from "axios";
 import ReactHtmlParser from "react-html-parser";
 
@@ -36,6 +35,7 @@ export const getStaticProps = async (context) => {
 function FullStory({ story }) {
   const [likes, setLikes] = useState(story.likes);
   const slug = story.slug;
+  const date = new Date(story.date_created).toString().substring(3, 15);
   const addLike = () => {
     axios
       .post(`${apiURL}/api/blogs/add-like`, {
@@ -55,11 +55,8 @@ function FullStory({ story }) {
         <h6>Bulletin</h6>
         <h1>{story.heading}</h1>
         <ul>
-          <li>{story.author}</li>
-          {story.categories.map((el) => (
-            <li>{el.charAt(0).toUpperCase() + el.slice(1)}</li>
-          ))}
-          <li>{story.date_created.toString().substring(0, 10)}</li>
+          <li>By {story.author}</li>
+          <li>{date}</li>
           <li>5 mins Read</li>
           <li onClick={addLike}>
             <FontAwesomeIcon
@@ -68,9 +65,15 @@ function FullStory({ story }) {
             />{" "}
             {likes} Likes
           </li>
-          <li>
-            <FontAwesomeIcon icon={faBookmark} />
-          </li>
+        </ul>
+        <ul className={styles.categories}>
+          {story.categories.map((el) => (
+            <li>
+              <button className={styles.button}>
+                {el.charAt(0).toUpperCase() + el.slice(1)}
+              </button>
+            </li>
+          ))}
         </ul>
       </div>
       <div className={styles.storypic}>

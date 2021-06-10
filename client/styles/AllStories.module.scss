@@ -1,5 +1,6 @@
 .storieswrapper {
   margin: 3% 15%;
+  min-height: 100vh;
 }
 
 .story {
@@ -34,6 +35,9 @@
   display: flex;
   padding: 0;
   list-style: none;
+  & li {
+    margin: auto 0;
+  }
 }
 .button {
   border: none;
@@ -78,12 +82,19 @@
   list-style: none;
   padding: 0;
 }
-
+.image {
+  margin: auto;
+  text-align: center;
+}
 @media screen and(max-width:768px) {
+  .storieswrapper {
+    margin: 3% 8%;
+  }
+
   .story {
     padding: 0 1rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 1.5fr 1fr;
+    grid-template-rows: 3fr 1fr;
   }
   .container {
     padding: 0.5rem;
@@ -93,8 +104,12 @@
   }
   .details ul {
     flex-direction: column;
+    margin: 0;
   }
   .details ul li {
     margin: 0.5rem 0;
+  }
+  .button {
+    margin: 5px;
   }
 }

@@ -1,5 +1,4 @@
 import mainstyles from "../styles/AllStories.module.scss";
-import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
@@ -41,13 +40,6 @@ export default function Story(props) {
               />{" "}
               {props.author}
             </li>
-            <li>
-              {props.categories.map((el, id) => (
-                <button className={mainstyles.button} key={id}>
-                  {el.charAt(0).toUpperCase() + el.slice(1)}
-                </button>
-              ))}
-            </li>
             <li>{date}</li>
             <li onClick={addLike}>
               <FontAwesomeIcon
@@ -56,12 +48,18 @@ export default function Story(props) {
               />{" "}
               {likes} Likes
             </li>
+            <li>
+              {props.categories.map((el, id) => (
+                <button className={mainstyles.button} key={id}>
+                  {el.charAt(0).toUpperCase() + el.slice(1)}
+                </button>
+              ))}
+            </li>
           </ul>
         </div>
       </div>
-      <div>
+      <div className={mainstyles.image}>
         <img
-          className={mainstyles.image}
           src={props.image ? props.image : "/images/img.png"}
           alt="story picture"
           width={150}
