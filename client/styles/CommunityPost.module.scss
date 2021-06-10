@@ -39,6 +39,9 @@
     transform: scale(1.2);
   }
 }
+#likebtn:hover {
+  color: #4267b2;
+}
 .FontAwesomeIconProfile {
   height: 2rem;
   width: 2rem;
@@ -46,7 +49,7 @@
 .buttons {
   padding: 5% 10%;
   display: grid;
-  grid-template-columns: 15% 15% 70%;
+  grid-template-columns: 25% 10% 65%;
 }
 .socials {
   margin: -5px 0;
