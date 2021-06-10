@@ -8,8 +8,10 @@ const PageHeader = (props) => {
     <section className={styles.top}>
       <div className={styles.headingcontainer}>
         <h1 className={styles.heading}>
-          {props.heading.slice(0, 1).toUpperCase() +
-            props.heading.slice(1).toLowerCase()}
+          {props.heading !== undefined
+            ? props.heading.slice(0, 1).toUpperCase() +
+              props.heading.slice(1).toLowerCase()
+            : "heading"}
         </h1>
       </div>
       <div className={styles.rect}>
