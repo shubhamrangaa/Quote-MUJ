@@ -4,82 +4,99 @@ import Paper from "@material-ui/core/Paper";
 import Image from "next/image";
 import Link from "next/link";
 import Divider from "@material-ui/core/Divider";
-import React from "react";
+import React , {useState, useEffect} from "react";
 import TextMobileStepper from "../components/Carousel";
 
 export default function TopStories() {
-  const newsElements = [
-    {
-      headline: "Organized expert lecture",
-      description:
-        "An online Expert Lecture was organized on Life and Literature through MS Teams.",
-      author: "random user",
-      imageMetaData: {
-        src: "/assets/image1.png",
-        alt: "Image 1",
-        width: 256,
-        height: 147,
-      },
-    },
-    {
-      headline: "Healthy lifestyle for Healthy heart.",
-      description:
-        "An online Expert Lecture was organized on Life and Literature through MS Teams.",
-      author: "random user",
-    },
-    {
-      headline: "Enhancing Research Skills and Integrity.",
-      description:
-        "An online Expert Lecture was organized on Life and Literature through MS Teams.",
-      author: "random user",
-    },
-    {
-      headline:
-        "International Virtual Conference on Physical Education and Sports Science",
-      description:
-        "Manipal University Jaipur organized the International Virtual Conference on Physical Education and Sports Science (IVCPESS-2021) from 30-31 March 2021.",
-      author: "random user",
-      imageMetaData: {
-        src: "/assets/image2.png",
-        alt: "Image 2",
-        width: 523,
-        height: 320,
-      },
-    },
-    {
-      headline: "Webinar on Trends in food Blogs",
-      description:
-        "Speaker of the session started with the new trends in food blogging.",
-      author: "random user",
-    },
-    {
-      headline: "Workshop on The Art of Story Telling",
-      description:
-        "An online workshop cum interactive session on The Art of Story Telling and Getting Published",
-      author: "random user",
-      imageMetaData: {
-        src: "/assets/image3.png",
-        alt: "Image 3",
-        width: 260,
-        height: 160,
-      },
-    },
-    {
-      headline: "Journey of a young Businesswoman",
-      description:
-        "Dept of Economics and Dept of Arts, organized a guest lecture which was very informative.",
-      author: "random user",
-    },
-    {
-      headline: "Webinar on Art of Mind Control",
-      description:
-        "Dept of Economics and Dept of Arts, organized a guest lecture which was very informative.",
-      author: "random user",
-    },
-  ];
-  const sectionOne = newsElements.slice(0, 3);
-  const sectionTwo = newsElements.slice(3, 5);
-  const sectionThree = newsElements.slice(5, 8);
+  // const newsElements = [
+  //   {
+  //     headline: "Organized expert lecture",
+  //     description:
+  //       "An online Expert Lecture was organized on Life and Literature through MS Teams.",
+  //     author: "random user",
+  //     imageMetaData: {
+  //       src: "/assets/image1.png",
+  //       alt: "Image 1",
+  //       width: 256,
+  //       height: 147,
+  //     },
+  //   },
+  //   {
+  //     headline: "Healthy lifestyle for Healthy heart.",
+  //     description:
+  //       "An online Expert Lecture was organized on Life and Literature through MS Teams.",
+  //     author: "random user",
+  //   },
+  //   {
+  //     headline: "Enhancing Research Skills and Integrity.",
+  //     description:
+  //       "An online Expert Lecture was organized on Life and Literature through MS Teams.",
+  //     author: "random user",
+  //   },
+  //   {
+  //     headline:
+  //       "International Virtual Conference on Physical Education and Sports Science",
+  //     description:
+  //       "Manipal University Jaipur organized the International Virtual Conference on Physical Education and Sports Science (IVCPESS-2021) from 30-31 March 2021.",
+  //     author: "random user",
+  //     imageMetaData: {
+  //       src: "/assets/image2.png",
+  //       alt: "Image 2",
+  //       width: 523,
+  //       height: 320,
+  //     },
+  //   },
+  //   {
+  //     headline: "Webinar on Trends in food Blogs",
+  //     description:
+  //       "Speaker of the session started with the new trends in food blogging.",
+  //     author: "random user",
+  //   },
+  //   {
+  //     headline: "Workshop on The Art of Story Telling",
+  //     description:
+  //       "An online workshop cum interactive session on The Art of Story Telling and Getting Published",
+  //     author: "random user",
+  //     imageMetaData: {
+  //       src: "/assets/image3.png",
+  //       alt: "Image 3",
+  //       width: 260,
+  //       height: 160,
+  //     },
+  //   },
+  //   {
+  //     headline: "Journey of a young Businesswoman",
+  //     description:
+  //       "Dept of Economics and Dept of Arts, organized a guest lecture which was very informative.",
+  //     author: "random user",
+  //   },
+  //   {
+  //     headline: "Webinar on Art of Mind Control",
+  //     description:
+  //       "Dept of Economics and Dept of Arts, organized a guest lecture which was very informative.",
+  //     author: "random user",
+  //   },
+  // ];
+  // const sectionOne = newsElements.slice(0, 3);
+  // const sectionTwo = newsElements.slice(3, 5);
+  // const sectionThree = newsElements.slice(5, 8);
+
+  const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchArticles();
+  }, []);
+
+  const fetchArticles = async () => {
+    fetch("https://quote-muj.herokuapp.com/api/blogs/all").then((res) =>
+      res.json().then((data) => {
+        setArticles(data);
+        setLoading(false);
+        console.log(data)
+      })
+    );
+  };
   return (
     <div className={styles.TopStories}>
       <h1 className={styles.decorated}>
@@ -89,32 +106,33 @@ export default function TopStories() {
         <Grid container spacing={3}>
           <Grid item xs={3}>
             <Paper className={styles.paper}>
-              {sectionOne.map((item, index) => (
+              {articles.map((item, index) => (
+                index < 3 && 
                 <>
                   <div key={index} className={styles.element}>
                     {item.imageMetaData && (
                       <Image
-                        src={item.imageMetaData.src}
-                        alt={item.imageMetaData.alt}
-                        width={item.imageMetaData.width}
-                        height={item.imageMetaData.height}
+                        src="/assets/image3.png"
+                        alt="img"
+                        width="100"
+                        height="100"
                       />
                     )}
-                    <h3>{item.headline}</h3>
+                    <h3>{item.heading}</h3>
                     <p>
-                      {item.description}
+                      {item.caption}
                       <br></br>
                       <span className={styles.userName}>by {item.author}</span>
                     </p>
                   </div>
-                  {index !== sectionOne.length - 1 && <Divider />}
+                  {index !== 2  && <Divider />}
                 </>
               ))}
             </Paper>
           </Grid>
           <Grid item xs={6}>
             <Paper className={styles.paper}>
-              {sectionTwo.map((item, index) => (
+              {articles.map((item, index) => (
                 <>
                   <div
                     key={index}
@@ -137,14 +155,14 @@ export default function TopStories() {
                       <span className={styles.userName}>by {item.author}</span>
                     </p>
                   </div>
-                  {index !== sectionTwo.length - 1 && <Divider />}
+                  {index !== articles.length - 1 && <Divider />}
                 </>
               ))}
             </Paper>
           </Grid>
           <Grid item xs={3}>
             <Paper className={styles.paper}>
-              {sectionThree.map((item, index) => (
+              {articles.map((item, index) => (
                 <>
                   <div key={index} className={styles.element}>
                     {item.imageMetaData && (
@@ -162,7 +180,7 @@ export default function TopStories() {
                       <span className={styles.userName}>by {item.author}</span>
                     </p>
                   </div>
-                  {index !== sectionThree.length - 1 && <Divider />}
+                  {index !== articles.length - 1 && <Divider />}
                 </>
               ))}
             </Paper>
