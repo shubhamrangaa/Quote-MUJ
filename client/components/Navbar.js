@@ -6,6 +6,24 @@ import burger from "../styles/Hamburger.module.scss";
 
 export const Navbar = () => {
   const [active, setActive] = useState(false);
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const date = new Date();
+  const currentMonth = months[date.getMonth()];
+  const currentYear = date.getFullYear();
+  const url = `/monthly/${currentYear}/${currentMonth}`;
 
   const handleClick = () => {
     setActive(!active);
@@ -28,8 +46,7 @@ export const Navbar = () => {
         <Link href="/blogs">Editorial</Link>
         <Link href="/category/categories">Categories</Link>
         <Link href="/category/upcoming">Events</Link>
-        <Link href="/monthly/2021/may">Monthly Newsletter</Link>
-        <Link href="/create">Create</Link>
+        <Link href={url}>Monthly Newsletter</Link>
       </div>
       <button
         className={
