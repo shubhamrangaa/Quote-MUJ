@@ -1,5 +1,5 @@
 import Collage from "./Collage";
-import styles from "../styles/Hero.module.scss";
+import styles from "@styles/Hero.module.scss";
 import Link from "next/link";
 
 export const Hero = () => {

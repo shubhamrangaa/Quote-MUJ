@@ -1,11 +1,11 @@
-import styles from "../styles/Topstories.module.scss";
+import styles from "@styles/Topstories.module.scss";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Image from "next/image";
 import Link from "next/link";
 import Divider from "@material-ui/core/Divider";
-import React , {useState, useEffect} from "react";
-import TextMobileStepper from "../components/Carousel";
+import React, { useState, useEffect } from "react";
+import TextMobileStepper from "../Carousel";
 
 export default function TopStories() {
   // const newsElements = [
@@ -93,7 +93,7 @@ export default function TopStories() {
       res.json().then((data) => {
         setArticles(data);
         setLoading(false);
-        console.log(data)
+        console.log(data);
       })
     );
   };
@@ -106,86 +106,97 @@ export default function TopStories() {
         <Grid container spacing={3}>
           <Grid item xs={3}>
             <Paper className={styles.paper}>
-              {articles.map((item, index) => (
-                index < 3 && 
-                <>
-                  <div key={index} className={styles.element}>
-                    {item.imageMetaData && (
-                      <Image
-                        src={item.images}
-                        alt="img"
-                        width={100}
-                        height={100}
-                      />
-                    )}
-                    <h3>{item.heading}</h3>
-                    <p className={styles.caption}>
-                      {item.caption}
-                      <br></br>
-                    </p>
-                    <span className={styles.userName}>by {item.author}</span>
-                  </div>
-                  {index !== 2  && <Divider />}
-                </>
-              ))}
+              {articles.map(
+                (item, index) =>
+                  index < 3 && (
+                    <>
+                      <div key={index} className={styles.element}>
+                        {item.imageMetaData && (
+                          <Image
+                            src={item.images}
+                            alt="img"
+                            width={100}
+                            height={100}
+                          />
+                        )}
+                        <h3>{item.heading}</h3>
+                        <p className={styles.caption}>
+                          {item.caption}
+                          <br></br>
+                        </p>
+                        <span className={styles.userName}>
+                          by {item.author}
+                        </span>
+                      </div>
+                      {index !== 2 && <Divider />}
+                    </>
+                  )
+              )}
             </Paper>
           </Grid>
           <Grid item xs={6}>
             <Paper className={styles.paper}>
-              {articles.map((item, index) => (
-                index <2  &&
-                <>
-                  <div
-                    key={index}
-                    className={
-                      index === 1 ? styles.elementmain2 : styles.elementmain
-                    }
-                  >
-                    {item.imageMetaData && (
-                      <Image
-                        src={item.imageMetaData.src}
-                        alt={item.imageMetaData.alt}
-                        width={item.imageMetaData.width}
-                        height={item.imageMetaData.height}
-                      />
-                    )}
-                    <h3>{item.heading}</h3>
-                    <p >
-                      {item.caption}
-                      <br />
-                      <span className={styles.userName}>by {item.author}</span>
-                    </p>
-                  </div>
-                  {index !== 1  && <Divider />}
-                </>
-              ))}
+              {articles.map(
+                (item, index) =>
+                  index < 2 && (
+                    <>
+                      <div
+                        key={index}
+                        className={
+                          index === 1 ? styles.elementmain2 : styles.elementmain
+                        }
+                      >
+                        {item.imageMetaData && (
+                          <Image
+                            src={item.imageMetaData.src}
+                            alt={item.imageMetaData.alt}
+                            width={item.imageMetaData.width}
+                            height={item.imageMetaData.height}
+                          />
+                        )}
+                        <h3>{item.heading}</h3>
+                        <p>
+                          {item.caption}
+                          <br />
+                          <span className={styles.userName}>
+                            by {item.author}
+                          </span>
+                        </p>
+                      </div>
+                      {index !== 1 && <Divider />}
+                    </>
+                  )
+              )}
             </Paper>
           </Grid>
           <Grid item xs={3}>
             <Paper className={styles.paper}>
-              {articles.map((item, index) => (
-                index <3 &&
-                <>
-                  <div key={index} className={styles.element}>
-                    {item.imageMetaData && (
-                      <Image
-                        src={item.imageMetaData.src}
-                        alt={item.imageMetaData.alt}
-                        width={item.imageMetaData.width}
-                        height={item.imageMetaData.height}
-                      />
-                    )}
-                    <h3>{item.heading}</h3>
-                    <p className={styles.caption}>
-                      {item.caption}
-                      <br />
-                      
-                    </p>
-                    <span className={styles.userName}>by {item.author}</span>
-                  </div>
-                  {index !== 2 && <Divider />}
-                </>
-              ))}
+              {articles.map(
+                (item, index) =>
+                  index < 3 && (
+                    <>
+                      <div key={index} className={styles.element}>
+                        {item.imageMetaData && (
+                          <Image
+                            src={item.imageMetaData.src}
+                            alt={item.imageMetaData.alt}
+                            width={item.imageMetaData.width}
+                            height={item.imageMetaData.height}
+                          />
+                        )}
+                        <h3>{item.heading}</h3>
+                        <p className={styles.caption}>
+                          {item.caption}
+                          <br />
+                        </p>
+                        <span className={styles.userName}>
+                          by {item.author}
+                        </span>
+                      </div>
+                      {index !== 2 && <Divider />}
+                    </>
+                  )
+              )}
             </Paper>
           </Grid>
         </Grid>

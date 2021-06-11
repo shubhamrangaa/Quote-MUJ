@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../styles/Collage.module.scss";
+import styles from "@styles/Collage.module.scss";
 
 export const Collage = () => {
   return (

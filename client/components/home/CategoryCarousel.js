@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import CommunityPost from "./CommunityPost";
+import CommunityPost from "../CommunityPost";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFrown } from "@fortawesome/free-regular-svg-icons";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import styles from "../styles/Community.module.scss";
+import styles from "@styles/CategoryCarousel.module.scss";
 
-const Community = () => {
+const CategoryCarousel = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -163,4 +163,4 @@ const Community = () => {
   );
 };
 
-export default Community;
+export default CategoryCarousel;

@@ -1,4 +1,4 @@
-import styles from "../styles/VlogCarousel.module.scss";
+import styles from "@styles/VlogCarousel.module.scss";
 import ReactPlayer from "react-player";
 import Carousel from "react-material-ui-carousel";
 
