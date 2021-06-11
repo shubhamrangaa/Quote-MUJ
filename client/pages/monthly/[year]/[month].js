@@ -19,13 +19,13 @@ import axios from "axios";
 // 		height: 400,
 // 	},
 // 	content: `Consequat exercitation duis officia laborum amet deserunt consectetur. Proident dolor do elit magna et nisi elit officia consectetur laborum esse. Mollit irure cillum ea laborum laboris proident velit qui qui quis. Exercitation quis dolor ad mollit irure adipisicing.
-		
+
 // 		Ex consequat quis enim exercitation laborum cupidatat id amet consectetur labore nulla veniam et ad. Laboris voluptate duis exercitation non culpa aliqua reprehenderit nisi minim dolore mollit pariatur labore laboris. Sunt velit exercitation id nostrud laborum dolore enim est. Quis aliqua deserunt laboris ut fugiat. Ex enim nisi aute deserunt magna ex. Ut quis dolor incididunt quis velit labore incididunt ad reprehenderit minim pariatur nulla tempor.
-  
+
 // 		Anim est do nostrud proident esse aliquip elit in sint. Excepteur do dolor mollit velit eiusmod ut nulla ea. Commodo aliqua pariatur non in nulla voluptate magna magna eiusmod veniam amet excepteur nulla officia. Fugiat pariatur pariatur ut ea ipsum non laborum do sit ut dolore est ex. Lorem eu veniam ex deserunt occaecat commodo anim minim ex cupidatat anim cillum.
-    
+
 //     Ex consequat quis enim exercitation laborum cupidatat id amet consectetur labore nulla veniam et ad. Laboris voluptate duis exercitation non culpa aliqua reprehenderit nisi minim dolore mollit pariatur labore laboris. Sunt velit exercitation id nostrud laborum dolore enim est. Quis aliqua deserunt laboris ut fugiat. Ex enim nisi aute deserunt magna ex. Ut quis dolor incididunt quis velit labore incididunt ad reprehenderit minim pariatur nulla tempor.
-  
+
 // 		Anim est do nostrud proident esse aliquip elit in sint. Excepteur do dolor mollit velit eiusmod ut nulla ea. Commodo aliqua pariatur non in nulla voluptate magna magna eiusmod veniam amet excepteur nulla officia. Fugiat pariatur pariatur ut ea ipsum non laborum do sit ut dolore est ex. Lorem eu veniam ex deserunt occaecat commodo anim minim ex cupidatat anim cillum.
 // 		`,
 // 	tags: ["Research", "Career"],
@@ -124,24 +124,24 @@ import axios from "axios";
 // ];
 
 export const getStaticPaths = async () => {
-  return {
-    paths: [],
-    fallback: 'blocking'
- }
-}
+	return {
+		paths: [],
+		fallback: "blocking",
+	};
+};
 
 export async function getStaticProps({ params }) {
-	const { month } = params
-	const res = await fetch(`https://quote-muj.herokuapp.com/api/blogs/monthly/${month}`)
-	const news = await res.json()
-	console.log(news)
-	return { props: { news } }
+	const { month } = params;
+	const res = await fetch(`https://quote-muj.herokuapp.com/api/blogs/monthly/${month}`);
+	const news = await res.json();
+	console.log(news);
+	return { props: { news } };
 }
 
 const Newsletter = ({ news }) => {
 	// console.log(news)
-	const {query} = useRouter();
-	const {year, month} = query;
+	const { query } = useRouter();
+	const { year, month } = query;
 	const headlinerData = news.slice(0, 1)[0];
 	const headlinerAsideData = news.slice(1, 5);
 	const otherNewsData = news.slice(5);
@@ -174,15 +174,14 @@ const Newsletter = ({ news }) => {
 					<HeadlinerMain
 						headline={headlinerData.heading}
 						content={headlinerData.caption}
-						imageMetaData={headlinerData.imageMetaData}
+						image={headlinerData.images}
 						tags={headlinerData.categories}
 					/>
 					<div className={styles.headlinerAsideContainer}>
 						{/* map headlineAside */}
 						{headlinerAsideData.map((data) => {
-							return (
-								<HeadlinerAside headline={data.heading} description={data.caption} imageMetaData={data.imageMetaData} author={data.author} />
-							);
+							console.log(headlinerAsideData);
+							return <HeadlinerAside headline={data.heading} description={data.caption} image={data.images} author={data.author} />;
 						})}
 					</div>
 				</div>
@@ -196,11 +195,14 @@ const Newsletter = ({ news }) => {
 					<div className={styles.subHeadingLine} />
 				</div>
 				{/* todo: style heading */}
-				{otherNewsData.map((data, i) => (
-					<div key={i.toString()}>
-						<FullWidthPreview heading={data.heading} body={data.caption} image={data.image} type={data.type} />
-					</div>
-				))}
+				{otherNewsData.map((data, i) => {
+					console.log(data);
+					return (
+						<div key={i.toString()}>
+							<FullWidthPreview heading={data.heading} body={data.caption} image={data.images} type={data.type} />
+						</div>
+					);
+				})}
 				<div className={styles.viewAllButton}>Explore all topics</div>
 			</section>
 		</>

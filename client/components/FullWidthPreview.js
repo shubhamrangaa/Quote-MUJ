@@ -9,9 +9,8 @@ const FullWidthPreview = (props) => {
 				<div className={styles.textBody}>{props.body}</div>
 				<div className={styles.textType}>{props.type}</div>
 			</div>
-			<div className={styles.imageContainer}>
-				<img src={props} />
-			</div>
+
+			<img className={styles.imageContainer} src={props.image ? props.image : "https://picsum.photos/300/200"} />
 		</div>
 	);
 };
