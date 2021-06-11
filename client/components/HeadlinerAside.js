@@ -10,10 +10,7 @@ const HeadlinerAside = (props) => {
   return (
     <div className={styles.headlinerAsideContainer}>
       <img
-        src={imageMetaData.src}
-        width={imageMetaData.width}
-        height={imageMetaData.height}
-        alt={imageMetaData.alt}
+        src={imageMetaData}
       />
       <div>
         <h3>{headline}</h3>

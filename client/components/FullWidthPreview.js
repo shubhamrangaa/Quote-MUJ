@@ -10,7 +10,7 @@ const FullWidthPreview = (props) => {
 				<div className={styles.textType}>{props.type}</div>
 			</div>
 			<div className={styles.imageContainer}>
-				<img src={props.image} width={300} height={200} />
+				<img src={props} />
 			</div>
 		</div>
 	);

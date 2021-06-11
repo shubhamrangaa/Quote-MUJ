@@ -7,14 +7,10 @@ import styles from "../styles/Headliner.module.scss";
 
 const HeadlinerMain = (props) => {
   const { headline, imageMetaData, content, tags } = props;
-
   return (
     <div className={styles.headlinerMainContainer}>
       <img
-        src={imageMetaData.src}
-        width={imageMetaData.width}
-        height={imageMetaData.height}
-        alt={imageMetaData.alt}
+        src={imageMetaData}
       />
       <h2>{headline}</h2>
       <p className={styles.content}>{content}</p>
