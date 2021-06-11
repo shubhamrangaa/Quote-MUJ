@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import styles from "../styles/Create.module.scss";
+import styles from "@styles/Create.module.scss";
 import Select from "react-select";
 import Dropzone from "react-dropzone";
 import Loader from "react-loader-spinner";
