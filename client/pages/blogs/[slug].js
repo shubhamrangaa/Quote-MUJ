@@ -5,7 +5,8 @@ import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import axios from "axios";
 import ReactHtmlParser from "react-html-parser";
 
-const apiURL = process.env.SERVER_URL || "https://quote-muj.herokuapp.com";
+// const apiURL = "https://quote-muj.herokuapp.com";
+const apiURL = process.env.SERVER_URL;
 
 export const getStaticPaths = async () => {
   const res = await fetch(`${apiURL}/api/blogs/all`);

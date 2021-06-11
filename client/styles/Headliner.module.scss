@@ -1,51 +1,84 @@
 .headlinerMainContainer {
-	h2 {
-		font-size: 46px;
-		font-family: "Merriweather", serif;
-	}
-	img {
-		width: 100%;
-	}
-	.content {
-		color: #4e4e4e;
-		// styles change to content text
-	}
-	.tags {
-		display: inline-block;
-		margin-right: 1rem;
-		background-color: rgb(223, 223, 223);
-		border-radius: 16px;
-		padding: 0.5rem 1rem;
-	}
+  a {
+    display: flex;
+    font-family: "Inter", sans-serif;
+    font-size: 2.6rem;
+    font-weight: 900;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    transition: 0.15s ease-in;
+
+    &:hover {
+      color: rgb(144, 144, 255);
+    }
+  }
+
+  img {
+    margin: 0 auto;
+    width: 100%;
+    max-height: 350px;
+  }
+  .content {
+    color: #4e4e4e;
+    margin: 0.35rem 0;
+    // styles change to content text
+  }
+  .tags {
+    display: inline-block;
+    margin-right: 1rem;
+    background-color: rgb(223, 223, 223);
+    border-radius: 16px;
+    padding: 0.5rem 1rem;
+  }
 }
 
 // headliner aside
 .headlinerAsideContainer {
-	display: flex;
-	flex-direction: row;
-	gap: 1.5rem;
-	margin: 1.5rem;
-	h3 {
-		margin-top: 0;
-		margin-bottom: 1rem;
-		max-height: calc(1.1rem * 3);
-		overflow: hidden;
-	}
-	img {
-		// width: 100%;
-		object-fit: cover;
-		height: 200px;
-		width: 300px;
-	}
-	.author {
-		font-style: italic;
-	}
-	.description {
-		font-size: 1rem;
-		max-height: calc(1.1rem * 5);
-		overflow: hidden;
-	}
-	@media (max-width: 768px) {
-		flex-direction: column;
-	}
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  margin: 0.5rem;
+  a {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    // max-height: calc(1.1rem * 3);
+    overflow: hidden;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.15s ease-in;
+
+    &:hover {
+      color: rgb(144, 144, 255);
+    }
+  }
+
+  .imageContainer {
+    width: 250px;
+
+    img {
+      // width: 100%;
+      margin: 0 auto;
+      object-fit: cover;
+      max-height: 180px;
+      width: 100%;
+      width: inherit;
+    }
+    @media only screen and (max-width: 700px) {
+      max-width: 300px;
+    }
+  }
+
+  .author {
+    font-style: italic;
+  }
+  .description {
+    font-size: 1rem;
+    max-height: calc(1.1rem * 5);
+    overflow: hidden;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }

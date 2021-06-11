@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import styles from "../styles/TrendingCarousel.module.scss";
+import styles from "@styles/TrendingCarousel.module.scss";
 
 const SmallWidthPreview = (props) => {
   return (

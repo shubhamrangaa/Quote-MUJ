@@ -1,102 +1,126 @@
-$outer-color: #E1E4E8;
+$outer-color: #e1e4e8;
 $border-active-color: hsl(209, 98%, 48%);
 
-:root{
-	--ck-border-radius: 0.5rem !important;
-	--ck-color-toolbar-border: #E1E4E8 !important;
-	--ck-color-base-border: #E1E4E8 !important;
-	--ck-inner-shadow: none !important;
-	--ck-color-text: #666 !important;
+:root {
+  --ck-border-radius: 0.5rem !important;
+  --ck-color-toolbar-border: #e1e4e8 !important;
+  --ck-color-base-border: #e1e4e8 !important;
+  --ck-inner-shadow: none !important;
+  --ck-color-text: #666 !important;
 }
 
-$scrollbar-bg : rgb(17, 17, 17);
+$scrollbar-bg: rgb(17, 17, 17);
 $scrollbar-thumb: rgba(49, 49, 49, 1);
 
 html,
 body {
-	padding: 0;
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-body{
-	overflow:auto;
+body {
+  overflow: auto;
 
-	&::-webkit-scrollbar-track {
-		border-radius: 10px;
-		background: inherit;
-	}
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: inherit;
+  }
 
-	&::-webkit-scrollbar {
-		width: 6px;
-		background: $scrollbar-bg;
-	}
+  &::-webkit-scrollbar {
+    width: 6px;
+    background: $scrollbar-bg;
+  }
 
-	&::-webkit-scrollbar-thumb {
-		border-radius: 10px;
-		background:$scrollbar-thumb;
-	}
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: $scrollbar-thumb;
+  }
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 textarea {
-	width:  inherit;
-	height: inherit;
-	min-height: 20vh;
-	max-height: 40vh;
-	resize: vertical;
+  width: inherit;
+  height: inherit;
+  min-height: 20vh;
+  max-height: 40vh;
+  resize: vertical;
 }
 
-.ck.ck-editor{
-	width: 100% !important;
-	max-width: 45vw !important;
-	margin: 0.5rem 0!important;
-	@media (max-width:1224px){
-		width: 90vw !important;
-		max-width: 90vw !important;
-	}
+.ck.ck-editor {
+  width: 100% !important;
+  max-width: 45vw !important;
+  margin: 0.5rem 0 !important;
+  @media (max-width: 1224px) {
+    width: 90vw !important;
+    max-width: 90vw !important;
+  }
 }
 
 .ck-rounded-corners .ck.ck-button,
 .ck-rounded-corners a.ck.ck-button,
 .ck.ck-button.ck-rounded-corners,
 a.ck.ck-button.ck-rounded-corners {
-	border-radius: 4px !important;
+  border-radius: 4px !important;
 }
 
-.select__control{
-	border-color:$outer-color !important;
-	padding: 0.5rem 1rem !important;
-	border-radius: 0.5rem !important;
+.select__control {
+  border-color: $outer-color !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.5rem !important;
 }
 
-.select__value-container{
-	padding: 0 !important;
+.select__value-container {
+  padding: 0 !important;
 }
 
-.select__placeholder{
-	font-family: -apple-system,
-		BlinkMacSystemFont,
-		Segoe UI,
-		Roboto,
-		Oxygen,
-		Ubuntu,
-		Cantarell,
-		Fira Sans,
-		Droid Sans,
-		Helvetica Neue,
-		sans-serif;
-	font-size: 1.25rem;
-	font-weight: 500;
-	letter-spacing: -0.5px;
-	color: #AFAAB0 !important;
+.select__placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #afaab0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Inter, sans-serif;
+  font-weight: 800;
+}
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.2rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+a {
+  font-family: Inter;
 }

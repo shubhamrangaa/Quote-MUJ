@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 .header {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.25rem;
+  padding: 0.25rem 1.25rem;
   background-color: black;
+  // max-height: 75px;
   color: white;
+  position: fixed;
+  width: 100%;
+  min-height: 80px;
 }
 
 .header a {
