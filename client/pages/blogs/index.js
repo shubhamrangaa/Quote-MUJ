@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import styles from "../../styles/Topstories.module.scss";
-import mainstyles from "../../styles/AllStories.module.scss";
-import Story from "../../components/Story";
+import styles from "@styles/Topstories.module.scss";
+import mainstyles from "@styles/AllStories.module.scss";
+import Story from "@components/Story";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Link from "next/link";

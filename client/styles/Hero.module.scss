@@ -3,14 +3,14 @@
 
 .hero {
   width: 100%;
-  min-height: 90vh;
+  height: 100vh;
+  padding-top: 70px;
   font-family: "Inter", sans-serif;
   background-image: url(../public/assets/Hero_Background.png);
   background-color: #0f0f0f;
   color: white;
   display: grid;
   @media (min-width: 768px) {
-    height: 630px;
     grid-template-columns: 60% 40%;
   }
 }

@@ -19,6 +19,7 @@
 .decorated > span {
   position: relative;
   display: inline-block;
+  font-family: merriweather;
 }
 .decorated > span:before,
 .decorated > span:after {
@@ -50,28 +51,24 @@
   line-height: 40px;
 }
 
-
-
 .elementmain {
   text-align: center;
 }
 
 .elementmain p {
   font-size: 16px;
-  
 }
 
-.caption{
+.caption {
   overflow: hidden;
-   text-overflow: ellipsis;
-   display: -webkit-box;
-   -webkit-line-clamp: 3; /* number of lines to show */
-   -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
 }
 
 .elementmain2 p {
   font-size: 16px;
- 
 }
 
 .root {
@@ -90,7 +87,7 @@
     display: block;
   }
 
-  .paper{
+  .paper {
     min-height: 500px;
   }
   .fullSection {

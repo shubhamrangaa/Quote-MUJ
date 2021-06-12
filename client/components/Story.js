@@ -1,4 +1,4 @@
-import mainstyles from "../styles/AllStories.module.scss";
+import mainstyles from "@styles/AllStories.module.scss";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
@@ -26,7 +26,7 @@ export default function Story(props) {
   };
   return (
     <div className={mainstyles.story} key={props.id}>
-      <div className={mainstyles.container}>
+      <div className={mainstyles.contentContainer}>
         <Link href={`/blogs/${props.slug}`}>
           <a className={mainstyles.heading}>{props.heading}</a>
         </Link>
@@ -40,30 +40,30 @@ export default function Story(props) {
               />{" "}
               {props.author}
             </li>
-            <li>{date}</li>
-            <li onClick={addLike}>
+            <li>{date.substring(0, 7)}</li>
+            {/* <li onClick={addLike}>
               <FontAwesomeIcon
                 className={mainstyles.FontAwesomeIconLike}
                 icon={faThumbsUp}
               />{" "}
               {likes} Likes
-            </li>
-            <li>
+            </li> */}
+            <li className={mainstyles.categoryContainer}>
               {props.categories.map((el, id) => (
-                <button className={mainstyles.button} key={id}>
-                  {el.charAt(0).toUpperCase() + el.slice(1)}
-                </button>
+                <Link href={`/category/${el}`} key={id}>
+                  <a className={mainstyles.button}>
+                    {el.charAt(0).toUpperCase() + el.slice(1)}
+                  </a>
+                </Link>
               ))}
             </li>
           </ul>
         </div>
       </div>
-      <div className={mainstyles.image}>
+      <div className={mainstyles.imageContainer}>
         <img
-          src={props.image ? props.image : "/images/img.png"}
+          src={props.image ? props.image : "https://picsum.photos/300/200"}
           alt="story picture"
-          width={150}
-          height={150}
         />
       </div>
     </div>

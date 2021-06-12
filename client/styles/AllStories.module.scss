@@ -1,31 +1,42 @@
 .storieswrapper {
-  margin: 3% 15%;
-  min-height: 100vh;
+  padding-top: 75px;
+  margin: 0 auto;
+  padding: 75px 1rem 0 1rem;
 }
 
 .story {
-  background-color: #f8f8f8;
+  background-color: #efefff;
   border-radius: 10px;
-  display: grid;
-  grid-template-columns: 80% 20%;
-  margin: 1rem 0;
+  // display: grid;
+  // grid-template-columns: 70% 30%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  max-width: 1250px;
 }
-.container {
-  display: grid;
-  grid-template-rows: auto;
-  padding: 1rem 2rem;
+.contentContainer {
+  // display: grid;
+  // grid-template-rows: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 .heading {
   font-family: Inter;
   font-size: 1.8rem;
-  font-weight: 700;
-  margin: 1rem 0;
+  font-weight: 900;
+  margin: 0.5rem 0;
+  color: rgb(26, 26, 26);
+  transition: 0.1s ease-in;
   &:hover {
     cursor: pointer;
+    color: #7979ff;
   }
 }
 .caption {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin: 0.5rem 0;
 }
 .details {
@@ -35,20 +46,21 @@
   display: flex;
   padding: 0;
   list-style: none;
-  & li {
-    margin: auto 0;
-  }
 }
+
+.categoryContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .button {
   border: none;
-  padding: 0.3rem 1rem;
+  padding: 0.4rem 1rem;
   text-align: center;
   text-decoration: none;
-  border-radius: 16px;
-  border-color: black;
-  border-style: solid;
-  border-width: 2px;
-  margin-left: 5px;
+  border-radius: 0.25rem;
+  margin-left: 0.45rem;
+  background-color: #ffffff;
 }
 .button:hover {
   background-color: #070707;
@@ -82,21 +94,23 @@
   list-style: none;
   padding: 0;
 }
-.image {
-  margin: auto;
-  text-align: center;
+.imageContainer {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 250px;
+    height: 180px;
+  }
 }
 @media screen and(max-width:768px) {
-  .storieswrapper {
-    margin: 3% 8%;
-  }
-
   .story {
-    padding: 0 1rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: 3fr 1fr;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
   }
-  .container {
+  .contentContainer {
     padding: 0.5rem;
   }
   .details {
@@ -111,5 +125,11 @@
   }
   .button {
     margin: 5px;
+  }
+
+  .imageContainer img {
+    margin: 0 auto;
+    width: 300px;
+    height: 200px;
   }
 }

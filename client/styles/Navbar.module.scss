@@ -5,12 +5,16 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.25rem 1.25rem;
-  background-color: black;
-  // max-height: 75px;
+  height: 75px;
   color: white;
   position: fixed;
   width: 100%;
-  min-height: 80px;
+  background-color: #000000;
+  z-index: 9999;
+  @media only screen and (max-width: 700px) {
+    min-height: 75px;
+    height: fit-content;
+  }
 }
 
 .header a {
@@ -18,7 +22,8 @@
   padding: 0.5rem 0.8rem;
   margin: 0.2rem;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 400;
   border-radius: 0.4rem;
   transition: all 0.2s ease;
   &:hover {
