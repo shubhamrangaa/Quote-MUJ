@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFrown } from "@fortawesome/free-regular-svg-icons";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import styles from "../styles/Community.module.scss";
+import styles from "../styles/CommunityPost.module.scss";
 import styles2 from "../styles/Topstories.module.scss";
 
 const TextMobileStepper = () => {
