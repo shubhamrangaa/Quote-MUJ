@@ -6,6 +6,7 @@ import Dropzone from "react-dropzone";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
+const apiURL = process.env.SERVER_URL || "https://quote-muj.herokuapp.com";
 const SubmissionForm = () => {
   const apiURL = process.env.SERVER_URL || "https://quote-muj.herokuapp.com";
   const [loading, setLoading] = useState(false);
@@ -287,11 +288,85 @@ const SubmissionForm = () => {
     </div>
   );
 };
+
+const checkToken = ()=>{
+	const password = localStorage.getItem("token");
+	let flag = false;
+	axios.get(`${apiURL}/api/blogs/confirmPassword/${password}`)
+	.then(res=>{
+		if(res.data.success){
+			flag = true;
+		}
+	})
+	return flag;
+}
+
+const Login = () => {
+	const [password, setPassword] = useState("")
+	const [error, setError] = useState("")
+	const [loading, setLoading] = useState(false)
+	const login = () => {
+		setLoading(true)
+		if(password.length){
+			axios.get(`${apiURL}/api/blogs/confirmPassword/${password}`)
+			.then(res=>{
+				if(res.data.success){
+					setIsLoggedIn(true)
+					localStorage.setItem("token",password)
+				}
+				else{
+					setError("Incorrect Password")
+					setLoading(false)
+					setTimeout(() => {
+						setError("")
+					}, 2000);
+				}
+			})
+			.catch(err=>{
+				setError(err.message)
+				setLoading(false)
+				setTimeout(() => {
+					setError("")
+				}, 2000);
+			})
+		}
+		else{
+			setError("Password cannot be empty")
+			setLoading(false)
+			setTimeout(() => {
+				setError("")
+			}, 2000);
+		}
+	}
+	return (
+		<div className={styles.logincontainer}>
+			<div className = {styles.loginflex}>
+				<input
+					className={styles.inputbox}
+					placeholder="Password"
+					value={password}
+					type="password"
+					onChange={(event) => {
+						setPassword(event.target.value);
+					}}
+				/>
+				<button
+					className={`${loading && styles.loading} ${styles.submitbtn}`}
+					onClick={login}
+				>
+					{loading ? `Loading...` : `Login`}
+				</button>
+				<p className={styles.errorText}>{error}</p>
+			</div>
+		</div>
+	)
+}
+
 const create = () => {
-  const isLoggedIn = true;
+  const [isLoggedIn, setIsLoggedIn] = useState(checkToken())
   return (
     <div className={styles.container}>
-      {isLoggedIn ? <SubmissionForm /> : <div>Not Logged In</div>}
+      {isLoggedIn ? <SubmissionForm /> : <Login/>}
     </div>
   );
 };
