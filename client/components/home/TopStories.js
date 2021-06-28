@@ -1,4 +1,5 @@
 import styles from "@styles/Topstories.module.scss";
+import { sectionHeading } from "@styles/Heading.module.scss";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Link from "next/link";
@@ -98,9 +99,9 @@ export default function TopStories() {
   };
   return (
     <div className={styles.TopStories}>
-      <h1 className={styles.decorated}>
+      <h2 className={styles.decorated + " " + sectionHeading}>
         <span>Top Stories</span>
-      </h1>
+      </h2>
       <div className={styles.fullSection}>
         <Grid container spacing={1}>
           <Grid item xs={3}>
@@ -110,14 +111,18 @@ export default function TopStories() {
                   index < 3 && (
                     <>
                       <div key={index} className={styles.element}>
-						{index===0&&(
-							<img
-								src={item.images ? item.images : "https://picsum.photos/300/200"}
-								alt="img"
-								width={256}
-								height={256}
-							/>
-						  )}
+                        {index === 0 && (
+                          <img
+                            src={
+                              item.images
+                                ? item.images
+                                : "https://picsum.photos/300/200"
+                            }
+                            alt="img"
+                            width={256}
+                            height={256}
+                          />
+                        )}
                         <h3 className={styles.heading}>{item.heading}</h3>
                         <p className={styles.contenttext}>
                           {item.caption}
@@ -137,7 +142,7 @@ export default function TopStories() {
             <Paper className={styles.paper}>
               {articles.slice(3).map(
                 (item, index) =>
-                  (index < 2) && (
+                  index < 2 && (
                     <>
                       <div
                         key={index}
@@ -145,14 +150,18 @@ export default function TopStories() {
                           index === 1 ? styles.elementmain2 : styles.elementmain
                         }
                       >
-                          {index===0&&(
-							<img
-								src={item.images ? item.images : "https://picsum.photos/300/200"}
-								alt="img"
-								width={256}
-								height={256}
-							/>
-						  )}
+                        {index === 0 && (
+                          <img
+                            src={
+                              item.images
+                                ? item.images
+                                : "https://picsum.photos/300/200"
+                            }
+                            alt="img"
+                            width={256}
+                            height={256}
+                          />
+                        )}
                         <h3 className={styles.heading}>{item.heading}</h3>
                         <p className={styles.contenttext}>
                           {item.caption}
@@ -172,14 +181,18 @@ export default function TopStories() {
                   index < 3 && (
                     <>
                       <div key={index} className={styles.element}>
-						  {index===0&&(
-							<img
-								src={item.images ? item.images : "https://picsum.photos/300/200"}
-								alt="img"
-								width={256}
-								height={256}
-							/>
-						  )}
+                        {index === 0 && (
+                          <img
+                            src={
+                              item.images
+                                ? item.images
+                                : "https://picsum.photos/300/200"
+                            }
+                            alt="img"
+                            width={256}
+                            height={256}
+                          />
+                        )}
                         <h3 className={styles.heading}>{item.heading}</h3>
                         <p className={styles.contenttext}>
                           {item.caption}

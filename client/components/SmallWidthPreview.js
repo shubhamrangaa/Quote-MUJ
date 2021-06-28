@@ -18,9 +18,9 @@ const SmallWidthPreview = (props) => {
           <img className={styles.images} src={props.image} draggable={false} />
         ) : null}
         <div>
-          <div className={styles.heading}>{props.title}</div>
+          <h3 className={styles.heading}>{props.title}</h3>
           <div className={styles.body}>{props.body}</div>
-          <div className={styles.author}>by {props.author}</div>
+          <div className={styles.author}>By {props.author}</div>
         </div>
       </div>
     </div>

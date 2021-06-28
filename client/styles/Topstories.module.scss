@@ -7,11 +7,6 @@
   padding: 3% 10%;
 }
 
-.TopStories h1 {
-  color: #585858;
-  font-family: "Inter", sans-serif;
-}
-
 .decorated {
   overflow: hidden;
   text-align: center;
@@ -19,14 +14,14 @@
 .decorated > span {
   position: relative;
   display: inline-block;
-  font-family: "Merriweather";
 }
+
 .decorated > span:before,
 .decorated > span:after {
   content: "";
   position: absolute;
   top: 50%;
-  border-bottom: 2px solid;
+  border-bottom: 2px solid #ccc;
   width: 100vw;
   margin: 0 20px;
 }
@@ -37,8 +32,8 @@
   left: 100%;
 }
 
-.heading{
-	margin-bottom: 0.5rem;
+.heading {
+  margin-bottom: 0.5rem;
 }
 
 .paper {
@@ -61,7 +56,7 @@
 }
 
 .elementmain2 {
-	text-align: center;
+  text-align: center;
 }
 
 .elementmain p {
@@ -76,17 +71,17 @@
   -webkit-box-orient: vertical;
 }
 
-.element{
-	display: grid;
-	place-items: center;
+.element {
+  display: grid;
+  place-items: center;
 }
 
 .elementmain2 p {
   font-size: 16px;
 }
 
-.contenttext{
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.contenttext {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .root {

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Libre+Baskerville:wght@400;700&display=swap");
 $outer-color: #e1e4e8;
 $border-active-color: hsl(209, 98%, 48%);
 
@@ -99,26 +100,31 @@ h4,
 h5,
 h6 {
   font-family: Inter, sans-serif;
-  font-weight: 800;
-}
-h1 {
-  font-size: 4rem;
 }
 
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
 h2 {
   font-size: 3rem;
+  font-weight: 700;
 }
 h3 {
   font-size: 1.8rem;
+  font-weight: 700;
 }
 h4 {
   font-size: 1.5rem;
+  font-weight: 600;
 }
 h5 {
   font-size: 1.2rem;
+  font-weight: 500;
 }
 h6 {
   font-size: 1rem;
+  font-weight: 500;
 }
 
 a {

@@ -1,4 +1,5 @@
 import styles from "@styles/VlogCarousel.module.scss";
+import { sectionHeading } from "@styles/Heading.module.scss";
 import ReactPlayer from "react-player";
 import Carousel from "react-material-ui-carousel";
 
@@ -20,7 +21,7 @@ const VlogCarousel = () => {
 
   return (
     <div className={styles.carousel}>
-      <p>Vlogs & Podcast</p>
+      <h2 className={sectionHeading}>Vlogs & Podcast</h2>
 
       <Carousel
         navButtonsAlwaysVisible={true}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "@styles/Topstories.module.scss";
+import { sectionHeading } from "@styles/Heading.module.scss";
 import mainstyles from "@styles/AllStories.module.scss";
 import Story from "@components/Story";
 import Loader from "react-loader-spinner";
@@ -50,9 +51,9 @@ export default function AllStories() {
 
   return (
     <div className={mainstyles.storieswrapper}>
-      <h1 className={styles.decorated}>
+      <h2 className={styles.decorated + " " + sectionHeading}>
         <span>All Stories</span>
-      </h1>
+      </h2>
       {loading ? (
         <Loader
           className={mainstyles.loader}

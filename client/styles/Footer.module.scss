@@ -1,134 +1,134 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 $title-color: #0070f3;
 $body-color: #151515;
 
 .footer {
-	position:sticky;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	background-color: $body-color;
-	color: white;
+  position: sticky;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $body-color;
+  color: white;
 }
 
 .footer a {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	flex-direction: row;
-	line-height: normal;
-	padding: 0 0 0.2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  line-height: normal;
+  padding: 0 0 0.2rem;
 }
 
 .logo {
-	height: 1em;
-	margin-left: 0.5rem;
+  height: 1em;
+  margin-left: 0.5rem;
 }
 
 .FontAwesomeIcon {
-	flex:1;
-	height: 3rem;
-	width: 3rem;
+  flex: 1;
+  height: 3rem;
+  width: 3rem;
 }
 
-.iconsHolder{
-	@media (max-width:1224px) {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin: 0 0 2rem;
-	}
+.iconsHolder {
+  @media (max-width: 1224px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 2rem;
+  }
 }
 
 .iconsWrapper {
-	display: inline-flex !important;
-	height: 3rem;
-	width: 3rem;
-	padding:0.75rem !important;
-	margin: 0 1rem 0 0;
-	background: white;
-	color: $body-color;
-	border-radius: 1000rem;
+  display: inline-flex !important;
+  height: 3rem;
+  width: 3rem;
+  padding: 0.75rem !important;
+  margin: 0 1rem 0 0;
+  background: white;
+  color: $body-color;
+  border-radius: 1000rem;
 }
 
 .left,
 .right {
-	margin: 50px;
-	@media (max-width:1224px) {
-		margin: 50px 50px 25px;
-	}
+  margin: 50px;
+  @media (max-width: 1224px) {
+    margin: 50px 50px 25px;
+  }
 }
 
 .left {
-	display: flex;
-	flex-grow: 1;
+  display: flex;
+  flex-grow: 1;
 }
 
 .right {
-	margin: auto 5%;
-	@media (max-width:1224px){
-		margin:0 50px 2rem;
-	}
+  margin: auto 5%;
+  @media (max-width: 1224px) {
+    margin: 0 50px 2rem;
+  }
 }
 
 .left ul {
-	margin: 0px 30px;
-	@media (max-width:1224px) {
-		margin-block-start: 1em;
-		margin-block-end: 1em;
-		padding: 0 1rem;
-	}
+  margin: 0px 30px;
+  @media (max-width: 1224px) {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding: 0 1rem;
+  }
 }
 
 .left li {
-	list-style: none;
-	line-height: 30px;
+  list-style: none;
+  line-height: 30px;
 }
 
 .footerpara {
-	letter-spacing: 1px;
+  letter-spacing: 1px;
 }
 
 .footerHeading {
-	font-family: 'Merriweather', serif;
-	margin-top: 0;
-	vertical-align: top;
-	padding: 0 1rem;
+  font-family: "Merriweather", serif;
+  margin-top: 0;
+  vertical-align: top;
+  padding: 0 1rem;
 }
 
 .footerHeadingContainer {
-	display: inline-flex;
-	flex-direction: row;
-	align-items: flex-start;
-	vertical-align: top;
-	cursor: pointer;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: flex-start;
+  vertical-align: top;
+  cursor: pointer;
 }
 
-.icon{
-	vertical-align: top;
+.icon {
+  vertical-align: top;
 }
 
 @media (max-width: 600px) {
-	.grid {
-		width: 100%;
-		flex-direction: column;
-	}
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
 
-	.footer {
-		flex-direction: column;
-	}
+  .footer {
+    flex-direction: column;
+  }
 
-	.right {
-		position: static;
-	}
+  .right {
+    position: static;
+  }
 
-	.footerHeading {
-		margin-top: 0px;
-	}
+  .footerHeading {
+    margin-top: 0px;
+  }
 
-	.left {
-		display: flex;
-		flex-direction: column;
-	}
+  .left {
+    display: flex;
+    flex-direction: column;
+  }
 }
