@@ -12,10 +12,6 @@
   background-color: #000000;
   backdrop-filter: blur(40px);
   z-index: 9999;
-  @media only screen and (max-width: 700px) {
-    min-height: 75px;
-    height: fit-content;
-  }
 }
 
 .header a:not(.brand) {
@@ -50,6 +46,19 @@
 @media (max-width: 768px) {
   .header {
     display: block;
+    // flex-direction: column;
+    min-height: 75px;
+    height: fit-content;
+    position: relative;
+    overflow: visible !important;
+    padding: 0.25rem 1.5rem;
+  }
+  .header > div {
+    overflow: visible !important;
+  }
+  .header .brandImage {
+    position: absolute;
+    bottom: -20px !important;
   }
   .header a {
     font-size: 1rem;
