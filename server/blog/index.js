@@ -192,4 +192,19 @@ router.get("/monthly/:month", async (req, res) => {
   }
 });
 
+router.get("/confirmPassword/:pass", async (req, res) => {
+  try {
+    const { pass } = req.params;
+	let success = false;
+    if(pass==="1234abcd"){
+		success=true;
+	}
+    res.json({
+      "success":success
+    });
+  } catch (err) {
+    console.error(err);
+  }
+});
+
 module.exports = router;

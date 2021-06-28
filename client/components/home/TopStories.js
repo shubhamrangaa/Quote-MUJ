@@ -1,7 +1,6 @@
 import styles from "@styles/Topstories.module.scss";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
-import Image from "next/image";
 import Link from "next/link";
 import Divider from "@material-ui/core/Divider";
 import React, { useState, useEffect } from "react";
@@ -103,7 +102,7 @@ export default function TopStories() {
         <span>Top Stories</span>
       </h1>
       <div className={styles.fullSection}>
-        <Grid container spacing={3}>
+        <Grid container spacing={1}>
           <Grid item xs={3}>
             <Paper className={styles.paper}>
               {articles.map(
@@ -111,22 +110,22 @@ export default function TopStories() {
                   index < 3 && (
                     <>
                       <div key={index} className={styles.element}>
-                        {item.imageMetaData && (
-                          <Image
-                            src={item.images}
-                            alt="img"
-                            width={100}
-                            height={100}
-                          />
-                        )}
-                        <h3>{item.heading}</h3>
-                        <p className={styles.caption}>
+						{index===0&&(
+							<img
+								src={item.images ? item.images : "https://picsum.photos/300/200"}
+								alt="img"
+								width={256}
+								height={256}
+							/>
+						  )}
+                        <h3 className={styles.heading}>{item.heading}</h3>
+                        <p className={styles.contenttext}>
                           {item.caption}
                           <br></br>
                         </p>
-                        <span className={styles.userName}>
+                        {/* <span className={styles.userName}>
                           by {item.author}
-                        </span>
+                        </span> */}
                       </div>
                       {index !== 2 && <Divider />}
                     </>
@@ -136,9 +135,9 @@ export default function TopStories() {
           </Grid>
           <Grid item xs={6}>
             <Paper className={styles.paper}>
-              {articles.map(
+              {articles.slice(3).map(
                 (item, index) =>
-                  index < 2 && (
+                  (index < 2) && (
                     <>
                       <div
                         key={index}
@@ -146,21 +145,18 @@ export default function TopStories() {
                           index === 1 ? styles.elementmain2 : styles.elementmain
                         }
                       >
-                        {item.imageMetaData && (
-                          <Image
-                            src={item.imageMetaData.src}
-                            alt={item.imageMetaData.alt}
-                            width={item.imageMetaData.width}
-                            height={item.imageMetaData.height}
-                          />
-                        )}
-                        <h3>{item.heading}</h3>
-                        <p>
+                          {index===0&&(
+							<img
+								src={item.images ? item.images : "https://picsum.photos/300/200"}
+								alt="img"
+								width={256}
+								height={256}
+							/>
+						  )}
+                        <h3 className={styles.heading}>{item.heading}</h3>
+                        <p className={styles.contenttext}>
                           {item.caption}
                           <br />
-                          <span className={styles.userName}>
-                            by {item.author}
-                          </span>
                         </p>
                       </div>
                       {index !== 1 && <Divider />}
@@ -171,27 +167,24 @@ export default function TopStories() {
           </Grid>
           <Grid item xs={3}>
             <Paper className={styles.paper}>
-              {articles.map(
+              {articles.slice(5).map(
                 (item, index) =>
                   index < 3 && (
                     <>
                       <div key={index} className={styles.element}>
-                        {item.imageMetaData && (
-                          <Image
-                            src={item.imageMetaData.src}
-                            alt={item.imageMetaData.alt}
-                            width={item.imageMetaData.width}
-                            height={item.imageMetaData.height}
-                          />
-                        )}
-                        <h3>{item.heading}</h3>
-                        <p className={styles.caption}>
+						  {index===0&&(
+							<img
+								src={item.images ? item.images : "https://picsum.photos/300/200"}
+								alt="img"
+								width={256}
+								height={256}
+							/>
+						  )}
+                        <h3 className={styles.heading}>{item.heading}</h3>
+                        <p className={styles.contenttext}>
                           {item.caption}
                           <br />
                         </p>
-                        <span className={styles.userName}>
-                          by {item.author}
-                        </span>
                       </div>
                       {index !== 2 && <Divider />}
                     </>

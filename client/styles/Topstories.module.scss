@@ -19,7 +19,7 @@
 .decorated > span {
   position: relative;
   display: inline-block;
-  font-family: merriweather;
+  font-family: "Merriweather";
 }
 .decorated > span:before,
 .decorated > span:after {
@@ -37,6 +37,10 @@
   left: 100%;
 }
 
+.heading{
+	margin-bottom: 0.5rem;
+}
+
 .paper {
   padding: 4%;
   text-align: left;
@@ -44,6 +48,7 @@
   font-family: "Noto Sans JP", sans-serif;
   display: inline-block;
   min-height: 720px;
+  box-shadow: none !important;
 }
 
 .userName {
@@ -53,6 +58,10 @@
 
 .elementmain {
   text-align: center;
+}
+
+.elementmain2 {
+	text-align: center;
 }
 
 .elementmain p {
@@ -67,8 +76,17 @@
   -webkit-box-orient: vertical;
 }
 
+.element{
+	display: grid;
+	place-items: center;
+}
+
 .elementmain2 p {
   font-size: 16px;
+}
+
+.contenttext{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .root {
