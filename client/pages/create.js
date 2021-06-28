@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import styles from "@styles/Create.module.scss";
+import styles from "../styles/Create.module.scss";
 import Select from "react-select";
 import Dropzone from "react-dropzone";
 import Loader from "react-loader-spinner";
@@ -37,6 +37,13 @@ const SubmissionForm = () => {
         flag = false;
       }
     });
+    if (
+      !/http(?:s?):\/\/(?:www\.)?youtu(?:be\.com\/watch\?v=|\.be\/)([\w\-\_]*)(&(amp;)?‌​[\w\?‌​=]*)?/g.test(
+        content["video"]
+      )
+    ) {
+      flag = false;
+    }
     return flag;
   };
   const submitHandler = () => {
@@ -134,6 +141,7 @@ const SubmissionForm = () => {
     categories: [],
     article_data: {},
     likes: 0,
+    video: "",
   });
   const { CKEditor, ClassicEditor } = editorRef.current || {};
 
@@ -248,6 +256,18 @@ const SubmissionForm = () => {
           Selected File : {files[files.length - 1].name}
         </p>
       )}
+      <input
+        className={styles.inputbox}
+        placeholder="Video URL"
+        value={content.video}
+        type="text"
+        onChange={(event) => {
+          setContent({
+            ...content,
+            video: event.target.value,
+          });
+        }}
+      />
       <button
         className={`${loading && styles.loading} ${styles.submitbtn}`}
         onClick={submitHandler}

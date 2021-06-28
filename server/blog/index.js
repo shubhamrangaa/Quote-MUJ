@@ -14,6 +14,7 @@ router.post("/new", async (req, res) => {
       article_data,
       likes,
       images,
+      videos,
     } = req.body;
 
     // NANO ID LOGIC
@@ -33,8 +34,8 @@ router.post("/new", async (req, res) => {
     // ADDING TO DATABASE QUERY
     const newBlog = await pool.query(
       `INSERT INTO 
-			blog(slug , author, heading, caption, article_data, date_created, likes, images, categories) 
-			VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9) 
+			blog(slug , author, heading, caption, article_data, date_created, likes, images, categories, videos) 
+			VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) 
 		  RETURNING *`,
       [
         slug,
@@ -46,6 +47,7 @@ router.post("/new", async (req, res) => {
         likes,
         images,
         categories,
+        videos,
       ]
     );
     // TO ADD TO CATEGORY TABLE
