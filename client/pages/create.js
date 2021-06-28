@@ -5,6 +5,7 @@ import Select from "react-select";
 import Dropzone from "react-dropzone";
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import dynamic from 'next/dynamic'
 
 const apiURL = process.env.SERVER_URL || "https://quote-muj.herokuapp.com";
 const SubmissionForm = () => {
@@ -289,18 +290,6 @@ const SubmissionForm = () => {
   );
 };
 
-const checkToken = ()=>{
-	const password = localStorage.getItem("token");
-	let flag = false;
-	axios.get(`${apiURL}/api/blogs/confirmPassword/${password}`)
-	.then(res=>{
-		if(res.data.success){
-			flag = true;
-		}
-	})
-	return flag;
-}
-
 const Login = () => {
 	const [password, setPassword] = useState("")
 	const [error, setError] = useState("")
@@ -312,7 +301,7 @@ const Login = () => {
 			.then(res=>{
 				if(res.data.success){
 					setIsLoggedIn(true)
-					localStorage.setItem("token",password)
+					// localStorage.setItem("token",password)
 				}
 				else{
 					setError("Incorrect Password")
@@ -363,7 +352,18 @@ const Login = () => {
 }
 
 const create = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(checkToken())
+	// const checkToken = ()=>{
+	// 	const password = localStorage.getItem("token");
+	// 	let flag = false;
+	// 	axios.get(`${apiURL}/api/blogs/confirmPassword/${password}`)
+	// 	.then(res=>{
+	// 		if(res.data.success){
+	// 			flag = true;
+	// 		}
+	// 	})
+	// 	return flag;
+	// }
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
   return (
     <div className={styles.container}>
       {isLoggedIn ? <SubmissionForm /> : <Login/>}
