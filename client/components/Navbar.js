@@ -31,15 +31,15 @@ export const Navbar = () => {
 
   return (
     <div className={styles.header}>
-      <Link href="/">
-        <a>
-          <Image
-            src="/assets/Quote.png"
-            alt="logo"
-            width={48}
-            height={44}
-          ></Image>
-        </a>
+      <Link href="/" className={styles.brand}>
+        {/* <a> */}
+        <Image
+          src="/assets/Quote.png"
+          alt="logo"
+          width={48}
+          height={44}
+        ></Image>
+        {/* </a> */}
       </Link>
       <div className={styles[active ? "mobileContainer" : "container"]}>
         <Link href="/">Home</Link>
@@ -47,7 +47,6 @@ export const Navbar = () => {
         <Link href="/category/all">Categories</Link>
         <Link href="/category/upcoming">Events</Link>
         <Link href={url}>Monthly Newsletter</Link>
-
       </div>
       <button
         className={

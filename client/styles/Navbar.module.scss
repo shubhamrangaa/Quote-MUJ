@@ -17,7 +17,7 @@
   }
 }
 
-.header a {
+.header a:not(.brand) {
   text-align: center;
   padding: 0.5rem 0.8rem;
   margin: 0.2rem;
@@ -34,9 +34,11 @@
     background-color: rgb(190, 190, 190);
   }
 }
+
 .container {
   display: flex;
 }
+
 .mobileContainer {
   display: flex;
   align-items: center;
