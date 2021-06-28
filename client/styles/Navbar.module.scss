@@ -4,12 +4,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.25rem 1.25rem;
+  padding: 0.25rem 5.5rem;
   height: 75px;
   color: white;
   position: fixed;
   width: 100%;
   background-color: #000000;
+  backdrop-filter: blur(40px);
   z-index: 9999;
   @media only screen and (max-width: 700px) {
     min-height: 75px;
@@ -19,19 +20,22 @@
 
 .header a:not(.brand) {
   text-align: center;
-  padding: 0.5rem 0.8rem;
-  margin: 0.2rem;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 400;
-  border-radius: 0.4rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  position: relative;
   transition: all 0.2s ease;
-  &:hover {
-    background-color: #ddd;
-    color: black;
+  &:hover::after {
+    content: "";
+    height: 2px;
+    position: absolute;
+    background: #fff;
+    border-radius: 4rem;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
   }
   &:active {
-    background-color: rgb(190, 190, 190);
+    background-color: #cccccc30;
   }
 }
 
