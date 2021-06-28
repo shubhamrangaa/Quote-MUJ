@@ -290,7 +290,7 @@ const SubmissionForm = () => {
   );
 };
 
-const Login = () => {
+const Login = (props) => {
 	const [password, setPassword] = useState("")
 	const [error, setError] = useState("")
 	const [loading, setLoading] = useState(false)
@@ -300,7 +300,7 @@ const Login = () => {
 			axios.get(`${apiURL}/api/blogs/confirmPassword/${password}`)
 			.then(res=>{
 				if(res.data.success){
-					setIsLoggedIn(true)
+					props.setIsLoggedIn(true)
 					// localStorage.setItem("token",password)
 				}
 				else{
@@ -366,7 +366,7 @@ const create = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   return (
     <div className={styles.container}>
-      {isLoggedIn ? <SubmissionForm /> : <Login/>}
+      {isLoggedIn ? <SubmissionForm /> : <Login setIsLoggedIn={setIsLoggedIn}/>}
     </div>
   );
 };
