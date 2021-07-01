@@ -34,6 +34,7 @@ export const Navbar = () => {
       <Link href="/" className={styles.brand}>
         {/* <a> */}
         <Image
+          className={styles.brandImage}
           src="/assets/Quote.png"
           alt="logo"
           width={48}

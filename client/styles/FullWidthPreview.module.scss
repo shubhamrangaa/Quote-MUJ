@@ -1,66 +1,66 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 
 .container {
-	display: flex;
-	flex-direction: row;
-	margin: 1rem auto 1rem auto;
-	width: 90%;
-	padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  margin: 1rem auto 1rem auto;
+  width: 90%;
+  padding: 1.5rem;
 }
 .heading {
-	font-family: "Merriweather";
+  font-family: "Merriweather";
 }
 .textContainer {
-	width: 70%;
-	padding-right: 8rem;
+  width: 70%;
+  padding-right: 8rem;
 }
 .textHeading {
-	font-family: "Inter";
-	font-weight: 800;
-	font-size: 30px;
-	margin: 1.5rem 0.5rem 1.5rem 0.5rem;
-	max-height: calc(35px * 2);
-	overflow: hidden;
+  font-family: "Inter";
+  font-weight: 800;
+  font-size: 30px;
+  margin: 1.5rem 0.5rem 1.5rem 0.5rem;
+  max-height: calc(35px * 2);
+  overflow: hidden;
 }
 .textBody {
-	font-family: "Open Sans", sans-serif;
-	color: #585858;
-	margin: 0.5rem;
-	font-size: 18px;
-	max-height: calc(25px * 3);
-	overflow: hidden;
+  font-family: "Open Sans", sans-serif;
+  color: #585858;
+  margin: 0.5rem;
+  font-size: 18px;
+  max-height: calc(25px * 3);
+  overflow: hidden;
 }
 .textType {
-	font-family: "Open Sans", sans-serif;
-	font-style: italic;
-	margin: 0.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  margin: 0.5rem;
 }
 .imageContainer {
-	height: 200px;
-	width: 300px;
-	object-fit: cover;
-	margin: auto;
+  height: 200px;
+  width: 300px;
+  object-fit: cover;
+  margin: auto;
 }
 @media (max-width: 768px) {
-	.container {
-		flex-direction: column-reverse;
-		margin: 0.5rem auto 0.5rem auto;
-		width: 90%;
-		padding: 0.5rem;
-	}
-	.textContainer {
-		width: 100%;
-		padding: 0;
-	}
-	.textHeading {
-		font-weight: 700;
-		font-size: 26px;
-		margin: 0.5rem 0.5rem 1rem 0.5rem;
-		max-height: calc(33px * 4);
-		overflow: hidden;
-	}
-	.imageContainer {
-		width: 100%;
-		margin: 0.5rem;
-	}
+  .container {
+    flex-direction: column-reverse;
+    margin: 0.5rem auto 0.5rem auto;
+    width: 90%;
+    padding: 0.5rem;
+  }
+  .textContainer {
+    width: 100%;
+    padding: 0;
+  }
+  .textHeading {
+    font-weight: 700;
+    font-size: 26px;
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
+    max-height: calc(33px * 4);
+    overflow: hidden;
+  }
+  .imageContainer {
+    width: 100%;
+    margin: 0.5rem;
+  }
 }

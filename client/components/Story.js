@@ -28,19 +28,21 @@ export default function Story(props) {
     <div className={mainstyles.story} key={props.id}>
       <div className={mainstyles.contentContainer}>
         <Link href={`/blogs/${props.slug}`}>
-          <a className={mainstyles.heading}>{props.heading}</a>
+          <a className={mainstyles.heading}>
+            <h3>{props.heading}</h3>
+          </a>
         </Link>
         <p className={mainstyles.caption}>{props.caption}</p>
         <div className={mainstyles.details}>
           <ul>
             <li>
-              <FontAwesomeIcon
+              {/* <FontAwesomeIcon
                 className={mainstyles.FontAwesomeIcon}
                 icon={faUserCircle}
-              />{" "}
-              {props.author}
+              /> */}
+              By {props.author},
             </li>
-            <li>{date.substring(0, 7)}</li>
+            <li>{date}</li>
             {/* <li onClick={addLike}>
               <FontAwesomeIcon
                 className={mainstyles.FontAwesomeIconLike}

@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 $title-color: #0070f3;
-
-
 
 .container {
   min-height: 100vh;
@@ -142,7 +140,7 @@ $title-color: #0070f3;
 .right {
   position: absolute;
   right: 6px;
-  }
+}
 
 .left ul {
   margin: 0px 30px;
@@ -158,7 +156,7 @@ $title-color: #0070f3;
 }
 
 .footerHeading {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   margin-top: 50px;
 }
 
@@ -173,11 +171,11 @@ $title-color: #0070f3;
   .right {
     position: static;
   }
-  .footerHeading{
+  .footerHeading {
     margin-top: 0px;
   }
-  .left{
+  .left {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
   }
 }
