@@ -69,14 +69,15 @@ const all = () => {
 
                       {/* if n>1 > use map */}
                       <SmallWidthPreview
+                        slug={el.article.slug}
                         title={el.article.heading}
                         body={el.article.caption.slice(0, 150) + "..."}
                         type={el.article.categories}
                         author={el.article.author}
                         // remove sample image in production
                         image={
-                          el.article.image
-                            ? el.article.image
+                          el.article.images != ""
+                            ? el.article.images
                             : "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60"
                         }
                         key={id}
