@@ -5,6 +5,9 @@ import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import axios from "axios";
 import ReactHtmlParser from "react-html-parser";
 import readTime from "../../utils/useReadTime";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 // const apiURL = process.env.SERVER_URL;
 // const apiURL = "https://quote-muj.herokuapp.com";
@@ -40,6 +43,7 @@ function FullStory({ story }) {
   const slug = story.slug;
   const date = new Date(story.date_created).toString().substring(3, 15);
   const read = readTime(story.article_data.data);
+  const images = JSON.parse(story.images);
   const addLike = () => {
     axios
       .post(`${apiURL}/api/blogs/add-like`, {
@@ -74,9 +78,66 @@ function FullStory({ story }) {
         </ul>
       </div>
       {story.images !== "" ? (
-        <div className={styles.storypic}>
-          <img src={story.images} alt="story-picture"></img>
-        </div>
+		  story.images.length!==1?(
+			<Carousel
+				additionalTransfrom={0}
+				arrows
+				autoPlay
+				autoPlaySpeed={3000}
+				centerMode={false}
+				className=""
+				containerClass="container-with-dots"
+				dotListClass=""
+				draggable
+				focusOnSelect={false}
+				infinite
+				itemClass=""
+				keyBoardControl
+				minimumTouchDrag={80}
+				renderButtonGroupOutside={false}
+				renderDotsOutside={false}
+				responsive={{
+					desktop: {
+						breakpoint: {
+							max: 3000,
+							min: 1024
+						},
+						items: 1,
+						partialVisibilityGutter: 40
+					},
+					mobile: {
+						breakpoint: {
+							max: 464,
+							min: 0
+						},
+						items: 1,
+						partialVisibilityGutter: 30
+					},
+					tablet: {
+						breakpoint: {
+							max: 1024,
+							min: 464
+						},
+						items: 1,
+						partialVisibilityGutter: 30
+					}
+				}}
+				showDots={false}
+				sliderClass=""
+				slidesToSlide={1}
+				swipeable
+				>
+				{images.map(item=>(
+					<div className={styles.storypic}>
+						<img src={item} alt="story-picture"></img>
+					</div>
+				))}
+			</Carousel>
+		  ):(
+			<div className={styles.storypic}>
+				<img src={images[0]} alt="story-picture"></img>
+			</div>
+		  )
       ) : null}
 
       {/* <div className={styles.text}>{story.caption}</div> */}

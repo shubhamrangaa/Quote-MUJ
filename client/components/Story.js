@@ -10,6 +10,14 @@ export default function Story(props) {
   const slug = props.slug;
   const [likes, setLikes] = useState(props.likes);
   const date = new Date(props.date_created).toString().substring(3, 15);
+  let image;
+  	try{
+		image = JSON.parse(props.image)[0]
+	}
+	catch{
+		image = props.image
+	}
+	console.log(image)
 
   const addLike = () => {
     axios
@@ -64,7 +72,7 @@ export default function Story(props) {
       </div>
       <div className={mainstyles.imageContainer}>
         <img
-          src={props.image ? props.image : "https://picsum.photos/300/200"}
+          src={image ? image : "https://picsum.photos/300/200"}
           alt="story picture"
         />
       </div>
