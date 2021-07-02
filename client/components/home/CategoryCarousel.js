@@ -80,9 +80,10 @@ const CategoryCarousel = () => {
           <button className={styles.button} onClick={fetchLatest}>
             Latest
           </button>
-          {CATEGORY_LIST.map((category) => {
+          {CATEGORY_LIST.map((category, id) => {
             return (
               <button
+                key={id}
                 className={styles.button}
                 onClick={(e) => fetchCategory(category)}
               >

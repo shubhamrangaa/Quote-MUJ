@@ -1,21 +1,21 @@
 import styles from "@styles/VlogCarousel.module.scss";
 import { sectionHeading } from "@styles/Heading.module.scss";
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/youtube";
 import Carousel from "react-material-ui-carousel";
 
 const VlogCarousel = () => {
   var videos = [
     {
-      url: "https://www.youtube.com/watch?v=vhnhUq8E-ZA",
+      url: "https://youtube.com/watch?v=vhnhUq8E-ZA",
     },
     {
-      url: "https://www.youtube.com/watch?v=YT4GQQRHHBQ",
+      url: "https://youtu.be/hTXLTOeogz8",
     },
     {
-      url: "https://www.youtube.com/watch?v=oOgpTRs--Do",
+      url: "https://youtube.com/watch?v=oOgpTRs--Do",
     },
     {
-      url: "https://www.youtube.com/watch?v=0Rh8CTlbLng",
+      url: "https://youtube.com/watch?v=0Rh8CTlbLng",
     },
   ];
 
@@ -29,17 +29,18 @@ const VlogCarousel = () => {
       <Carousel
         navButtonsAlwaysVisible={true}
         autoPlay={false}
-        cycleNavigation={false}
+        cycleNavigation={true}
       >
-        {videos.map((vid, i) => (
-          <VideoPlayer key={i} vid={vid} />
+        {videos.map((vid, id) => (
+          // <VideoPlayer key={i} vid={vid} />
+          <ReactPlayer key={id} className={styles.player} url={vid.url} />
         ))}
       </Carousel>
     </div>
   );
 };
 
-function VideoPlayer(props) {
-  return <ReactPlayer className={styles.player} url={props.vid.url} />;
-}
+// function VideoPlayer(props) {
+//   return <ReactPlayer className={styles.player} url={props.vid.url} />;
+// }
 export default VlogCarousel;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../../styles/StoryPage.module.scss";
+import styles from "@styles/StoryPage.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import axios from "axios";
@@ -8,6 +8,7 @@ import readTime from "../../utils/useReadTime";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import ReactPlayer from "react-player";
 
 // const apiURL = process.env.SERVER_URL;
 // const apiURL = "https://quote-muj.herokuapp.com";
@@ -44,12 +45,11 @@ function FullStory({ story }) {
   const date = new Date(story.date_created).toString().substring(3, 15);
   const read = readTime(story.article_data.data);
   let images;
-  	try{
-		images = JSON.parse(story.images)
-	}
-	catch{
-		images = [story.images]
-	}
+  try {
+    images = JSON.parse(story.images);
+  } catch {
+    images = [story.images];
+  }
   const addLike = () => {
     axios
       .post(`${apiURL}/api/blogs/add-like`, {
@@ -130,8 +130,8 @@ function FullStory({ story }) {
             slidesToSlide={1}
             swipeable
           >
-            {images.map((item) => (
-              <div className={styles.storypic}>
+            {images.map((item, id) => (
+              <div className={styles.storypic} key={id}>
                 <img src={item} alt="story-picture"></img>
               </div>
             ))}
@@ -147,6 +147,8 @@ function FullStory({ story }) {
       <div className={styles.text}>
         <>{ReactHtmlParser(story.article_data.data)}</>
       </div>
+      {console.log(story.video)}
+      {/* <ReactPlayer url={story.videos} /> */}
       <div className={styles.categories}>
         <ul>
           {story.categories.map((el, id) => (
