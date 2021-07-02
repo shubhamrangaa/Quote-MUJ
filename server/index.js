@@ -1,3 +1,4 @@
+const rateLimit = require("express-rate-limit");
 const express = require("express");
 const morgan = require("morgan");
 const helmet = require("helmet");
@@ -15,6 +16,10 @@ app.use(
     origin: "*",
   })
 );
+app.use(rateLimit({
+	windowMs: 5000,
+	max: 100,
+}))
 
 app.use(express.json());
 app.use("/api/blogs", blog);
