@@ -43,10 +43,13 @@ function FullStory({ story }) {
   const slug = story.slug;
   const date = new Date(story.date_created).toString().substring(3, 15);
   const read = readTime(story.article_data.data);
-  console.log(story.images);
-  if (story.images) {
-    var images = JSON.parse(story.images);
-  }
+  let images;
+  	try{
+		images = JSON.parse(story.images)
+	}
+	catch{
+		images = [story.images]
+	}
   const addLike = () => {
     axios
       .post(`${apiURL}/api/blogs/add-like`, {
@@ -85,15 +88,12 @@ function FullStory({ story }) {
           <Carousel
             additionalTransfrom={0}
             arrows
-            autoPlay
-            autoPlaySpeed={3000}
             centerMode={false}
             className=""
             containerClass="container-with-dots"
             dotListClass=""
             draggable
             focusOnSelect={false}
-            infinite
             itemClass=""
             keyBoardControl
             minimumTouchDrag={80}
