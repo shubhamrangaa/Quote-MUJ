@@ -8,6 +8,7 @@ import readTime from "../../utils/useReadTime";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import ReactPlayer from "react-player";
 
 // const apiURL = process.env.SERVER_URL;
 // const apiURL = "https://quote-muj.herokuapp.com";
@@ -146,6 +147,8 @@ function FullStory({ story }) {
       <div className={styles.text}>
         <>{ReactHtmlParser(story.article_data.data)}</>
       </div>
+      {console.log(story.video)}
+      {/* <ReactPlayer url={story.videos} /> */}
       <div className={styles.categories}>
         <ul>
           {story.categories.map((el, id) => (
