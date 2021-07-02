@@ -123,7 +123,10 @@ export default function TopStories() {
                             height={256}
                           />
                         )}
-                        <h3 className={styles.heading}>{item.heading}</h3>
+                        <Link href={`/blogs/${item.slug}`}>
+                          <h3 className={styles.heading}>{item.heading}</h3>
+                        </Link>
+
                         <p className={styles.contenttext}>
                           {item.caption}
                           <br></br>
@@ -162,7 +165,9 @@ export default function TopStories() {
                             height={256}
                           />
                         )}
-                        <h3 className={styles.heading}>{item.heading}</h3>
+                        <Link href={`/blogs/${item.slug}`}>
+                          <h3 className={styles.heading}>{item.heading}</h3>
+                        </Link>
                         <p className={styles.contenttext}>
                           {item.caption}
                           <br />
@@ -193,7 +198,9 @@ export default function TopStories() {
                             height={256}
                           />
                         )}
-                        <h3 className={styles.heading}>{item.heading}</h3>
+                        <Link href={`/blogs/${item.slug}`}>
+                          <h3 className={styles.heading}>{item.heading}</h3>
+                        </Link>
                         <p className={styles.contenttext}>
                           {item.caption}
                           <br />

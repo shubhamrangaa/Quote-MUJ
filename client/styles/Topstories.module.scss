@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap");
-
 .TopStories {
   justify-content: center;
   text-align: center;
@@ -35,13 +32,17 @@
 .heading {
   margin-bottom: 0.5rem;
   text-align: center;
+  transition: 0.2s all;
+  &:hover {
+    cursor: pointer;
+    color: #7979ff;
+  }
 }
 
 .paper {
   padding: 4%;
   text-align: left;
   font-size: 14px;
-  font-family: "Noto Sans JP", sans-serif;
   display: inline-block;
   min-height: 720px;
   box-shadow: none !important;
@@ -80,11 +81,6 @@
 .elementmain2 p {
   font-size: 16px;
 }
-
-.contenttext {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
 .root {
   display: none;
 }
