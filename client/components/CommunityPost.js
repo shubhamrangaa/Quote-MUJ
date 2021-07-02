@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Paper from "@material-ui/core/Paper";
-import styles from "../styles/CommunityPost.module.scss";
+import styles from "@styles/CommunityPost.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
@@ -31,15 +31,9 @@ const CommunityPost = (props) => {
     <div>
       <Paper elevation={1} className={styles.main}>
         <div className={styles.header}>
-          <div className={styles.profile}>
-            <FontAwesomeIcon
-              className={styles.FontAwesomeIconProfile}
-              icon={faUserCircle}
-            />
-          </div>
           <div className={styles.user}>
-            <p id={styles.username}>{props.author}</p>
-            <p id={styles.designation}>Staff Writer, Mumbai</p>
+            <h3>{props.heading}</h3>
+            <p id={styles.designation}>By {props.author}</p>
           </div>
         </div>
         <div className={styles.content}>
