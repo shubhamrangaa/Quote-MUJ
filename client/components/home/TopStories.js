@@ -3,7 +3,6 @@ import { sectionHeading, decorated } from "@styles/Heading.module.scss";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Link from "next/link";
-import Divider from "@material-ui/core/Divider";
 import React, { useState, useEffect } from "react";
 import TextMobileStepper from "../Carousel";
 
@@ -135,7 +134,6 @@ export default function TopStories() {
                           by {item.author}
                         </span> */}
                       </div>
-                      {/* {index !== 2 && <Divider />} */}
                     </>
                   )
               )}
@@ -173,7 +171,6 @@ export default function TopStories() {
                           <br />
                         </p>
                       </div>
-                      {/* {index !== 1 && <Divider />} */}
                     </>
                   )
               )}
@@ -206,7 +203,6 @@ export default function TopStories() {
                           <br />
                         </p>
                       </div>
-                      {index !== 2 && <Divider />}
                     </>
                   )
               )}
