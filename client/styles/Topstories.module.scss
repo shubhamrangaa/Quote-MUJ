@@ -1,6 +1,6 @@
 .TopStories {
   justify-content: center;
-  text-align: center;
+  // text-align: center;
   padding: 3% 10%;
 }
 
@@ -31,7 +31,7 @@
 
 .heading {
   margin-bottom: 0.5rem;
-  text-align: center;
+  // text-align: center;
   transition: 0.2s all;
   &:hover {
     cursor: pointer;
@@ -40,29 +40,35 @@
 }
 
 .paper {
-  padding: 4%;
+  // padding: 4%;
   text-align: left;
-  font-size: 14px;
+  // font-size: 14px;
   display: inline-block;
   min-height: 720px;
   box-shadow: none !important;
 }
 
-.userName {
-  font-size: 18px;
-  line-height: 40px;
-}
+// .userName {
+//   font-size: 18px;
+//   line-height: 40px;
+// }
 
 .elementmain {
-  text-align: center;
+  // text-align: center;
 }
 
 .elementmain2 {
-  text-align: center;
+  // text-align: center;
 }
 
-.elementmain p {
-  font-size: 16px;
+// .elementmain p {
+//   font-size: 16px;
+// }
+
+.paper img {
+  // min-height: 200px;
+  // max-height: 600px;
+  width: 100%;
 }
 
 .caption {
@@ -75,7 +81,7 @@
 
 .element {
   display: grid;
-  place-items: center;
+  // place-items: center;
 }
 
 .elementmain2 p {

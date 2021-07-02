@@ -1,7 +1,7 @@
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useRouter } from "next/router";
 import styles from "@styles/MonthlyNewsletter.module.scss";
-
+import { sectionHeading, decorated } from "@styles/Heading.module.scss";
 // components
 import HeadlinerMain from "@components/HeadlinerMain";
 import HeadlinerAside from "@components/HeadlinerAside";
@@ -63,9 +63,9 @@ const Newsletter = ({ news }) => {
             {/* todo: style heading */}
             {/* <h2 className={sectionHeading}>Headliners</h2> */}
             <div className={styles.subHeadingContainer}>
-              <div className={styles.subHeadingLine} />
-              <h2 className={styles.subHeadingText}>Headliners</h2>
-              <div className={styles.subHeadingLine} />
+              <h2 className={decorated + " " + sectionHeading}>
+                <span>Headliners</span>
+              </h2>
             </div>
             <div className={styles.headlinerContainer}>
               <HeadlinerMain
@@ -97,9 +97,12 @@ const Newsletter = ({ news }) => {
           {/* Other News Section */}
           <section>
             <div className={styles.subHeadingContainer}>
-              <div className={styles.subHeadingLine} />
-              <h2 className={styles.subHeadingText}>Other News</h2>
-              <div className={styles.subHeadingLine} />
+              {/* <div className={styles.subHeadingLine} /> */}
+              <h2 className={decorated + " " + sectionHeading}>
+                <span>Other News</span>
+              </h2>
+              {/* <h2 className={styles.subHeadingText}></h2> */}
+              {/* <div className={styles.subHeadingLine} /> */}
             </div>
             {/* todo: style heading */}
             {otherNewsData.map((data, i) => {

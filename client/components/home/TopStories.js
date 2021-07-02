@@ -1,5 +1,5 @@
 import styles from "@styles/Topstories.module.scss";
-import { sectionHeading } from "@styles/Heading.module.scss";
+import { sectionHeading, decorated } from "@styles/Heading.module.scss";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Link from "next/link";
@@ -99,11 +99,11 @@ export default function TopStories() {
   };
   return (
     <div className={styles.TopStories}>
-      <h2 className={styles.decorated + " " + sectionHeading}>
+      <h2 className={decorated + " " + sectionHeading}>
         <span>Top Stories</span>
       </h2>
       <div className={styles.fullSection}>
-        <Grid container spacing={1}>
+        <Grid container spacing={4}>
           <Grid item xs={3}>
             <Paper className={styles.paper}>
               {articles.map(
@@ -119,8 +119,8 @@ export default function TopStories() {
                                 : "https://picsum.photos/300/200"
                             }
                             alt="img"
-                            width={256}
-                            height={256}
+                            // width={256}
+                            // height={256}
                           />
                         )}
                         <Link href={`/blogs/${item.slug}`}>
@@ -135,7 +135,7 @@ export default function TopStories() {
                           by {item.author}
                         </span> */}
                       </div>
-                      {index !== 2 && <Divider />}
+                      {/* {index !== 2 && <Divider />} */}
                     </>
                   )
               )}
@@ -161,8 +161,8 @@ export default function TopStories() {
                                 : "https://picsum.photos/300/200"
                             }
                             alt="img"
-                            width={256}
-                            height={256}
+                            // width={256}
+                            // height={256}
                           />
                         )}
                         <Link href={`/blogs/${item.slug}`}>
@@ -173,7 +173,7 @@ export default function TopStories() {
                           <br />
                         </p>
                       </div>
-                      {index !== 1 && <Divider />}
+                      {/* {index !== 1 && <Divider />} */}
                     </>
                   )
               )}

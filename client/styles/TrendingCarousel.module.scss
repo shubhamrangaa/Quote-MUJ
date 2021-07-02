@@ -35,6 +35,10 @@
   text-align: start;
   font-weight: 600;
   margin-left: 15px;
+  &:hover {
+    cursor: pointer;
+    color: #7979ff;
+  }
 }
 // .body::after {
 //   content: "...";

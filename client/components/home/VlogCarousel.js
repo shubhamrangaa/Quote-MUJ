@@ -21,7 +21,10 @@ const VlogCarousel = () => {
 
   return (
     <div className={styles.carousel}>
-      <h2 className={sectionHeading}>Vlogs & Podcast</h2>
+      <h2 className={styles.decorated + " " + sectionHeading}>
+        <span>Vlogs & Podcast</span>
+      </h2>
+      {/* <h2 className={sectionHeading}></h2> */}
 
       <Carousel
         navButtonsAlwaysVisible={true}
