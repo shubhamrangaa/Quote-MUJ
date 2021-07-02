@@ -73,9 +73,11 @@ function FullStory({ story }) {
           </div>
         </ul>
       </div>
-      <div className={styles.storypic}>
-        <img src={story.images} alt="story-picture"></img>
-      </div>
+      {story.images !== "" ? (
+        <div className={styles.storypic}>
+          <img src={story.images} alt="story-picture"></img>
+        </div>
+      ) : null}
 
       {/* <div className={styles.text}>{story.caption}</div> */}
       <div className={styles.text}>
