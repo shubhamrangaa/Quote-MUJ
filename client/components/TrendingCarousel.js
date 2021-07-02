@@ -7,87 +7,42 @@ import styles from "../styles/TrendingCarousel.module.scss";
 
 import SmallWidthPreview from "./SmallWidthPreview";
 
-const data = [
-  {
-    title: "Webinar on Trends in food Blogs",
-    image:
-      "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
-    body: "Speaker of the session started with the new trends in food blogging the new trends in food blogging the new trends in food blogging",
-    author: "random user",
-  },
-  {
-    title: "Webinar on Trends in food Blogs",
-    image:
-      "https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60",
-    body: "Speaker of the session started with the new trends in food blogging the new trends in food blogging the new trends in food blogging",
-    author: "random user",
-  },
-  {
-    title: "Webinar on Trends in food Blogs",
-    image:
-      "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
-    body: "Speaker of the session started with the new trends in food blogging the new trends in food blogging the new trends in food blogging",
-    author: "random user",
-  },
-  {
-    title: "Webinar on Trends in food Blogs",
-    image:
-      "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
-    body: "Speaker of the session started with the new trends in food blogging the new trends in food blogging the new trends in food blogging",
-    author: "random user",
-  },
-];
+const TrendingCarousel = ({ news: data }) => {
+	const responsive = {
+		desktop: {
+			breakpoint: { max: 3000, min: 1024 },
+			items: 2,
+			slidesToSlide: 1,
+		},
+		tablet: {
+			breakpoint: { max: 1024, min: 464 },
+			items: 1,
+			slidesToSlide: 1,
+		},
+		mobile: {
+			breakpoint: { max: 464, min: 0 },
+			items: 1,
+			slidesToSlide: 1,
+		},
+	};
 
-const TrendingCarousel = () => {
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 2,
-      slidesToSlide: 1,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      slidesToSlide: 1,
-    },
-  };
-
-  return (
-    <div className={styles.community}>
-      <div className={styles.nav}>
-        <div className={styles.title}>
-          <FontAwesomeIcon
-            icon={faArrowAltCircleUp}
-            className={styles.faIcon}
-          />
-          TRENDING
-        </div>
-      </div>
-      <div className={styles.container}>
-        <Carousel
-          responsive={responsive}
-          showDots={true}
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-        >
-          {data.map((item, i) => (
-            <SmallWidthPreview
-              title={item.title}
-              image={item.image}
-              body={item.body}
-              author={item.author}
-              index={i}
-              key={i}
-            />
-          ))}
-        </Carousel>
-      </div>
-    </div>
-  );
+	return (
+		<div className={styles.community}>
+			<div className={styles.nav}>
+				<div className={styles.title}>
+					<FontAwesomeIcon icon={faArrowAltCircleUp} className={styles.faIcon} />
+					TRENDING
+				</div>
+			</div>
+			<div className={styles.container}>
+				<Carousel responsive={responsive} showDots={true} removeArrowOnDeviceType={["tablet", "mobile"]}>
+					{data.map((item, i) => (
+						<SmallWidthPreview slug={item.slug} title={item.heading} image={item.images} body={item.caption} author={item.author} index={i} key={i} />
+					))}
+				</Carousel>
+			</div>
+		</div>
+	);
 };
 
 export default TrendingCarousel;
