@@ -84,7 +84,6 @@ function FullStory({ story }) {
         <>{ReactHtmlParser(story.article_data.data)}</>
       </div>
       <div className={styles.categories}>
-        <p>Topics</p>
         <ul>
           {story.categories.map((el) => (
             <li>
