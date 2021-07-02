@@ -7,12 +7,12 @@ import Loader from "react-loader-spinner";
 import SmallWidthPreview from "../../components/SmallWidthPreview";
 import PageHeader from "../../components/PageHeader";
 
+// constants
+import CATEGORY_LIST from "../../constants/CategoryList";
+
 const all = () => {
   const [loading, setLoading] = useState(true);
   const [categoryWiseArticles, setCategoryWiseArticles] = useState([]);
-
-  // list of categories
-  const categoryList = ["Sports", "Research", "News", "Events"];
 
   const fetchCategoryWisePosts = async (category) => {
     fetch(
@@ -33,7 +33,7 @@ const all = () => {
 
   useEffect(() => {
     setLoading(true);
-    categoryList.forEach((category) => {
+    CATEGORY_LIST.forEach((category) => {
       fetchCategoryWisePosts(category);
     });
     setLoading(false);
@@ -43,32 +43,6 @@ const all = () => {
     <>
       <PageHeader heading="All Categories" />
       <div className={styles.allCategoryContainer}>
-        {/* category pills  */}
-        <section>
-          <div className={styles.nav} style={{ paddingRight: "1.5rem" }}>
-            <div className={styles.categories}>
-              <button
-                className={styles.button}
-                // onClick={fetchLatest}
-              >
-                Latest
-              </button>
-              {categoryList.map((category) => {
-                return (
-                  <button
-                    key={category}
-                    className={styles.button}
-                    // onClick={(e) => fetchCategory(category)}
-                  >
-                    {category.slice(0, 1).toUpperCase() +
-                      category.slice(1).toLowerCase()}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
         {/* 1 post per category */}
         <div>
           {loading ? (

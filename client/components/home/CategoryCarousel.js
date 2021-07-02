@@ -1,12 +1,20 @@
 import React, { useState, useEffect } from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import CommunityPost from "../CommunityPost";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFrown } from "@fortawesome/free-regular-svg-icons";
+// components
 import Loader from "react-loader-spinner";
+import Carousel from "react-multi-carousel";
+import CommunityPost from "../CommunityPost";
+
+// styles
+import "react-multi-carousel/lib/styles.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import styles from "@styles/CategoryCarousel.module.scss";
+
+// icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFrown } from "@fortawesome/free-regular-svg-icons";
+
+// constants
+import CATEGORY_LIST from "../../constants/CategoryList";
 
 const CategoryCarousel = () => {
   const [articles, setArticles] = useState([]);
@@ -66,60 +74,22 @@ const CategoryCarousel = () => {
   return (
     <div className={styles.community}>
       <div className={styles.nav}>
-        <p id={styles.title}>Categories</p>
-        <p className={styles.line}></p>
+        <h3 id={styles.title}>Categories</h3>
+        {/* <p className={styles.line}></p> */}
         <div className={styles.categories}>
           <button className={styles.button} onClick={fetchLatest}>
             Latest
           </button>
-          <button
-            className={styles.button}
-            onClick={(e) => fetchCategory("News")}
-          >
-            News
-          </button>
-          <button
-            className={styles.button}
-            onClick={(e) => fetchCategory("Sports")}
-          >
-            Sports
-          </button>
-          <button
-            className={styles.button}
-            onClick={(e) => fetchCategory("Events")}
-          >
-            Events
-          </button>
-          <button
-            className={styles.button}
-            onClick={(e) => fetchCategory("Research")}
-          >
-            Research
-          </button>
-          <button
-            className={styles.button}
-            onClick={(e) => fetchCategory("Placements")}
-          >
-            Placements
-          </button>
-          <button
-            className={styles.button}
-            onClick={(e) => fetchCategory("Academics")}
-          >
-            Academics
-          </button>
-          <button
-            className={styles.button}
-            onClick={(e) => fetchCategory("Leadership")}
-          >
-            Leadership
-          </button>
-          <button
-            className={styles.button}
-            onClick={(e) => fetchCategory("Accreditation")}
-          >
-            Accreditation
-          </button>
+          {CATEGORY_LIST.map((category) => {
+            return (
+              <button
+                className={styles.button}
+                onClick={(e) => fetchCategory(category)}
+              >
+                {category}
+              </button>
+            );
+          })}
         </div>
       </div>
       <div className={styles.container}>

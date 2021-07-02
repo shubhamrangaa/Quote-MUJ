@@ -1,53 +1,65 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-
 .community {
-  background-color: #f5f5f5;
+  background-color: #f7fafc;
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
 }
 .nav {
+  padding-top: 1rem;
   display: flex;
-  padding-left: 1.5rem;
+  align-items: center;
+  padding: 3% 10%;
+  padding-bottom: 0;
+  position: relative;
 }
 #title {
-  font-size: 25px;
-  margin-top: 15px;
-  padding-left: 10%;
+  margin: 0;
+  margin-right: 1.5rem;
+  margin-left: 1rem;
+  position: relative;
+  &::after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    color: #333;
+    position: absolute;
+  }
 }
 .categories {
+  width: 100%;
   display: flex;
   overflow-x: scroll;
 }
 .categories::-webkit-scrollbar {
   display: none;
 }
-.line {
-  margin-left: 10px;
-  border-left: 2px solid #585858;
-  height: 40px;
-}
+
 .container {
-  color: #585858;
+  color: #f7fafc;
   justify-content: center;
   text-align: center;
   padding: 3% 10%;
 }
 .button {
-  background-color: #f5f5f5;
+  background-color: #fff;
   border: none;
   color: black;
   padding: 0.3rem 1rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  margin: 20px 10px;
+  // margin: 20px 10px;
+  margin-left: 1rem;
   cursor: pointer;
   border-radius: 16px;
-  border-color: black;
+  border-color: #4a5568;
   border-style: solid;
   border-width: 2px;
+  transition: 0.2s all;
 }
 .button:hover {
+  border-color: #070707;
   background-color: #070707;
   color: white;
 }
@@ -65,14 +77,12 @@
     flex-direction: column;
   }
   #title {
-    margin: 5px 0 0 10px;
-    font-size: 1.3rem;
+    // margin: 5px 0 0 10px;
+    // font-size: 1.3rem;
+    margin-bottom: 1.5rem;
     padding: 0;
   }
-  .line {
-    margin: 5px 0 -35px 10px;
-    border-left: 0;
-    border-top: 2px solid #585858;
-    width: 2.5rem;
+  .categories {
+    margin-bottom: 1rem;
   }
 }
