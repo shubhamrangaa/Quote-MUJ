@@ -40,7 +40,7 @@ const Category = ({ news }) => {
   const otherNewsData = news.slice(5);
   return (
     <>
-      {!news ? (
+      {Object.keys(news).length ? (
         <div>
           <PageHeader heading={categoryName} />
           <section>
