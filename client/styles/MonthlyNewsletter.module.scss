@@ -134,6 +134,9 @@ $anim-type: cubic-bezier(0.01, 1.13, 0.74, 0.97);
 }
 
 @media screen and(max-width:768px) {
+  .top {
+    padding-top: 0;
+  }
   .headlinerContainer {
     grid-template-columns: auto;
     margin: 0.5rem;

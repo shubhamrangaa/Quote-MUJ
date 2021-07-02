@@ -3,13 +3,12 @@
 }
 
 .heading {
-  padding: 3% 30%;
+  padding: 4% 20%;
 
-  h1 {
-    font-family: Arial;
+  h2 {
     margin: 0;
-    padding: 10px 0px;
-    font-size: 60px;
+    margin-top: 80px;
+    // padding: 10px 0px;
   }
   h6 {
     margin: 0;
@@ -17,12 +16,48 @@
   }
   ul {
     list-style: none;
-    display: flex;
-    gap: 10px;
     padding: 0;
     li {
-      margin-right: 3rem;
+      margin-right: 0.5rem;
     }
+  }
+}
+
+.metaData {
+  display: flex;
+  flex-wrap: wrap;
+  // flex-direction: column;
+  // justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+
+  display: flex;
+  // font-size: 0.9rem;
+  color: #4a5568;
+  position: relative;
+  li:not(:last-child):after {
+    content: "·";
+    position: absolute;
+    // left: 2px;
+    margin-left: 5px;
+  }
+}
+
+.categories {
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  p {
+    color: #718096;
+  }
+  padding: 3% 20%;
+  // margin-top: 1.5rem;
+  padding-top: 1rem;
+
+  li {
+    margin-right: 1rem;
   }
 }
 .FontAwesomeIcon {
@@ -37,20 +72,30 @@
 .storypic {
   width: 100%;
   text-align: center;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  img {
+    position: absolute;
+    // top: -60%;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 }
 .text {
-  padding: 3% 30%;
+  padding: 3% 20%;
 }
 .button {
+  background-color: #edf2f7;
   border: none;
   padding: 0.3rem 1rem;
   text-align: center;
   text-decoration: none;
   border-radius: 16px;
-  border-color: black;
-  border-style: solid;
-  border-width: 2px;
+  transition: 0.2s all;
   &:hover {
+    // border: #070707;
     background-color: #070707;
     color: white;
   }
@@ -58,31 +103,27 @@
 
 @media screen and (max-width: 768px) {
   .heading {
-    h1 {
-      font-size: 2.5rem;
+    h2 {
+      font-size: 40px;
     }
     ul {
       li {
-        margin-right: 0;
+        margin-right: 0.5rem;
       }
     }
   }
   .heading,
-  .text {
+  .text,
+  .categories {
     padding: 3% 10%;
   }
   .storypic {
+    // height: max-content;
+    height: 450px;
     img {
-      width: 80%;
+      top: 0;
+      // width: 80%;
+      // height: min-content;
     }
-  }
-  .button {
-    padding: 0.1rem 0.5rem;
-    font-size: 0.8rem;
-  }
-  .categories {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr;
   }
 }

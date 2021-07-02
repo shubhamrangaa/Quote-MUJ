@@ -54,21 +54,34 @@ function FullStory({ story }) {
   return (
     <div>
       <div className={styles.heading}>
-        <h6>Bulletin</h6>
-        <h1>{story.heading}</h1>
+        <h2>{story.heading}</h2>
         <ul>
-          <li>By {story.author}</li>
-          <li>{date}</li>
-          <li>5 mins Read</li>
-          <li onClick={addLike}>
-            <FontAwesomeIcon
-              className={styles.FontAwesomeIcon}
-              icon={faThumbsUp}
-            />{" "}
-            {likes} Likes
-          </li>
+          <div className={styles.metaData}>
+            <li>By {story.author}</li>
+
+            <li>{date}</li>
+            <li>5 mins Read</li>
+            <li onClick={addLike}>
+              <FontAwesomeIcon
+                className={styles.FontAwesomeIcon}
+                icon={faThumbsUp}
+              />{" "}
+              {likes} Likes
+            </li>
+          </div>
         </ul>
-        <ul className={styles.categories}>
+      </div>
+      <div className={styles.storypic}>
+        <img src={story.images} alt="story-picture"></img>
+      </div>
+
+      {/* <div className={styles.text}>{story.caption}</div> */}
+      <div className={styles.text}>
+        <>{ReactHtmlParser(story.article_data.data)}</>
+      </div>
+      <div className={styles.categories}>
+        <p>Topics</p>
+        <ul>
           {story.categories.map((el) => (
             <li>
               <button className={styles.button}>
@@ -77,14 +90,6 @@ function FullStory({ story }) {
             </li>
           ))}
         </ul>
-      </div>
-      <div className={styles.storypic}>
-        <img src="/images/img.png" alt="story-picture"></img>
-      </div>
-
-      <div className={styles.text}>{story.caption}</div>
-      <div className={styles.text}>
-        <>{ReactHtmlParser(story.article_data.data)}</>
       </div>
     </div>
   );
