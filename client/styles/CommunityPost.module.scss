@@ -1,40 +1,45 @@
 .main {
   margin: 0 1rem 1.5rem 1rem !important;
+  padding: 3% 10%;
 }
 .header,
 .content {
-  display: flex;
   margin: auto;
   justify-content: center;
   align-items: center;
 }
 .header {
-  display: flex;
-  // grid-template-columns: 30% 70%;
-  padding: 5% 10%;
+  margin-bottom: 0.5rem;
 }
 .content {
-  padding: 5% 10%;
   text-align: left;
 }
 .user {
   text-align: left;
   display: grid;
+  h4 {
+    transition: 0.2s ease;
+    margin-bottom: 1rem;
+  }
+  h4:hover {
+    cursor: pointer;
+    color: #7979ff;
+  }
 }
 #username {
-  font-size: 1.3rem;
   margin: 0;
 }
 #designation {
+  font-style: italic;
   font-size: 0.9rem;
   margin: 0;
 }
 .FontAwesomeIcon {
   height: 1.3rem;
   width: 1.3rem;
-  transition: 0.4s;
+  transition: 0.2s;
   &:hover {
-    color: #aaa;
+    color: #4267b2;
     cursor: pointer;
     transform: scale(1.2);
   }
@@ -47,9 +52,11 @@
   width: 2rem;
 }
 .buttons {
-  padding: 5% 10%;
-  display: grid;
-  grid-template-columns: 25% 10% 65%;
+  margin-top: 1.5rem;
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  justify-content: center;
 }
 .socials {
   margin: -5px 0;

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "next/link";
 import Paper from "@material-ui/core/Paper";
 import styles from "@styles/CommunityPost.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -32,7 +33,9 @@ const CommunityPost = (props) => {
       <Paper elevation={1} className={styles.main}>
         <div className={styles.header}>
           <div className={styles.user}>
-            <h3>{props.heading}</h3>
+            <Link href={`/blogs/${props.slug}`}>
+              <h4>{props.heading}</h4>
+            </Link>
             <p id={styles.designation}>By {props.author}</p>
           </div>
         </div>
@@ -44,7 +47,7 @@ const CommunityPost = (props) => {
           )}
         </div>
         <div className={styles.buttons}>
-          <span>
+          <div style={{ display: "flex", gap: "0.5rem" }}>
             <FontAwesomeIcon
               className={styles.FontAwesomeIcon}
               id={styles.likebtn}
@@ -52,7 +55,7 @@ const CommunityPost = (props) => {
               onClick={(e) => addLike(props.slug)}
             />{" "}
             {likes}
-          </span>
+          </div>
           <FontAwesomeIcon
             className={styles.FontAwesomeIcon}
             icon={faShareAlt}
