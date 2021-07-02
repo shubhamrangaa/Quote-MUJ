@@ -1,4 +1,3 @@
-// @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
 $title-color: #0070f3;
 $body-color: #151515;
@@ -12,7 +11,7 @@ $body-color: #151515;
   color: white;
 }
 
-.footer a {
+.footer a:not(.brand) {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -41,10 +40,16 @@ $body-color: #151515;
   }
 }
 
+.linksWrapper{
+	*{
+		padding: 0.4rem 0;
+	}
+}
+
 .iconsWrapper {
   display: inline-flex !important;
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
   padding: 0.75rem !important;
   margin: 0 1rem 0 0;
   background: white;
@@ -87,7 +92,7 @@ $body-color: #151515;
 }
 
 .footerpara {
-  letter-spacing: 1px;
+  letter-spacing: 0.3px;
 }
 
 .footerHeading {
@@ -95,6 +100,7 @@ $body-color: #151515;
   margin-top: 0;
   vertical-align: top;
   padding: 0 1rem;
+  font-size: 2rem;
 }
 
 .footerHeadingContainer {

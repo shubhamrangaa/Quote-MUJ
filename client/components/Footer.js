@@ -4,14 +4,18 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
 import Image from "next/image";
+import months from "../constants/Months";
 
 function Footer() {
+  const date = new Date();
+  const currentMonth = months[date.getMonth()];
+  const currentYear = date.getFullYear();
+  const url = `/monthly/${currentYear}/${currentMonth}`;
   return (
     <div className={styles.footer}>
       <div className={styles.left}>
-        <Link href="/">
+        <a href="/" className={styles.brand}>
           <div className={styles.footerHeadingContainer}>
             <Image
               className={styles.icon}
@@ -22,37 +26,34 @@ function Footer() {
             ></Image>
             <h1 className={styles.footerHeading}>Quote Muj</h1>
           </div>
-        </Link>
+        </a>
         <div>
-          <ul>
+          <ul className={styles.linksWrapper}>
             <li>
-              <Link href="/">Home</Link>
+              <a href="/">Home</a>
             </li>
             <li>
-              <Link href="/">About</Link>
+              <a href="/blogs">Editorials</a>
             </li>
             <li>
-              <Link href="/">Podcasts</Link>
+              <a href="/category/all">Categories</a>
             </li>
             <li>
-              <Link href="/">Vlogs</Link>
+              <a href={url}>Monthly Newsletter</a>
             </li>
             <li>
-              <Link href="/stories">Browse</Link>
+              <a href="/category/Events">Events</a>
             </li>
           </ul>
         </div>
 
         <div>
-          <ul>
+          <ul className={styles.linksWrapper}>
             <li>
-              <Link href="/">Categories</Link>
+              <a href="/about">About</a>
             </li>
             <li>
-              <Link href="/">About</Link>
-            </li>
-            <li>
-              <Link href="/">Browse</Link>
+              <a href="/vlogs">Vlogs</a>
             </li>
           </ul>
         </div>
