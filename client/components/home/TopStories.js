@@ -108,33 +108,31 @@ export default function TopStories() {
               {articles.map(
                 (item, index) =>
                   index < 3 && (
-                    <>
-                      <div key={index} className={styles.element}>
-                        {index === 0 && (
-                          <img
-                            src={
-                              item.images
-                                ? item.images
-                                : "https://picsum.photos/300/200"
-                            }
-                            alt="img"
-                            // width={256}
-                            // height={256}
-                          />
-                        )}
-                        <Link href={`/blogs/${item.slug}`}>
-                          <h3 className={styles.heading}>{item.heading}</h3>
-                        </Link>
+                    <div key={index} className={styles.element}>
+                      {index === 0 && (
+                        <img
+                          src={
+                            item.images
+                              ? item.images
+                              : "https://picsum.photos/300/200"
+                          }
+                          alt="img"
+                          // width={256}
+                          // height={256}
+                        />
+                      )}
+                      <Link href={`/blogs/${item.slug}`}>
+                        <h3 className={styles.heading}>{item.heading}</h3>
+                      </Link>
 
-                        <p className={styles.contenttext}>
-                          {item.caption}
-                          <br></br>
-                        </p>
-                        {/* <span className={styles.userName}>
+                      <p className={styles.contenttext}>
+                        {item.caption}
+                        <br></br>
+                      </p>
+                      {/* <span className={styles.userName}>
                           by {item.author}
                         </span> */}
-                      </div>
-                    </>
+                    </div>
                   )
               )}
             </Paper>
@@ -144,34 +142,32 @@ export default function TopStories() {
               {articles.slice(3).map(
                 (item, index) =>
                   index < 2 && (
-                    <>
-                      <div
-                        key={index}
-                        className={
-                          index === 1 ? styles.elementmain2 : styles.elementmain
-                        }
-                      >
-                        {index === 0 && (
-                          <img
-                            src={
-                              item.images
-                                ? item.images
-                                : "https://picsum.photos/300/200"
-                            }
-                            alt="img"
-                            // width={256}
-                            // height={256}
-                          />
-                        )}
-                        <Link href={`/blogs/${item.slug}`}>
-                          <h3 className={styles.heading}>{item.heading}</h3>
-                        </Link>
-                        <p className={styles.contenttext}>
-                          {item.caption}
-                          <br />
-                        </p>
-                      </div>
-                    </>
+                    <div
+                      key={index}
+                      className={
+                        index === 1 ? styles.elementmain2 : styles.elementmain
+                      }
+                    >
+                      {index === 0 && (
+                        <img
+                          src={
+                            item.images
+                              ? item.images
+                              : "https://picsum.photos/300/200"
+                          }
+                          alt="img"
+                          // width={256}
+                          // height={256}
+                        />
+                      )}
+                      <Link href={`/blogs/${item.slug}`}>
+                        <h3 className={styles.heading}>{item.heading}</h3>
+                      </Link>
+                      <p className={styles.contenttext}>
+                        {item.caption}
+                        <br />
+                      </p>
+                    </div>
                   )
               )}
             </Paper>
@@ -181,29 +177,27 @@ export default function TopStories() {
               {articles.slice(5).map(
                 (item, index) =>
                   index < 3 && (
-                    <>
-                      <div key={index} className={styles.element}>
-                        {index === 0 && (
-                          <img
-                            src={
-                              item.images
-                                ? item.images
-                                : "https://picsum.photos/300/200"
-                            }
-                            alt="img"
-                            width={256}
-                            height={256}
-                          />
-                        )}
-                        <Link href={`/blogs/${item.slug}`}>
-                          <h3 className={styles.heading}>{item.heading}</h3>
-                        </Link>
-                        <p className={styles.contenttext}>
-                          {item.caption}
-                          <br />
-                        </p>
-                      </div>
-                    </>
+                    <div key={index} className={styles.element}>
+                      {index === 0 && (
+                        <img
+                          src={
+                            item.images
+                              ? item.images
+                              : "https://picsum.photos/300/200"
+                          }
+                          alt="img"
+                          width={256}
+                          height={256}
+                        />
+                      )}
+                      <Link href={`/blogs/${item.slug}`}>
+                        <h3 className={styles.heading}>{item.heading}</h3>
+                      </Link>
+                      <p className={styles.contenttext}>
+                        {item.caption}
+                        <br />
+                      </p>
+                    </div>
                   )
               )}
             </Paper>

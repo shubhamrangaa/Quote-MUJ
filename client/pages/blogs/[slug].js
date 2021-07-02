@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../../styles/StoryPage.module.scss";
+import styles from "@styles/StoryPage.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import axios from "axios";
@@ -44,12 +44,11 @@ function FullStory({ story }) {
   const date = new Date(story.date_created).toString().substring(3, 15);
   const read = readTime(story.article_data.data);
   let images;
-  	try{
-		images = JSON.parse(story.images)
-	}
-	catch{
-		images = [story.images]
-	}
+  try {
+    images = JSON.parse(story.images);
+  } catch {
+    images = [story.images];
+  }
   const addLike = () => {
     axios
       .post(`${apiURL}/api/blogs/add-like`, {
@@ -130,8 +129,8 @@ function FullStory({ story }) {
             slidesToSlide={1}
             swipeable
           >
-            {images.map((item) => (
-              <div className={styles.storypic}>
+            {images.map((item, id) => (
+              <div className={styles.storypic} key={id}>
                 <img src={item} alt="story-picture"></img>
               </div>
             ))}
