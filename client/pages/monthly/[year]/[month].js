@@ -63,9 +63,9 @@ const Newsletter = ({ news }) => {
             {/* todo: style heading */}
             {/* <h2 className={sectionHeading}>Headliners</h2> */}
             <div className={styles.subHeadingContainer}>
-              <h2 className={decorated + " " + sectionHeading}>
+              <h3 className={decorated + " " + sectionHeading}>
                 <span>Headliners</span>
-              </h2>
+              </h3>
             </div>
             <div className={styles.headlinerContainer}>
               <HeadlinerMain
@@ -97,19 +97,15 @@ const Newsletter = ({ news }) => {
           {/* Other News Section */}
           <section>
             <div className={styles.subHeadingContainer}>
-              {/* <div className={styles.subHeadingLine} /> */}
-              <h2 className={decorated + " " + sectionHeading}>
+              <h3 className={decorated + " " + sectionHeading}>
                 <span>Other News</span>
-              </h2>
-              {/* <h2 className={styles.subHeadingText}></h2> */}
-              {/* <div className={styles.subHeadingLine} /> */}
+              </h3>
             </div>
-            {/* todo: style heading */}
             {otherNewsData.map((data, i) => {
-              //   console.log(data);
               return (
                 <div key={i.toString()}>
                   <FullWidthPreview
+                    slug={data.slug}
                     heading={data.heading}
                     body={data.caption}
                     image={data.images}

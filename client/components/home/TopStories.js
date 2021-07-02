@@ -98,9 +98,9 @@ export default function TopStories() {
   };
   return (
     <div className={styles.TopStories}>
-      <h2 className={decorated + " " + sectionHeading}>
+      <h3 className={decorated + " " + sectionHeading}>
         <span>Top Stories</span>
-      </h2>
+      </h3>
       <div className={styles.fullSection}>
         <Grid container spacing={4}>
           <Grid item xs={3}>
