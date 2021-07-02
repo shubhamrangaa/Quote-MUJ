@@ -3,6 +3,15 @@ const router = express.Router();
 const pool = require("../db.js");
 const { customAlphabet } = require("nanoid");
 
+const removeMatching = (originalArray, regex) => {
+	newArr = []
+	originalArray.forEach((item) => {
+		newArr.push(item.replace(regex, ""))
+	})
+
+	return newArr.filter(n => n);
+}
+
 // CREATE BLOG
 router.post("/new", async (req, res) => {
   try {
@@ -22,11 +31,10 @@ router.post("/new", async (req, res) => {
       "1234567890abcdefghijklmnopqrstuvqxyzABCDEFGHIJKLMNOPQRSTUVQXYZ",
       5
     );
-    let slug = `${heading
-      .toLowerCase()
-      .split(" ")
-      .slice(0, 5)
-      .join("-")}-${nanoid()}`;
+    let slug = `${
+	  removeMatching(heading.toLowerCase().split(" "), /[^ \w]/g)
+	  .slice(0, 5)
+	  .join("-")}-${nanoid()}`;
 
     // DATE LOGIC
     let date_created = [new Date().toISOString()];

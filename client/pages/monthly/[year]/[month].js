@@ -36,9 +36,7 @@ const Newsletter = ({ news }) => {
   const otherNewsData = news.slice(5);
   return (
     <>
-      {news === {} ? (
-        <div>No Articles</div>
-      ) : (
+      {Object.keys(news).length ? (
         <div>
           <section className={styles.top}>
             <div className={styles.headingcontainer}>
@@ -119,6 +117,17 @@ const Newsletter = ({ news }) => {
             })}
             <div className={styles.viewAllButton}>Explore all topics</div>
           </section>
+        </div>
+      ) : (
+        <div
+          style={{
+            height: "100vh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          No Articles
         </div>
       )}
     </>
