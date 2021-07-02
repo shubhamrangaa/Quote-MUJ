@@ -46,7 +46,7 @@ export const Navbar = () => {
         <Link href="/">Home</Link>
         <Link href="/blogs">Editorial</Link>
         <Link href="/category/all">Categories</Link>
-        <Link href="/category/upcoming">Events</Link>
+        <Link href="/category/Events">Events</Link>
         <Link href={url}>Monthly Newsletter</Link>
       </div>
       <button

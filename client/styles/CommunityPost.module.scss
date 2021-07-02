@@ -9,9 +9,9 @@
   align-items: center;
 }
 .header {
-  display: grid;
-  grid-template-columns: 30% 70%;
-  padding: 5% 0;
+  display: flex;
+  // grid-template-columns: 30% 70%;
+  padding: 5% 10%;
 }
 .content {
   padding: 5% 10%;
