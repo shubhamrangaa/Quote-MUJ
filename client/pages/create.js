@@ -9,7 +9,6 @@ import dynamic from 'next/dynamic'
 
 const apiURL = process.env.SERVER_URL || "https://quote-muj.herokuapp.com";
 const SubmissionForm = () => {
-	const apiURL = process.env.SERVER_URL || "https://quote-muj.herokuapp.com";
 	const [loading, setLoading] = useState(false);
 	const [resultText, setResultText] = useState({
 		type: "",
@@ -51,27 +50,34 @@ const SubmissionForm = () => {
 	const submitHandler = () => {
 		if (checkContent()) {
 			setLoading(true);
+			let img_urls = []
 			let imageURL = "";
 			if (files) {
 				// image upload handler
-				const fData = new FormData();
-				fData.append("file", files[0]);
-				fData.append("upload_preset", "i6tj3zd3");
-				axios({
-					method: "post",
-					url: "https://api.cloudinary.com/v1_1/quote-muj/image/upload",
-					data: fData,
-					headers: {
-						"Content-Type": "multipart/form-data",
-					},
-				})
+				files.forEach((item,index)=>{
+					let fData = new FormData();
+					fData.append("file", item);
+					fData.append("upload_preset", "i6tj3zd3");
+					setResultText({
+						type: "success",
+						message: `Uploading Image ${index+1}...`,
+					});
+					axios({
+						method: "post",
+						url: "https://api.cloudinary.com/v1_1/quote-muj/image/upload",
+						data: fData,
+						headers: {
+							"Content-Type": "multipart/form-data",
+						},
+					})
 					.then((res) => {
-						console.log(res.data);
 						imageURL = res.data.secure_url;
-						axios
+						img_urls.push(imageURL)
+						if(img_urls.length==files.length){
+							axios
 							.post(`${apiURL}/api/blogs/new`, {
 								...content,
-								images: imageURL,
+								images: JSON.stringify(img_urls),
 							})
 							.then((res) => {
 								setResultText({
@@ -91,6 +97,7 @@ const SubmissionForm = () => {
 							.finally(() => {
 								setLoading(false);
 							});
+						}
 					})
 					.catch((err) => {
 						setResultText({
@@ -100,9 +107,7 @@ const SubmissionForm = () => {
 						});
 						console.log(err);
 					})
-					.finally(() => {
-						setLoading(false);
-					});
+				})
 			} else {
 				axios
 					.post(`${apiURL}/api/blogs/new`, {
@@ -225,6 +230,7 @@ const SubmissionForm = () => {
 				}}
 				accept="image/jpeg, image/png"
 				maxSize={30720000}
+				multiple
 			>
 				{({
 					getRootProps,
@@ -258,7 +264,11 @@ const SubmissionForm = () => {
 			</Dropzone>
 			{files && (
 				<p className={styles.selectedText}>
-					Selected File : {files[files.length - 1].name}
+					Selected File(s) :<br/> {files.map((item)=>(
+						<>
+							{item.name}<br/>
+						</>
+					))}
 				</p>
 			)}
 			<input
