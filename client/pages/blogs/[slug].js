@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import axios from "axios";
 import ReactHtmlParser from "react-html-parser";
+import readTime from "../../utils/useReadTime";
 
 // const apiURL = process.env.SERVER_URL;
 // const apiURL = "https://quote-muj.herokuapp.com";
@@ -38,6 +39,7 @@ function FullStory({ story }) {
   const [likes, setLikes] = useState(story.likes);
   const slug = story.slug;
   const date = new Date(story.date_created).toString().substring(3, 15);
+  const read = readTime(story.article_data.data);
   const addLike = () => {
     axios
       .post(`${apiURL}/api/blogs/add-like`, {
@@ -60,7 +62,7 @@ function FullStory({ story }) {
             <li>By {story.author}</li>
 
             <li>{date}</li>
-            <li>5 mins Read</li>
+            <li>{read}</li>
             <li onClick={addLike}>
               <FontAwesomeIcon
                 className={styles.FontAwesomeIcon}

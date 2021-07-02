@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
+
 .header {
   display: flex;
   align-items: center;
@@ -12,6 +13,9 @@
   background-color: #000000;
   backdrop-filter: blur(40px);
   z-index: 9999;
+  *{
+	cursor: pointer;
+  }
 }
 
 .header a:not(.brand) {

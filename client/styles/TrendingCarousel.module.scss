@@ -1,39 +1,40 @@
 .community {
-  background-color: #f5f5f5;
-  font-weight: normal;
+	background-color: #f5f5f5;
+	font-weight: normal;
 }
 .nav {
-  display: flex;
-  padding-left: 1.5rem;
+	display: flex;
+	padding-left: 1.5rem;
 }
 .faIcon {
-  margin-right: 10px;
+	margin-right: 10px;
 }
 .title {
-  font-size: 24px;
-  // line-height: 32.68px;
-  // letter-spacing: 8px;
-  font-weight: 700;
-  margin-top: 30px;
-  padding-left: 10%;
+	font-size: 24px;
+	// line-height: 32.68px;
+	// letter-spacing: 8px;
+	font-weight: 700;
+	margin-top: 30px;
+	padding-left: 10%;
 }
 .content {
-  display: flex;
+	display: flex;
+	cursor: pointer;
 }
 .indices {
-  font-size: 28px;
-  color: black;
-  font-family: "Merriweather";
-  text-align: start;
-  font-weight: 700;
-  margin-bottom: 5px;
+	font-size: 28px;
+	color: black;
+	font-family: "Merriweather";
+	text-align: start;
+	font-weight: 700;
+	margin-bottom: 5px;
 }
 .heading {
-  font-size: 22px;
-  margin-top: 0;
-  text-align: start;
-  font-weight: 700;
-  margin-left: 15px;
+	font-size: 22px;
+	margin-top: 0;
+	text-align: start;
+	font-weight: 700;
+	margin-left: 15px;
 }
 // .body::after {
 //   content: "...";
@@ -41,43 +42,43 @@
 //   right: 32px;
 // }
 .body {
-  color: black;
-  margin-top: 16px;
-  text-align: start;
-  margin-left: 15px;
-  max-height: calc(22px * 5);
-  overflow: hidden;
+	color: black;
+	margin-top: 16px;
+	text-align: start;
+	margin-left: 15px;
+	max-height: calc(22px * 5);
+	overflow: hidden;
 }
 .author {
-  font-style: italic;
-  color: black;
-  margin-top: 1rem;
-  text-align: start;
-  margin-left: 1rem;
+	font-style: italic;
+	color: black;
+	margin-top: 1rem;
+	text-align: start;
+	margin-left: 1rem;
 }
 .images {
-  width: 50%;
+	width: 50%;
 }
 .container {
-  color: #585858;
-  justify-content: center;
-  text-align: center;
-  padding: 3% 10%;
+	color: #585858;
+	justify-content: center;
+	text-align: center;
+	padding: 3% 10%;
 }
 @media (max-width: 768px) {
-  .nav {
-    display: flex;
-    flex-direction: column;
-  }
-  .title {
-    margin: 15px 0 0 10px;
-    font-size: 1.3rem;
-    padding: 0;
-  }
-  .content {
-    display: inline;
-  }
-  .images {
-    width: 90%;
-  }
+	.nav {
+		display: flex;
+		flex-direction: column;
+	}
+	.title {
+		margin: 15px 0 0 10px;
+		font-size: 1.3rem;
+		padding: 0;
+	}
+	.content {
+		display: inline;
+	}
+	.images {
+		width: 90%;
+	}
 }
