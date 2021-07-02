@@ -23,7 +23,7 @@ router.post("/new", async (req, res) => {
       article_data,
       likes,
       images,
-      videos,
+      video,
     } = req.body;
 
     // NANO ID LOGIC
@@ -55,7 +55,7 @@ router.post("/new", async (req, res) => {
         likes,
         images,
         categories,
-        videos,
+        video,
       ]
     );
     // TO ADD TO CATEGORY TABLE
