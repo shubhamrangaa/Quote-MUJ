@@ -117,3 +117,14 @@
     padding: 3% 10%;
   }
 }
+
+.playerWrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+}
+
+.reactPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

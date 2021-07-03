@@ -147,9 +147,17 @@ function FullStory({ story }) {
       <div className={styles.text}>
         <>{ReactHtmlParser(story.article_data.data)}</>
       </div>
-      {console.log(story.video)}
-      {/* <ReactPlayer url={story.videos} /> */}
       <div className={styles.categories}>
+        {story.videos ? (
+          <div className={styles.playerWrapper}>
+            <ReactPlayer
+              className={styles.reactPlayer}
+              url={story.videos}
+              width="100%"
+              height="100%"
+            />
+          </div>
+        ) : null}
         <ul>
           {story.categories.map((el, id) => (
             <li key={id}>
