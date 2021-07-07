@@ -71,7 +71,7 @@ const Newsletter = ({ news }) => {
               <HeadlinerMain
                 headline={headlinerData.heading}
                 content={headlinerData.caption}
-                image={headlinerData.images}
+                image={JSON.parse(headlinerData.images)[0]}
                 tags={headlinerData.categories}
                 slug={headlinerData.slug}
               />
@@ -84,7 +84,7 @@ const Newsletter = ({ news }) => {
                       key={id}
                       headline={data.heading}
                       description={data.caption}
-                      image={data.images}
+                      image={JSON.parse(data.images)[0]}
                       author={data.author}
                       slug={data.slug}
                     />
@@ -108,7 +108,7 @@ const Newsletter = ({ news }) => {
                     slug={data.slug}
                     heading={data.heading}
                     body={data.caption}
-                    image={data.images}
+                    image={JSON.parse(data.images)[0]}
                     type={data.type}
                   />
                 </div>

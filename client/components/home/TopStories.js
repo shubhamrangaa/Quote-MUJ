@@ -85,7 +85,7 @@ export default function TopStories() {
 
   useEffect(() => {
     fetchArticles();
-  }, []);
+}, []);
 
   const fetchArticles = async () => {
     fetch("https://quote-muj.herokuapp.com/api/blogs/all").then((res) =>
@@ -113,7 +113,7 @@ export default function TopStories() {
                         <img
                           src={
                             item.images
-                              ? item.images
+                              ? JSON.parse(item.images)[0]
                               : "https://picsum.photos/300/200"
                           }
                           alt="img"
@@ -152,7 +152,7 @@ export default function TopStories() {
                         <img
                           src={
                             item.images
-                              ? item.images
+                              ? JSON.parse(item.images)[0]
                               : "https://picsum.photos/300/200"
                           }
                           alt="img"
@@ -182,7 +182,7 @@ export default function TopStories() {
                         <img
                           src={
                             item.images
-                              ? item.images
+                              ? JSON.parse(item.images)[0]
                               : "https://picsum.photos/300/200"
                           }
                           alt="img"
