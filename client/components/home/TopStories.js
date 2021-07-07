@@ -7,79 +7,6 @@ import React, { useState, useEffect } from "react";
 import TextMobileStepper from "../Carousel";
 
 export default function TopStories() {
-  // const newsElements = [
-  //   {
-  //     headline: "Organized expert lecture",
-  //     description:
-  //       "An online Expert Lecture was organized on Life and Literature through MS Teams.",
-  //     author: "random user",
-  //     imageMetaData: {
-  //       src: "/assets/image1.png",
-  //       alt: "Image 1",
-  //       width: 256,
-  //       height: 147,
-  //     },
-  //   },
-  //   {
-  //     headline: "Healthy lifestyle for Healthy heart.",
-  //     description:
-  //       "An online Expert Lecture was organized on Life and Literature through MS Teams.",
-  //     author: "random user",
-  //   },
-  //   {
-  //     headline: "Enhancing Research Skills and Integrity.",
-  //     description:
-  //       "An online Expert Lecture was organized on Life and Literature through MS Teams.",
-  //     author: "random user",
-  //   },
-  //   {
-  //     headline:
-  //       "International Virtual Conference on Physical Education and Sports Science",
-  //     description:
-  //       "Manipal University Jaipur organized the International Virtual Conference on Physical Education and Sports Science (IVCPESS-2021) from 30-31 March 2021.",
-  //     author: "random user",
-  //     imageMetaData: {
-  //       src: "/assets/image2.png",
-  //       alt: "Image 2",
-  //       width: 523,
-  //       height: 320,
-  //     },
-  //   },
-  //   {
-  //     headline: "Webinar on Trends in food Blogs",
-  //     description:
-  //       "Speaker of the session started with the new trends in food blogging.",
-  //     author: "random user",
-  //   },
-  //   {
-  //     headline: "Workshop on The Art of Story Telling",
-  //     description:
-  //       "An online workshop cum interactive session on The Art of Story Telling and Getting Published",
-  //     author: "random user",
-  //     imageMetaData: {
-  //       src: "/assets/image3.png",
-  //       alt: "Image 3",
-  //       width: 260,
-  //       height: 160,
-  //     },
-  //   },
-  //   {
-  //     headline: "Journey of a young Businesswoman",
-  //     description:
-  //       "Dept of Economics and Dept of Arts, organized a guest lecture which was very informative.",
-  //     author: "random user",
-  //   },
-  //   {
-  //     headline: "Webinar on Art of Mind Control",
-  //     description:
-  //       "Dept of Economics and Dept of Arts, organized a guest lecture which was very informative.",
-  //     author: "random user",
-  //   },
-  // ];
-  // const sectionOne = newsElements.slice(0, 3);
-  // const sectionTwo = newsElements.slice(3, 5);
-  // const sectionThree = newsElements.slice(5, 8);
-
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -92,7 +19,6 @@ export default function TopStories() {
       res.json().then((data) => {
         setArticles(data);
         setLoading(false);
-        console.log(data);
       })
     );
   };
