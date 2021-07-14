@@ -35,6 +35,7 @@ export default function TopStories() {
                 (item, index) =>
                   index < 3 && (
                     <div key={index} className={styles.element}>
+                      //urgent commit
                       {index === 0 && (
                         <img
                           src={
@@ -50,7 +51,6 @@ export default function TopStories() {
                       <Link href={`/blogs/${item.slug}`}>
                         <h3 className={styles.heading}>{item.heading}</h3>
                       </Link>
-
                       <p className={styles.contenttext}>
                         {item.caption}
                         <br></br>
