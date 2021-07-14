@@ -1,49 +1,93 @@
 import React from "react";
 import styles from "../styles/About.module.scss";
 
+const aboutData = [
+	{
+		name:"Ar. Sonali Jain",
+		title:"Faculty Coordinator",
+		description:"Some text that describes me lorem ipsum ipsum lorem.",
+		contact:"mike@example.com",
+		image:"https://res.cloudinary.com/quote-muj/image/upload/v1626255710/827610ef-619e-4f5b-a454-d6d2140c025c_frlnnx.jpg"
+	},
+	{
+		name: "Dr. Nitu Bhatnagar",
+		title: "Faculty Coordinator",
+		description: "Some text that describes me lorem ipsum ipsum lorem.",
+		contact: "mike@example.com",
+		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626255709/875125d8-49ab-4dff-b2ab-5c29c999ac3e_fnyunv.jpg"
+	},
+	{
+		name: "Dr. Mani Sachdev",
+		title: "Faculty Coordinator",
+		description: "Some text that describes me lorem ipsum ipsum lorem.",
+		contact: "mike@example.com",
+		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626255709/697fc7bf-5059-4590-8122-636f92543ef4_vrwdd8.jpg"
+	},
+	{
+		name: "Ms. Shweta Sharma",
+		title: "Faculty Coordinator",
+		description: "Some text that describes me lorem ipsum ipsum lorem.",
+		contact: "mike@example.com",
+		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626255709/754bf274-dcc7-4dd8-8864-fe995ac612e7_gloqio.jpg"
+	},
+	{
+		name: "Ar. Deepak Singh",
+		title: "Faculty Coordinator",
+		description: "Some text that describes me lorem ipsum ipsum lorem.",
+		contact: "mike@example.com",
+		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626255708/8e2f246a-2a9d-4f58-aff7-5a6b77eda25d_re19bf.jpg"
+	},
+	{
+		name: "Dr. Lucky Vijayvargiya",
+		title: "Faculty Coordinator",
+		description: "Some text that describes me lorem ipsum ipsum lorem.",
+		contact: "mike@example.com",
+		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626255708/a9d34e6f-9424-4993-abac-d09d187a12e0_wngoi6.jpg"
+	},
+	{
+		name: "Dr. Richa Arora",
+		title: "Faculty Coordinator",
+		description: "Some text that describes me lorem ipsum ipsum lorem.",
+		contact: "mike@example.com",
+		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626255709/ef29a5e1-4d8e-4181-bdbc-3fd0f1a5f2e9_syg2gk.jpg"
+	},
+	{
+		name: "Dr. Ankit Mudra",
+		title: "Faculty Coordinator",
+		description: "Some text that describes me lorem ipsum ipsum lorem.",
+		contact: "mike@example.com",
+		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626259492/Ankit_Mundra_fkkrth.jpg"
+	},
+	{
+		name: "Mr. Apoorv",
+		title: "Faculty Coordinator",
+		description: "Some text that describes me lorem ipsum ipsum lorem.",
+		contact: "mike@example.com",
+		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626259242/7891124530_profile_pic_kuwbl6.jpg"
+	}
+]
+
 const about = () => {
 	return (
 		<div className={styles.wrapper}>
-			<h1>Faculty Coordinators</h1>
+			<h1 className={styles.heading}>Faculty Coordinators</h1>
 			<div className={styles.row}>
-				<div className={styles.column}>
-					<div className={styles.card}>
-						<img src="https://www.w3schools.com/w3images/team1.jpg" alt="Jane" style={{ width: "100%" }} />
-						<div className={styles.container}>
-							<h2>Jane Doe</h2>
-							<p className={styles.title}>CEO & Founder</p>
-							<p>Some text that describes me lorem ipsum ipsum lorem.</p>
-							<p>jane@example.com</p>
-							<p><button className={styles.button}>Contact</button></p>
+				{aboutData.map(item=>{
+					return(
+						<div className={styles.column}>
+							<div className={styles.card}>
+								<img src={item.image} alt="Jane" className={styles.image} />
+								<div className={styles.container}>
+									<h3 className={styles.name}>{item.name}</h3>
+									<p className={styles.title}>{item.title}</p>
+									<p><button onClick={()=>{
+										document.location.href = `mailto:${item.contact})`
+									}} className={styles.button}>Contact</button></p>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-
-				<div className={styles.column}>
-					<div className={styles.card}>
-						<img src="https://www.w3schools.com/w3images/team2.jpg" alt="Mike" style={{ width: "100%" }} />
-						<div className={styles.container}>
-							<h2>Mike Ross</h2>
-							<p className={styles.title}>Art Director</p>
-							<p>Some text that describes me lorem ipsum ipsum lorem.</p>
-							<p>mike@example.com</p>
-							<p><button className={styles.button}>Contact</button></p>
-						</div>
-					</div>
-				</div>
-
-				<div className={styles.column}>
-					<div className={styles.card}>
-						<img src="https://www.w3schools.com/w3images/team3.jpg" alt="John" style={{ width: "100%" }} />
-						<div className={styles.container}>
-							<h2>John Doe</h2>
-							<p className={styles.title}>Designer</p>
-							<p>Some text that describes me lorem ipsum ipsum lorem.</p>
-							<p>john@example.com</p>
-							<p><button className={styles.button}>Contact</button></p>
-						</div>
-					</div>
-				</div>
+					)
+				})}
 			</div>
 		</div>
 	)
