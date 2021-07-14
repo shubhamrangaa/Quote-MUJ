@@ -64,7 +64,7 @@ const Newsletter = ({ news }) => {
             {/* <h2 className={sectionHeading}>Headliners</h2> */}
             <div className={styles.subHeadingContainer}>
               <h3 className={decorated + " " + sectionHeading}>
-                <span>Headliners</span>
+                <span>Headlines</span>
               </h3>
             </div>
             <div className={styles.headlinerContainer}>
@@ -102,13 +102,19 @@ const Newsletter = ({ news }) => {
               </h3>
             </div>
             {otherNewsData.map((data, i) => {
+				let image = ""
+				try {
+					image = JSON.parse(data.images)[0];
+				} catch (e) {
+					image = data.images
+				}
               return (
                 <div key={i.toString()}>
                   <FullWidthPreview
                     slug={data.slug}
                     heading={data.heading}
                     body={data.caption}
-                    image={JSON.parse(data.images)[0]}
+					image={image}
                     type={data.type}
                   />
                 </div>

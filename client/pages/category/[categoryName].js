@@ -32,7 +32,20 @@ const Category = ({ news }) => {
 	let { categoryName } = query;
 	//   console.log(categoryName);
 	categoryName = categoryName.charAt(0).toUpperCase() + categoryName.slice(1);
-
+	news = news.map(item => {
+		try{
+			return {
+				...item,
+				images: JSON.parse(item.images)[0]
+			}
+		}
+		catch{
+			return {
+				...item,
+				images: item.images
+			}
+		}
+	})
 	const headlinerData = news.slice(0, 1)[0];
 	const headlinerAsideData = news.slice(1, 4);
 	const otherNewsData = news.slice(5);

@@ -36,9 +36,16 @@ const TrendingCarousel = ({ news: data }) => {
 			</div>
 			<div className={styles.container}>
 				<Carousel responsive={responsive} showDots={true} removeArrowOnDeviceType={["tablet", "mobile"]}>
-					{data.map((item, i) => (
-						<SmallWidthPreview slug={item.slug} title={item.heading} image={item.images} body={item.caption} author={item.author} index={i} key={i} />
-					))}
+					{data.map((item, i) => {
+						let image = ""
+						try {
+							image = JSON.parse(item.images)[0];
+						} catch (e) {
+							image = item.images
+						}
+						return (
+						<SmallWidthPreview slug={item.slug} title={item.heading} image={image} body={item.caption} author={item.author} index={i} key={i} />
+					)})}
 				</Carousel>
 			</div>
 		</div>
