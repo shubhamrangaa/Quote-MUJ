@@ -49,6 +49,7 @@ const Category = ({ news }) => {
 	const headlinerData = news.slice(0, 1)[0];
 	const headlinerAsideData = news.slice(1, 4);
 	const otherNewsData = news.slice(5);
+	console.log(headlinerData.images)
 	return (
 		<>
 			{Object.keys(news).length ? (
@@ -61,13 +62,14 @@ const Category = ({ news }) => {
 							<HeadlinerMain
 								headline={headlinerData.heading}
 								content={headlinerData.caption}
-								imageMetaData={headlinerData.images}
+								image={headlinerData.images}
 								tags={headlinerData.categories}
+								slug={headlinerData.slug}
 							/>
 							<div className={styles.headlinerAsideContainer}>
 								{/* map headlineAside */}
 								{headlinerAsideData.map((data) => {
-									return <HeadlinerAside headline={data.heading} description={data.caption} imageMetaData={data.images} author={data.author} />;
+									return <HeadlinerAside headline={data.heading} description={data.caption} image={data.images} author={data.author} slug={data.slug} />;
 								})}
 							</div>
 						</div>
@@ -83,7 +85,7 @@ const Category = ({ news }) => {
 						{/* todo: style heading */}
 						{otherNewsData.map((data, i) => (
 							<div key={i.toString()}>
-								<FullWidthPreview heading={data.heading} body={data.body} image={data.image} type={data.type} />
+								<FullWidthPreview heading={data.heading} body={data.body} image={data.images} type={data.type} />
 							</div>
 						))}
 						<div className={styles.viewAllButton}>Explore all topics</div>

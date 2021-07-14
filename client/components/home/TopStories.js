@@ -35,7 +35,6 @@ export default function TopStories() {
                 (item, index) =>
                   index < 3 && (
                     <div key={index} className={styles.element}>
-                      //urgent commit
                       {index === 0 && (
                         <img
                           src={

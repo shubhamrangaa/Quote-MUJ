@@ -9,8 +9,8 @@ const HeadlinerMain = (props) => {
   const { headline, image, content, tags, slug } = props;
   return (
     <div className={styles.headlinerMainContainer}>
-      <img src={image ? image : "https://picsum.photos/300/200"} />
-      <Link href={`/blogs/${slug}`}>
+      <img src={props.image ? props.image : "https://picsum.photos/300/200"} />
+      <Link href={`/blogs/${props.slug}`}>
         <a>{headline}</a>
       </Link>
       <p className={styles.content}>{content}</p>
