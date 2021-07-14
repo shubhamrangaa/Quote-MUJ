@@ -65,31 +65,31 @@ const getRandomImage = () => {
 const studentData = [
 	{
 		name: "Shubham Ranga",
-		title: "B.Tech, CSE, 3rd Year",
+		title: "3rd year BTech (CSE)",
 		contact: "mailto:example@example.com",
 		image: getRandomImage()
 	},
 	{
 		name:"Manavendra Sen",
-		title: "B.Tech, IT, 3rd Year",
+		title: "3rd year BTech (IT)",
 		contact: "mailto:example@example.com",
 		image: getRandomImage()
 	},
 	{
-		name: "Boidushya Bhattacharyay",
-		title: "B.Tech, IT, 2nd Year",
+		name: "Boidushya Bhattacharya",
+		title: "2nd year BTech (IT)",
 		contact: "mailto:example@example.com",
 		image: getRandomImage()
 	},
 	{
 		name: "Vaibhav Garg",
-		title: "B.Tech, IT, 3rd Year",
+		title: "3rd year BTech (IT)",
 		contact: "mailto:example@example.com",
 		image: getRandomImage()
 	},
 	{
 		name: "Kevin Peter",
-		title: "B.Tech, IT, 4th Year",
+		title: "4th year BTech (IT)",
 		contact: "mailto:example@example.com",
 		image: getRandomImage()
 	}
@@ -104,7 +104,7 @@ const about = () => {
 					return(
 						<div className={styles.column}>
 							<div className={styles.card}>
-								<img src={item.image} alt="Jane" className={styles.image} />
+								<img src={item.image} alt="Image" className={styles.image} />
 								<div className={styles.container}>
 									<h3 className={styles.name}>{item.name}</h3>
 									<p className={styles.title}>{item.title}</p>
@@ -123,7 +123,7 @@ const about = () => {
 					return (
 						<div className={styles.column}>
 							<div className={styles.card}>
-								<img src={item.image} alt="Jane" className={styles.image} />
+								<img src={item.image} alt="Image" className={styles.image} />
 								<div className={styles.container}>
 									<h3 className={styles.name}>{item.name}</h3>
 									<p className={styles.title}>{item.title}</p>
