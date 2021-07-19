@@ -90,7 +90,7 @@ const studentData = [
 	{
 		name: "Kevin Peter",
 		title: "4th year BTech (CSE)",
-		contact: "mailto:example@example.com",
+		contact: "mailto:kevzpeterk@gmail.com",
 		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626718876/Myself_tjvvc8.jpg"
 	},
 	{
