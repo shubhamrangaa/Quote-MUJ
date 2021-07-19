@@ -49,7 +49,6 @@ const Category = ({ news }) => {
 	const headlinerData = news.slice(0, 1)[0];
 	const headlinerAsideData = news.slice(1, 4);
 	const otherNewsData = news.slice(5);
-	console.log(headlinerData.images)
 	return (
 		<>
 			{Object.keys(news).length ? (
@@ -68,8 +67,8 @@ const Category = ({ news }) => {
 							/>
 							<div className={styles.headlinerAsideContainer}>
 								{/* map headlineAside */}
-								{headlinerAsideData.map((data) => {
-									return <HeadlinerAside headline={data.heading} description={data.caption.slice(0, 150) + "..."} image={data.images} author={data.author} slug={data.slug} />;
+								{headlinerAsideData.map((data, index) => {
+									return <HeadlinerAside key={index} headline={data.heading} description={data.caption.slice(0, 150) + "..."} image={data.images} author={data.author} slug={data.slug} />;
 								})}
 							</div>
 						</div>
