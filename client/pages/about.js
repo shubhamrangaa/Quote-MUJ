@@ -72,13 +72,13 @@ const studentData = [
 	{
 		name:"Manavendra Sen",
 		title: "3rd year BTech (IT)",
-		contact: "mailto:example@example.com",
+		contact: "mailto:manavendra4288@gmail.com",
 		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626714863/IMG_20210309_193348-01_xberio.jpg"
 	},
 	{
 		name: "Boidushya Bhattacharya",
 		title: "2nd year BTech (IT)",
-		contact: "mailto:example@example.com",
+		contact: "mailto:boidushyabhattacharya@gmail.com",
 		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626714954/BoidushyaBhattacharyay_rbs12t.jpg"
 	},
 	{
