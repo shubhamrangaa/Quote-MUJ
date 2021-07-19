@@ -92,6 +92,12 @@ const studentData = [
 		title: "4th year BTech (IT)",
 		contact: "mailto:example@example.com",
 		image: getRandomImage()
+	},
+	{
+		name: "Pritam Reddy",
+		title: "3rd year BTech (CSE)",
+		contact: "mailto:example@example.com",
+		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626272359/pritam_baivtv.jpg"
 	}
 ]
 
