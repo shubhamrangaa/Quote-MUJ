@@ -4,10 +4,10 @@ const CATEGORY_LIST = [
   "Sports",
   "Events",
   "Research",
-  "Placements",
+  // "Placements",
   "Academics",
-  "Leadership",
-  "Accreditation",
+  // "Leadership",
+  // "Accreditation",
 ];
 
 export default CATEGORY_LIST;
