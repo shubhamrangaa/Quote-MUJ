@@ -28,7 +28,7 @@ export const Hero = () => {
         <h1 id={styles.title}>We believe in the power of stories</h1>
         <p id={styles.intro}>
           Welcome to the Official Newsletter website of Manipal University
-          Jaipur. Find everything latest in our May newsletter!
+          Jaipur. Find everything latest in our {currentMonth} newsletter!
         </p>
         <Link href={url}>
           <a id={styles.explore}>Explore {currentMonth} Newsletter</a>
