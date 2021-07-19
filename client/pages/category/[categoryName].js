@@ -33,13 +33,13 @@ const Category = ({ news }) => {
 	//   console.log(categoryName);
 	categoryName = categoryName.charAt(0).toUpperCase() + categoryName.slice(1);
 	news = news.map(item => {
-		try{
+		try {
 			return {
 				...item,
 				images: JSON.parse(item.images)[0]
 			}
 		}
-		catch{
+		catch {
 			return {
 				...item,
 				images: item.images
@@ -69,7 +69,7 @@ const Category = ({ news }) => {
 							<div className={styles.headlinerAsideContainer}>
 								{/* map headlineAside */}
 								{headlinerAsideData.map((data) => {
-									return <HeadlinerAside headline={data.heading} description={data.caption} image={data.images} author={data.author} slug={data.slug} />;
+									return <HeadlinerAside headline={data.heading} description={data.caption.slice(0, 150) + "..."} image={data.images} author={data.author} slug={data.slug} />;
 								})}
 							</div>
 						</div>

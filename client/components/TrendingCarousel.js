@@ -44,8 +44,9 @@ const TrendingCarousel = ({ news: data }) => {
 							image = item.images
 						}
 						return (
-						<SmallWidthPreview slug={item.slug} title={item.heading} image={image} body={item.caption} author={item.author} index={i} key={i} />
-					)})}
+							<SmallWidthPreview slug={item.slug} title={item.heading} image={image} body={item.caption.slice(0, 150) + "..."} author={item.author} index={i} key={i} />
+						)
+					})}
 				</Carousel>
 			</div>
 		</div>
