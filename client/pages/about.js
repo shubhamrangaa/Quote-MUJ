@@ -91,17 +91,11 @@ const studentData = [
 		name: "Kevin Peter",
 		title: "4th year BTech (CSE)",
 		contact: "mailto:example@example.com",
-		image: getRandomImage()
+		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626718876/Myself_tjvvc8.jpg"
 	},
 	{
 		name: "A Mahi Pritam Reddy",
 		title: "4th year BTech (CSE)",
-		contact: "mailto:example@example.com",
-		image: getRandomImage()
-	},
-	{
-		name: "Pritam Reddy",
-		title: "3rd year BTech (CSE)",
 		contact: "mailto:example@example.com",
 		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626272359/pritam_baivtv.jpg"
 	}
