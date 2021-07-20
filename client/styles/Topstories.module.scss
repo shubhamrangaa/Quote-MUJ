@@ -1,5 +1,6 @@
 .TopStories {
   justify-content: center;
+  text-align: justify;
   // text-align: center;
   padding: 3% 10%;
 }
@@ -46,6 +47,9 @@
   display: inline-block;
   min-height: 720px;
   box-shadow: none !important;
+  p{
+    text-align: justify;
+  }
 }
 
 // .userName {
