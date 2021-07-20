@@ -12,7 +12,7 @@ export default function TopStories() {
 
   useEffect(() => {
     fetchArticles();
-}, []);
+  }, []);
 
   const fetchArticles = async () => {
     fetch("https://quote-muj.herokuapp.com/api/blogs/all").then((res) =>
@@ -33,7 +33,7 @@ export default function TopStories() {
             <Paper className={styles.paper}>
               {articles.map(
                 (item, index) =>
-                  index < 3 && (
+                  index < 2 && (
                     <div key={index} className={styles.element}>
                       {index === 0 && (
                         <img
@@ -43,8 +43,8 @@ export default function TopStories() {
                               : "https://picsum.photos/300/200"
                           }
                           alt="img"
-                          // width={256}
-                          // height={256}
+                        // width={256}
+                        // height={256}
                         />
                       )}
                       <Link href={`/blogs/${item.slug}`}>
@@ -81,8 +81,8 @@ export default function TopStories() {
                               : "https://picsum.photos/300/200"
                           }
                           alt="img"
-                          // width={256}
-                          // height={256}
+                        // width={256}
+                        // height={256}
                         />
                       )}
                       <Link href={`/blogs/${item.slug}`}>
@@ -101,7 +101,7 @@ export default function TopStories() {
             <Paper className={styles.paper}>
               {articles.slice(5).map(
                 (item, index) =>
-                  index < 3 && (
+                  index < 2 && (
                     <div key={index} className={styles.element}>
                       {index === 0 && (
                         <img

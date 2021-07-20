@@ -31,20 +31,22 @@ const CommunityPost = (props) => {
   return (
     <div>
       <Paper elevation={1} className={styles.main}>
-        <div className={styles.header}>
-          <div className={styles.user}>
-            <Link href={`/blogs/${props.slug}`}>
-              <h4>{props.heading}</h4>
-            </Link>
-            <p id={styles.designation}>By {props.author}</p>
+        <div>
+          <div className={styles.header}>
+            <div className={styles.user}>
+              <Link href={`/blogs/${props.slug}`}>
+                <h4>{props.heading}</h4>
+              </Link>
+              <p id={styles.designation}>By {props.author}</p>
+            </div>
           </div>
-        </div>
-        <div className={styles.content}>
-          {props.caption.length > 120 ? (
-            <p>{props.caption.substring(0, 120)}...</p>
-          ) : (
-            <p>{props.caption}</p>
-          )}
+          <div className={styles.content}>
+            {props.caption.length > 120 ? (
+              <p>{props.caption.substring(0, 120)}...</p>
+            ) : (
+              <p>{props.caption}</p>
+            )}
+          </div>
         </div>
         <div className={styles.buttons}>
           <div style={{ display: "flex", gap: "0.5rem" }}>
