@@ -98,6 +98,12 @@ const studentData = [
 		title: "4th year BTech (CSE)",
 		contact: "mailto:anapalli.189301104@muj.manipal.edu",
 		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626272359/pritam_baivtv.jpg"
+	},
+	{
+		name: "Krathish Prakash",
+		title: "3rd year BTech (IT)",
+		contact: "https://www.linkedin.com/in/krathishprakash/",
+		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626758935/1570116562486_wzviwi.jpg"
 	}
 ]
 
