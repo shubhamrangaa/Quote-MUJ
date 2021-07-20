@@ -7,10 +7,6 @@ import months from "../constants/Months";
 
 export const Navbar = () => {
   const [active, setActive] = useState(false);
-  const date = new Date();
-  const currentMonth = months[date.getMonth()];
-  const currentYear = date.getFullYear();
-  const url = `/monthly/${currentYear}/${currentMonth}`;
 
   const handleClick = () => {
     setActive(!active);
@@ -34,7 +30,6 @@ export const Navbar = () => {
         <Link href="/blogs">Editorial</Link>
         <Link href="/category/all">Categories</Link>
         <Link href="/category/Events">Events</Link>
-        <Link href={url}>Monthly Newsletter</Link>
       </div>
       <button
         className={

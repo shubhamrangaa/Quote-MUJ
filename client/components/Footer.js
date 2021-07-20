@@ -91,6 +91,9 @@ function Footer() {
             />
           </a>
         </div>
+		<div className={styles.contactWrapper}>
+			Contact us:
+		</div>
       </div>
     </div>
   );
