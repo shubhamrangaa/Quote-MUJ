@@ -51,7 +51,7 @@ const aboutData = [
 		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626259242/7891124530_profile_pic_kuwbl6.jpg"
 	},
 	{
-		name: "Dr. Ankit Mudra",
+		name: "Mr. Ankit Mundra",
 		title: "Faculty Coordinator",
 		contact: "mailto:example@example.com",
 		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626259492/Ankit_Mundra_fkkrth.jpg"
@@ -119,10 +119,8 @@ const about = () => {
 								<img src={item.image} alt="Image" className={styles.image} />
 								<div className={styles.container}>
 									<h3 className={styles.name}>{item.name}</h3>
-									<p className={styles.title}>{item.title}</p>
-									<p><button onClick={()=>{
-										document.location.href = item.contact
-									}} className={styles.button}>Contact</button></p>
+									<br />
+									<br />
 								</div>
 							</div>
 						</div>
