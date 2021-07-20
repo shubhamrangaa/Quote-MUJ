@@ -11,13 +11,12 @@ export default function Story(props) {
   const [likes, setLikes] = useState(props.likes);
   const date = new Date(props.date_created).toString().substring(3, 15);
   let image;
-  	try{
-		image = JSON.parse(props.image)[0]
-	}
-	catch{
-		image = props.image
-	}
-	console.log(image)
+  try {
+    image = JSON.parse(props.image)[0]
+  }
+  catch {
+    image = props.image
+  }
 
   const addLike = () => {
     axios

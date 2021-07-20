@@ -29,14 +29,13 @@ const all = () => {
         );
       })
     );
+    setLoading(false);
   };
 
   useEffect(() => {
-    setLoading(true);
     CATEGORY_LIST.forEach((category) => {
       fetchCategoryWisePosts(category);
     });
-    setLoading(false);
   }, []);
 
   return (
@@ -58,7 +57,7 @@ const all = () => {
               {categoryWiseArticles.length > 0 ? (
                 categoryWiseArticles.map((el, id) => {
                   return (
-                    <div>
+                    <div key={id}>
                       {/* category heading */}
                       <div className={styles.postHeading}>
                         <p>{el.category}</p>

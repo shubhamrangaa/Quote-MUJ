@@ -83,7 +83,7 @@ const Newsletter = ({ news }) => {
                     <HeadlinerAside
                       key={id}
                       headline={data.heading}
-                      description={data.caption}
+                      description={data.caption.slice(0, 150) + "..."}
                       image={JSON.parse(data.images)[0]}
                       author={data.author}
                       slug={data.slug}
@@ -102,19 +102,19 @@ const Newsletter = ({ news }) => {
               </h3>
             </div>
             {otherNewsData.map((data, i) => {
-				let image = ""
-				try {
-					image = JSON.parse(data.images)[0];
-				} catch (e) {
-					image = data.images
-				}
+              let image = ""
+              try {
+                image = JSON.parse(data.images)[0];
+              } catch (e) {
+                image = data.images
+              }
               return (
                 <div key={i.toString()}>
                   <FullWidthPreview
                     slug={data.slug}
                     heading={data.heading}
                     body={data.caption}
-					image={image}
+                    image={image}
                     type={data.type}
                   />
                 </div>

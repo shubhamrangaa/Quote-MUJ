@@ -75,6 +75,7 @@ function FullStory({ story }) {
             <li>{read}</li>
             <li onClick={addLike}>
               <FontAwesomeIcon
+                size={16}
                 className={styles.FontAwesomeIcon}
                 icon={faThumbsUp}
               />{" "}
@@ -145,7 +146,7 @@ function FullStory({ story }) {
 
       {/* <div className={styles.text}>{story.caption}</div> */}
       <div className={styles.text}>
-        <>{ReactHtmlParser(story.article_data.data)}</>
+        <>{ReactHtmlParser(story.article_data.data.replace(' ', '&nbsp;'))}</>
       </div>
       <div className={styles.categories}>
         {story.videos ? (
