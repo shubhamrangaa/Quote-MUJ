@@ -66,8 +66,8 @@ const studentData = [
 	{
 		name: "Shubham Ranga",
 		title: "3rd year BTech (CSE)",
-		contact: "mailto:example@example.com",
-		image: getRandomImage()
+		contact: "mailto:shubham.199301215@muj.manipal.edu",
+		image: "https://res.cloudinary.com/shubhamrangaa/image/upload/v1615662977/ProfilePicture-min_eve2rh.jpg"
 	},
 	{
 		name:"Manavendra Sen",
@@ -84,8 +84,8 @@ const studentData = [
 	{
 		name: "Vaibhav Garg",
 		title: "3rd year BTech (IT)",
-		contact: "mailto:example@example.com",
-		image: getRandomImage()
+		contact: "mailto:vaibhav.199302174@muj.manipal.edu",
+		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626756922/download_r8rdbn.jpg"
 	},
 	{
 		name: "Kevin Peter",
@@ -96,7 +96,7 @@ const studentData = [
 	{
 		name: "A Mahi Pritam Reddy",
 		title: "4th year BTech (CSE)",
-		contact: "mailto:example@example.com",
+		contact: "mailto:anapalli.189301104@muj.manipal.edu",
 		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626272359/pritam_baivtv.jpg"
 	}
 ]
