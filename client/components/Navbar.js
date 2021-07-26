@@ -29,7 +29,7 @@ export const Navbar = () => {
         <Link href="/">Home</Link>
         <Link href="/blogs">Editorial</Link>
         <Link href="/category/all">Categories</Link>
-        <Link href="/category/Events">Events</Link>
+        <Link href="/category/Events">Upcoming Events</Link>
       </div>
       <button
         className={

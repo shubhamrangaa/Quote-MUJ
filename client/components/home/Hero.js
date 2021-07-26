@@ -25,7 +25,7 @@ export const Hero = () => {
   return (
     <div className={styles.hero}>
       <div className={styles.main}>
-        <h1 id={styles.title}>We believe in the power of stories</h1>
+        <h1 id={styles.title}>MUJ Bioscope</h1>
         <p id={styles.intro}>
           Welcome to the Official Newsletter website of Manipal University
           Jaipur. Find everything latest in our {currentMonth} newsletter!

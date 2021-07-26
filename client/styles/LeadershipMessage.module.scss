@@ -5,14 +5,17 @@
 }
 .tray {
 	display: flex;
+	gap: 1rem;
 	width: 100%;
+	justify-content: center;
 	align-items: center;
 	@media (max-width: 768px) {
+		gap: 0.5rem;
 		flex-direction: column;
 	}
 }
 .secondary {
-	margin: 0.75rem auto;
+	margin: 0.75rem 0;
 	padding: 0.75rem 2.25rem;
 	max-width: 50%;
 	font-family: "merriweather", serif;
