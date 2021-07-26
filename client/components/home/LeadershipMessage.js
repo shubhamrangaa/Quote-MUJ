@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "@styles/LeadershipMessage.module.scss";
 import { sectionHeading, decorated } from "@styles/Heading.module.scss";
+import Link from "next/link";
 
 const LeadershipMessage = () => {
 	return (
@@ -9,9 +10,15 @@ const LeadershipMessage = () => {
 				<span>Leadership Message</span>
 			</h3>
 			<div className={styles.tray}>
-				<div className={styles.secondary}>President's Message</div>
-				<div className={styles.secondary}>Pro President's Message</div>
-				<div className={styles.secondary}>Registrar's Message</div>
+				<Link href='/'>
+					<div className={styles.secondary}>President's Message</div>
+				</Link>
+				<Link href='/'>
+					<div className={styles.secondary}>Pro President's Message</div>
+				</Link>
+				<Link href='/'>
+					<div className={styles.secondary}>Registrar's Message</div>
+				</Link>
 			</div>
 		</div>
 	);
