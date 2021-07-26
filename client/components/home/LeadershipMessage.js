@@ -10,13 +10,13 @@ const LeadershipMessage = () => {
 				<span>Leadership Message</span>
 			</h3>
 			<div className={styles.tray}>
-				<Link href='/'>
+				<Link href='/message/president'>
 					<div className={styles.secondary}>President's Message</div>
 				</Link>
-				<Link href='/'>
+				<Link href='/message/pro_president'>
 					<div className={styles.secondary}>Pro President's Message</div>
 				</Link>
-				<Link href='/'>
+				<Link href='/message/registrar'>
 					<div className={styles.secondary}>Registrar's Message</div>
 				</Link>
 			</div>
