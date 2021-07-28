@@ -15,14 +15,15 @@ export const Navbar = () => {
   return (
     <div className={styles.header}>
       <Link href="/" className={styles.brand}>
-        <a>
-          <Image
+        <a className={styles.brandName}>
+          {/* <Image
             className={styles.brandImage}
             src="/assets/Quote.png"
             alt="logo"
             width={48}
-            height={44}
-          ></Image>
+            height={48}
+          ></Image> */}
+          MUJ Bioscope
         </a>
       </Link>
       <div className={styles[active ? "mobileContainer" : "container"]}>
