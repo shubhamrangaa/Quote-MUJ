@@ -75,20 +75,19 @@ const Category = ({ news }) => {
 					</section>
 					<TrendingCarousel news={news} />
 					{/* Other News Section */}
-					<section>
+					{/* <section>
 						<div className={styles.subHeadingContainer}>
 							<div className={styles.subHeadingLine} />
 							<div className={styles.subHeadingText}>Other News</div>
 							<div className={styles.subHeadingLine} />
 						</div>
-						{/* todo: style heading */}
 						{otherNewsData.map((data, i) => (
 							<div key={i.toString()}>
 								<FullWidthPreview heading={data.heading} body={data.body} image={data.images} type={data.type} />
 							</div>
 						))}
 						<div className={styles.viewAllButton}>Explore all topics</div>
-					</section>
+					</section> */}
 				</div>
 			) : (
 				<div
