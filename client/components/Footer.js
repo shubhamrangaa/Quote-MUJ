@@ -33,7 +33,7 @@ function Footer() {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/blogs">Editorials</a>
+              <a href="/blogs">News</a>
             </li>
             <li>
               <a href="/category/all">Categories</a>
