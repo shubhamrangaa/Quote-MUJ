@@ -22,9 +22,9 @@ function Footer() {
               src="/assets/Quote.png"
               alt="logo"
               width={48}
-              height={44}
+              height={48}
             ></Image>
-            <h1 className={styles.footerHeading}>Quote Muj</h1>
+            <h1 className={styles.footerHeading}>MUJ Bioscope</h1>
           </div>
         </a>
         <div>
