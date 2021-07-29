@@ -27,6 +27,12 @@ const aboutData = [
 		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626255708/a9d34e6f-9424-4993-abac-d09d187a12e0_wngoi6.jpg"
 	},
 	{
+		name: "Dr. Subhash Kumar",
+		title: "Faculty Coordinator",
+		contact: "mailto:example@example.com",
+		image: "https://res.cloudinary.com/quote-muj/image/upload/v1627562185/127487592-eac2f96c-2ca0-437d-85ef-c55adf4af722_s61bff.jpg"
+	},
+	{
 		name: "Ms. Shweta Sharma",
 		title: "Faculty Coordinator",
 		contact: "mailto:example@example.com",
