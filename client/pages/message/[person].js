@@ -21,11 +21,11 @@ function Message() {
 		<div>
 			<div className={styles.heading}>
 				<h2>{message.heading}</h2>
-				<ul>
+				{/* <ul>
 					<div className={styles.metaData}>
 						<li>By {message.author}</li>
 					</div>
-				</ul>
+				</ul> */}
 			</div>
 
 			<div className={styles.storypic}>

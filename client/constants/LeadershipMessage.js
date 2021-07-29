@@ -1,6 +1,6 @@
 export const messages = {
 	president: {
-		heading: "President's Message for the Newsletter 2021",
+		heading: "President's Message",
 		author: "Dr G. K. Prabhu",
 		image: "/assets/og_gkprabhu.jpg",
 		data: `<h4>Dr G. K. Prabhu</h4>
@@ -33,7 +33,7 @@ export const messages = {
 		<br>`,
 	},
 	pro_president: {
-		heading: "Pro President's Message for the Newsletter 2021",
+		heading: "Pro President's Message",
 		author: "Dr N. N. Sharma",
 		image: "/assets/nnsharma.jpg",
 		data: `<h4>Dr N. N. Sharma</h4>
@@ -75,7 +75,7 @@ export const messages = {
 		<br>`,
 	},
 	registrar: {
-		heading: "Registrar's Message for the Newsletter 2021",
+		heading: "Registrar's Message",
 		author: "Dr H. Ravishankar Kamath",
 		image: "/assets/hravishankar.jpg",
 		data: `<h4>Dr H. Ravishankar Kamath</h4>

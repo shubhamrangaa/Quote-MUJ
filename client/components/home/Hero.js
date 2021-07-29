@@ -39,7 +39,7 @@ export const Hero = () => {
           Jaipur. Find everything latest in our {currentMonth} newsletter!
         </p>
         <Link href={url}>
-          <a id={styles.explore}>Explore {currentMonth} Newsletter</a>
+          <a id={styles.explore}>Explore Inaugural Issue</a>
         </Link>
       </div>
 
