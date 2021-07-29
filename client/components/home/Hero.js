@@ -1,6 +1,7 @@
 import Collage from "./Collage";
 import styles from "@styles/Hero.module.scss";
 import Link from "next/link";
+import Image from "next/image";
 
 export const Hero = () => {
   const months = [
@@ -25,6 +26,13 @@ export const Hero = () => {
   return (
     <div className={styles.hero}>
       <div className={styles.main}>
+        <Image
+          className={styles.brandImage}
+          src="/assets/Quote.png"
+          alt="logo"
+          width={120}
+          height={120}
+        ></Image>
         <h1 id={styles.title}>MUJ Bioscope</h1>
         <p id={styles.intro}>
           Welcome to the Official Newsletter website of Manipal University
