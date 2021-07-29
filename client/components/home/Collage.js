@@ -20,7 +20,7 @@ export const Collage = () => {
         <img src="/assets/image 4.jpg" width={175} alt="img5"></img>
       </div>
       <div id={styles.img6}>
-        <img id={styles.img6} src="/assets/Rectangle.png" height={150} alt="img6"></img>
+        <img id={styles.img6} src="/assets/Rectangle.png" height={110} alt="img6"></img>
       </div>
     </div>
   );
