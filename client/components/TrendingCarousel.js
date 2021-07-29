@@ -29,8 +29,8 @@ const TrendingCarousel = ({ news: data }) => {
 	return (
 		<div className={styles.community}>
 			<div className={styles.nav}>
+				{/* <FontAwesomeIcon icon={faArrowAltCircleUp} className={styles.faIcon} style={{f}} size={16} fontSize={16} /> */}
 				<div className={styles.title}>
-					<FontAwesomeIcon icon={faArrowAltCircleUp} className={styles.faIcon} />
 					TRENDING
 				</div>
 			</div>

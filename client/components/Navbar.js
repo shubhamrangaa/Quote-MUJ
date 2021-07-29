@@ -15,21 +15,22 @@ export const Navbar = () => {
   return (
     <div className={styles.header}>
       <Link href="/" className={styles.brand}>
-        <a>
-          <Image
+        <a className={styles.brandName}>
+          {/* <Image
             className={styles.brandImage}
             src="/assets/Quote.png"
             alt="logo"
             width={48}
-            height={44}
-          ></Image>
+            height={48}
+          ></Image> */}
+          MUJ Bioscope
         </a>
       </Link>
       <div className={styles[active ? "mobileContainer" : "container"]}>
         <Link href="/">Home</Link>
-        <Link href="/blogs">Editorial</Link>
+        <Link href="/blogs">News</Link>
         <Link href="/category/all">Categories</Link>
-        <Link href="/category/Events">Events</Link>
+        <Link href="/category/Events">Upcoming Events</Link>
       </div>
       <button
         className={

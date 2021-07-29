@@ -24,6 +24,7 @@ const SubmissionForm = () => {
     { value: "Leadership", label: "Leadership" },
     { value: "Placements", label: "Placements" },
     { value: "Accreditation", label: "Accreditation" },
+    { value: "Editorial", label: "Editorial" },
   ];
   const handleChange = (e) => {
     setContent({
@@ -243,8 +244,8 @@ const SubmissionForm = () => {
           const additionalClass = isDragAccept
             ? styles.accept
             : isDragReject
-            ? styles.reject
-            : "";
+              ? styles.reject
+              : "";
 
           return (
             <div

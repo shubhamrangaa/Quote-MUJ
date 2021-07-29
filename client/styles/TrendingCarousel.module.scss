@@ -14,19 +14,19 @@
   // line-height: 32.68px;
   // letter-spacing: 8px;
   font-weight: 700;
-  margin-top: 30px;
-  padding-left: 10%;
+  margin-top: 2rem;
+  padding-left: 4rem;
 }
 .content {
   display: flex;
   cursor: pointer;
 }
 .indices {
-  font-size: 28px;
+  font-size: 18px;
   color: black;
   font-family: "Merriweather";
   text-align: start;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 5px;
 }
 .heading {
@@ -62,12 +62,13 @@
 }
 .images {
   width: 50%;
+  max-height: 200px;
 }
 .container {
   color: #585858;
   justify-content: center;
   text-align: center;
-  padding: 3% 10%;
+  padding: 2rem 4rem;
 }
 @media (max-width: 768px) {
   .nav {

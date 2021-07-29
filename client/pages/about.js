@@ -116,7 +116,7 @@ const studentData = [
 const about = () => {
 	return (
 		<div className={styles.wrapper}>
-			<h1 className={styles.heading}>Faculty Coordinators</h1>
+			<h2 className={styles.heading}>Editorial Board</h2>
 			<div className={styles.row}>
 				{aboutData.map(item=>{
 					return(
@@ -133,7 +133,7 @@ const about = () => {
 					)
 				})}
 			</div>
-			<h1 className={styles.heading}>Student Developers</h1>
+			<h2 className={styles.heading}>Student Developers</h2>
 			<div className={styles.row}>
 				{studentData.map(item => {
 					return (
@@ -143,9 +143,9 @@ const about = () => {
 								<div className={styles.container}>
 									<h3 className={styles.name}>{item.name}</h3>
 									<p className={styles.title}>{item.title}</p>
-									<p><button onClick={() => {
+									{/* <p><button onClick={() => {
 										document.location.href = `mailto:${item.contact})`
-									}} className={styles.button}>Contact</button></p>
+									}} className={styles.button}>Contact</button></p> */}
 								</div>
 							</div>
 						</div>

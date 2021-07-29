@@ -1,11 +1,12 @@
 import styles from "../styles/Footer.module.scss";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import months from "../constants/Months";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
   const date = new Date();
@@ -15,34 +16,34 @@ function Footer() {
   return (
     <div className={styles.footer}>
       <div className={styles.left}>
-        <a href="/" className={styles.brand}>
+        <a href='/' className={styles.brand}>
           <div className={styles.footerHeadingContainer}>
             <Image
               className={styles.icon}
-              src="/assets/Quote.png"
-              alt="logo"
+              src='/assets/Quote.png'
+              alt='logo'
               width={48}
-              height={44}
+              height={48}
             ></Image>
-            <h1 className={styles.footerHeading}>Quote Muj</h1>
+            <h1 className={styles.footerHeading}>MUJ Bioscope</h1>
           </div>
         </a>
         <div>
           <ul className={styles.linksWrapper}>
             <li>
-              <a href="/">Home</a>
+              <a href='/'>Home</a>
             </li>
             <li>
-              <a href="/blogs">Editorials</a>
+              <a href='/blogs'>News</a>
             </li>
             <li>
-              <a href="/category/all">Categories</a>
+              <a href='/category/all'>Categories</a>
             </li>
             <li>
               <a href={url}>Monthly Newsletter</a>
             </li>
             <li>
-              <a href="/category/Events">Events</a>
+              <a href='/category/Events'>Upcoming Events</a>
             </li>
           </ul>
         </div>
@@ -50,10 +51,10 @@ function Footer() {
         <div>
           <ul className={styles.linksWrapper}>
             <li>
-              <a href="/about">About</a>
+              <a href='/about'>About</a>
             </li>
             <li>
-              <a href="/vlogs">Vlogs</a>
+              <a href='/vlogs'>Vlogs</a>
             </li>
           </ul>
         </div>
@@ -66,34 +67,69 @@ function Footer() {
         </div>
 
         <div className={styles.iconsHolder}>
-          <a href="#" className={styles.iconsWrapper}>
+          <a
+            href='https://www.facebook.com/manipal.university'
+            target='_blank'
+            rel="noopener"
+            className={styles.iconsWrapper}
+          >
             <FontAwesomeIcon
               className={styles.FontAwesomeIcon}
               icon={faFacebook}
             />
           </a>
-          <a href="#" className={styles.iconsWrapper}>
+          <a
+            target='_blank'
+            rel="noopener"
+            href='https://www.linkedin.com/school/manipal-university-jaipur/'
+            className={styles.iconsWrapper}
+          >
             <FontAwesomeIcon
               className={styles.FontAwesomeIcon}
               icon={faLinkedinIn}
             />
           </a>
-          <a href="#" className={styles.iconsWrapper}>
+          <a href='https://www.instagram.com/jaipurmanipal/'
+            target='_blank'
+            rel="noopener"
+            className={styles.iconsWrapper}>
             <FontAwesomeIcon
               className={styles.FontAwesomeIcon}
               icon={faInstagram}
             />
           </a>
-          <a href="#" className={styles.iconsWrapper}>
+          <a href='https://twitter.com/Jaipur_Manipal'
+            target='_blank'
+            rel="noopener"
+            className={styles.iconsWrapper}>
             <FontAwesomeIcon
               className={styles.FontAwesomeIcon}
               icon={faTwitter}
             />
           </a>
+          <a href='https://www.youtube.com/channel/UCFbeX4UJyd4fHTCnCVGob_Q'
+            target='_blank'
+            rel="noopener"
+            className={styles.iconsWrapper}>
+            <FontAwesomeIcon
+              className={styles.FontAwesomeIcon}
+              icon={faYoutube}
+            />
+          </a>
         </div>
-		<div className={styles.contactWrapper}>
-			Contact us:
-		</div>
+        <div className={styles.contactWrapper}>Contact us:
+          <a href="tel:01413999100">
+            <FontAwesomeIcon
+              style={{
+              fontSize:"16px",
+              width: "16px",
+              height: "16px",
+              marginRight: "0.5rem",
+            }}
+              icon={faPhone}
+            />
+            0141 - 3999100</a>
+        </div>
       </div>
     </div>
   );

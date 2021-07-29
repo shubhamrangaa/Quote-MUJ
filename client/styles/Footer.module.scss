@@ -41,7 +41,11 @@ $body-color: #151515;
 
 .linksWrapper {
   * {
+    margin: 0;
     padding: 0.4rem 0;
+  }
+  @media (max-width: 1224px) {
+    margin: 1rem !important;
   }
 }
 
@@ -58,7 +62,7 @@ $body-color: #151515;
 
 .left,
 .right {
-  margin: 50px;
+  margin: 4rem 8rem;
   @media (max-width: 1224px) {
     margin: 50px 50px 25px;
   }
@@ -70,6 +74,7 @@ $body-color: #151515;
 }
 
 .right {
+  flex-grow: 1;
   margin: 50px;
   @media (max-width: 1224px) {
     margin: 0 50px 2rem;
@@ -144,9 +149,15 @@ $body-color: #151515;
   }
   .contactWrapper {
   	text-align: center;
+    a{
+      justify-content: center !important;
+    }
   }
 }
 
 .contactWrapper{
 	padding: 1rem 0;
+  a {
+    margin-top: 1rem;
+  }
 }
