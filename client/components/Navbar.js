@@ -6,47 +6,39 @@ import burger from "../styles/Hamburger.module.scss";
 import months from "../constants/Months";
 
 export const Navbar = () => {
-  const [active, setActive] = useState(false);
+	const [active, setActive] = useState(false);
 
-  const handleClick = () => {
-    setActive(!active);
-  };
+	const handleClick = () => {
+		setActive(!active);
+	};
 
-  return (
-    <div className={styles.header}>
-      <Link href="/" className={styles.brand}>
-        <a className={styles.brandName}>
-          {/* <Image
+	return (
+		<div className={styles.header}>
+			<Link href='/' className={styles.brand}>
+				<a className={styles.brandName}>
+					{/* <Image
             className={styles.brandImage}
             src="/assets/Quote.png"
             alt="logo"
             width={48}
             height={48}
           ></Image> */}
-          MUJ Bioscope
-        </a>
-      </Link>
-      <div className={styles[active ? "mobileContainer" : "container"]}>
-        <Link href="/">Home</Link>
-        <Link href="/blogs">News</Link>
-        <Link href="/category/all">Categories</Link>
-        <Link href="/category/Events">Upcoming Events</Link>
-      </div>
-      <button
-        className={
-          burger["hamburger"] +
-          " " +
-          burger["hamburger--spin"] +
-          " " +
-          burger[active ? "is-active" : null]
-        }
-        onClick={handleClick}
-      >
-        <span className={burger["hamburger-box"]}>
-          <span className={burger["hamburger-inner"]}></span>
-        </span>
-      </button>
-    </div>
-  );
+					MUJ Bioscope
+				</a>
+			</Link>
+			<div className={styles[active ? "mobileContainer" : "container"]}>
+				<Link href='/'>Home</Link>
+				<Link href='/blogs'>News</Link>
+				<Link href='/category/all'>Categories</Link>
+				<Link href='/editorial'>Editorial</Link>
+				<Link href='/category/Events'>Upcoming Events</Link>
+			</div>
+			<button className={burger["hamburger"] + " " + burger["hamburger--spin"] + " " + burger[active ? "is-active" : null]} onClick={handleClick}>
+				<span className={burger["hamburger-box"]}>
+					<span className={burger["hamburger-inner"]}></span>
+				</span>
+			</button>
+		</div>
+	);
 };
 export default Navbar;
