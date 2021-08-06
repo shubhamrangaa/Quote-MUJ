@@ -5,6 +5,10 @@
   padding: 1% 10%;
   padding-top: 0;
   padding-bottom: 0;
+  @media(max-width: 768px) {
+    padding: 5% 2%;
+    margin:  2rem 0;
+  }
 }
 
 .decorated {

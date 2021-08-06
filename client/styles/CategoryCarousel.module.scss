@@ -1,6 +1,5 @@
 .community {
   background-color: #f7fafc;
-  font-family: "Open Sans", sans-serif;
   font-weight: normal;
 }
 .nav {
@@ -43,6 +42,10 @@
   h3 {
     color: #303030;
   }
+  @media(max-width: 768px) {
+    padding: 0% 2%;
+    margin:  2rem 0;
+  }
 }
 .button {
   background-color: #fff;
@@ -77,6 +80,7 @@
 @media (max-width: 768px) {
   .nav {
     display: flex;
+    padding-top: 2rem;
     flex-direction: column;
   }
   #title {
