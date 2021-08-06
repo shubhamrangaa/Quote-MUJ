@@ -1,15 +1,24 @@
+// Excuse me for the quality of the code below :)
 import React from "react";
-import ReactHtmlParser from "react-html-parser";
+import Image from "next/image";
 
 import styles from "../styles/About.module.scss";
-
-import { editorialNewsletter } from "../constants/Editorial";
 
 const editorial = () => {
 	return (
 		<div className={styles.wrapper}>
 			<h2 className={styles.heading}>Editorial Newsletter</h2>
-			<div style={{ fontSize: "1.2rem", margin: "1rem", marginBottom: "5rem" }}>
+			<div style={{ width: "300px" }}>
+				<img
+					src={"https://res.cloudinary.com/quote-muj/image/upload/v1626255709/ef29a5e1-4d8e-4181-bdbc-3fd0f1a5f2e9_syg2gk.jpg"}
+					alt='picture'
+					style={{ objectFit: "cover", borderRadius: "50%", margin: 15 }}
+					width={300}
+					height={300}
+				/>
+				<h5 style={{ textAlign: "center" }}>Dr. Richa Arora</h5>
+			</div>
+			<div style={{ fontSize: "1.2rem", margin: "1rem", marginBottom: "5rem", marginTop: 50 }}>
 				Dear Readers,
 				<br />
 				<br />
