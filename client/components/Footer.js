@@ -51,7 +51,7 @@ function Footer() {
         <div>
           <ul className={styles.linksWrapper}>
             <li>
-              <a href='/about'>About</a>
+              <a href='/editorial-board'>Editorial Board</a>
             </li>
             <li>
               <a href='/vlogs'>Vlogs</a>
@@ -70,7 +70,7 @@ function Footer() {
           <a
             href='https://www.facebook.com/manipal.university'
             target='_blank'
-            rel="noopener"
+            rel='noopener'
             className={styles.iconsWrapper}
           >
             <FontAwesomeIcon
@@ -80,7 +80,7 @@ function Footer() {
           </a>
           <a
             target='_blank'
-            rel="noopener"
+            rel='noopener'
             href='https://www.linkedin.com/school/manipal-university-jaipur/'
             className={styles.iconsWrapper}
           >
@@ -89,46 +89,54 @@ function Footer() {
               icon={faLinkedinIn}
             />
           </a>
-          <a href='https://www.instagram.com/jaipurmanipal/'
+          <a
+            href='https://www.instagram.com/jaipurmanipal/'
             target='_blank'
-            rel="noopener"
-            className={styles.iconsWrapper}>
+            rel='noopener'
+            className={styles.iconsWrapper}
+          >
             <FontAwesomeIcon
               className={styles.FontAwesomeIcon}
               icon={faInstagram}
             />
           </a>
-          <a href='https://twitter.com/Jaipur_Manipal'
+          <a
+            href='https://twitter.com/Jaipur_Manipal'
             target='_blank'
-            rel="noopener"
-            className={styles.iconsWrapper}>
+            rel='noopener'
+            className={styles.iconsWrapper}
+          >
             <FontAwesomeIcon
               className={styles.FontAwesomeIcon}
               icon={faTwitter}
             />
           </a>
-          <a href='https://www.youtube.com/channel/UCFbeX4UJyd4fHTCnCVGob_Q'
+          <a
+            href='https://www.youtube.com/channel/UCFbeX4UJyd4fHTCnCVGob_Q'
             target='_blank'
-            rel="noopener"
-            className={styles.iconsWrapper}>
+            rel='noopener'
+            className={styles.iconsWrapper}
+          >
             <FontAwesomeIcon
               className={styles.FontAwesomeIcon}
               icon={faYoutube}
             />
           </a>
         </div>
-        <div className={styles.contactWrapper}>Contact us:
-          <a href="tel:01413999100">
+        <div className={styles.contactWrapper}>
+          Contact us:
+          <a href='tel:01413999100'>
             <FontAwesomeIcon
               style={{
-              fontSize:"16px",
-              width: "16px",
-              height: "16px",
-              marginRight: "0.5rem",
-            }}
+                fontSize: "16px",
+                width: "16px",
+                height: "16px",
+                marginRight: "0.5rem",
+              }}
               icon={faPhone}
             />
-            0141 - 3999100</a>
+            0141 - 3999100
+          </a>
         </div>
       </div>
     </div>
