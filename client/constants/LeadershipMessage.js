@@ -1,9 +1,9 @@
 export const messages = {
-	president: {
-		heading: "President's Message",
-		author: "Dr G. K. Prabhu",
-		image: "/assets/og_gkprabhu.jpg",
-		data: `<h4>Dr G. K. Prabhu</h4>
+  president: {
+    heading: "President's Message",
+    author: "Dr G. K. Prabhu",
+    image: "/assets/og_gkprabhu.jpg",
+    data: `<h4>Dr G. K. Prabhu</h4>
 		<h5>President</h5>
 		<h5>Manipal University Jaipur</h5>
 		<br>
@@ -31,12 +31,12 @@ export const messages = {
 		astounding and astonishing world of Manipal University Jaipur
 		<br>
 		<br>`,
-	},
-	pro_president: {
-		heading: "Pro President's Message",
-		author: "Dr N. N. Sharma",
-		image: "/assets/nnsharma.jpg",
-		data: `<h4>Dr N. N. Sharma</h4>
+  },
+  pro_president: {
+    heading: "Pro President's Message",
+    author: "Dr N. N. Sharma",
+    image: "/assets/nnsharma.jpg",
+    data: `<h4>Dr N. N. Sharma</h4>
 		<h5>Pro President</h5>
 		<h5>Manipal University Jaipur</h5>
 		<br>
@@ -73,12 +73,12 @@ export const messages = {
 		journey of MUJ.
 		<br>
 		<br>`,
-	},
-	registrar: {
-		heading: "Registrar's Message",
-		author: "Dr H. Ravishankar Kamath",
-		image: "/assets/hravishankar.jpg",
-		data: `<h4>Dr H. Ravishankar Kamath</h4>
+  },
+  registrar: {
+    heading: "Registrar's Message",
+    author: "Dr. Nitu Bhatnagar",
+    image: "/assets/nbhatnagar.jpg",
+    data: `<h4>Dr. Nitu Bhatnagar</h4>
 		<h5>Registrar</h5>
 		<h5>Manipal University Jaipur</h5>
 		<br>
@@ -109,5 +109,5 @@ export const messages = {
 		Manipal University Jaipur.
 		<br>
 		<br>`,
-	},
+  },
 };

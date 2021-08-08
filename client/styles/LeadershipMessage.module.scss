@@ -1,45 +1,65 @@
 .container {
-	justify-content: center;
-	text-align: justify;
-	padding: 3% 10%;
-	padding-bottom: 1.5rem;
+  justify-content: center;
+  text-align: justify;
+  padding: 3% 10%;
+  padding-bottom: 1.5rem;
 }
 .tray {
-	display: flex;
-	gap: 1rem;
-	width: 100%;
-	justify-content: center;
-	align-items: center;
-	@media (max-width: 768px) {
-		gap: 0.5rem;
-		flex-direction: column;
-	}
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  @media (max-width: 768px) {
+    gap: 0.5rem;
+    flex-direction: column;
+  }
 }
 .secondary {
-	margin: 0.75rem 0;
-	padding: 0.75rem 2.25rem;
-	max-width: 50%;
-	font-family: "merriweather", serif;
-	font-weight: 600;
-	font-size: 1rem;
-	line-height: 15px;
-	color: black;
-	border: 2px solid;
-	border-radius: 0.2rem;
-	background: white;
-	cursor: pointer;
-	@media (max-width: 768px) {
-		text-align: center;
-		font-size: 13px;
-		padding: 0.75rem 1.25rem;
-		margin: 0.25rem 0.15rem;
-		font-weight: 700;
-		max-width: 90%;
-		width: 100%;
-	}
+  margin: 0.75rem 0;
+  padding: 0.75rem 2.25rem;
+  max-width: 50%;
+  font-family: "merriweather", serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 15px;
+  color: black;
+  border: 2px solid;
+  border-radius: 0.2rem;
+  background: white;
+  cursor: pointer;
+  @media (max-width: 768px) {
+    text-align: center;
+    font-size: 13px;
+    padding: 0.75rem 1.25rem;
+    margin: 0.25rem 0.15rem;
+    font-weight: 700;
+    max-width: 90%;
+    width: 100%;
+  }
 }
 .secondary:hover {
-	color: white;
-	background: black;
-	border-color: black;
+  color: white;
+  background: black;
+  border-color: black;
 }
+
+// LEADERSHIP CARDS
+
+.card {
+	h3{
+		text-align: left;
+	}
+  max-width: calc((100% - 4rem) / 3);
+	.cardImage{
+		img {
+			width: 100%;
+			aspect-ratio: 4 / 3;
+			border-radius: 4px;
+		}
+	}
+	@media (max-width: 768px) {
+		max-width: 100%;
+	}
+}
+

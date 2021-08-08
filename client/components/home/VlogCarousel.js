@@ -5,18 +5,14 @@ import Carousel from "react-material-ui-carousel";
 
 const VlogCarousel = () => {
   var videos = [
-    {
-      url: "https://youtube.com/watch?v=vhnhUq8E-ZA",
-    },
-    {
-      url: "https://youtu.be/hTXLTOeogz8",
-    },
-    {
-      url: "https://youtube.com/watch?v=oOgpTRs--Do",
-    },
-    {
-      url: "https://youtube.com/watch?v=0Rh8CTlbLng",
-    },
+    "https://youtu.be/ypxNQTEqNZQ",
+    "https://youtube.com/watch?v=vhnhUq8E-ZA",
+    "https://youtu.be/gyYgmdx7hDs",
+    "https://youtu.be/KqVcZ1tO9JU",
+    "https://youtu.be/mZ0PDmokGSA",
+    "https://youtube.com/watch?v=oOgpTRs--Do",
+    "https://youtube.com/watch?v=0Rh8CTlbLng",
+    "https://youtu.be/ZDx_sFG_jok",
   ];
 
   return (
@@ -33,7 +29,7 @@ const VlogCarousel = () => {
       >
         {videos.map((vid, id) => (
           // <VideoPlayer key={i} vid={vid} />
-          <ReactPlayer key={id} className={styles.player} url={vid.url} />
+          <ReactPlayer key={id} className={styles.player} url={vid} />
         ))}
       </Carousel>
     </div>
