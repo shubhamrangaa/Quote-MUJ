@@ -24,26 +24,28 @@ export const Hero = () => {
   const url = `/monthly/${currentYear}/${currentMonth}`;
 
   return (
-    <div className={styles.hero}>
-      <div className={styles.main}>
-        <Image
-          className={styles.brandImage}
-          src="/assets/Quote.png"
-          alt="logo"
-          width={120}
-          height={120}
-        ></Image>
-        <h1 id={styles.title}>MUJ Bioscope</h1>
-        <p id={styles.intro}>
-          Welcome to the Official Newsletter website of Manipal University
-          Jaipur. Find everything latest in our {currentMonth} newsletter!
-        </p>
-        <Link href={url}>
-          <a id={styles.explore}>Explore Inaugural Issue</a>
-        </Link>
+    <div className={styles.heroContainer}>
+      <div className={styles.hero}>
+        <div className={styles.main}>
+          <Image
+            className={styles.brandImage}
+            src='/assets/Quote.png'
+            alt='logo'
+            width={100}
+            height={100}
+          ></Image>
+          <h1 id={styles.title}>MUJ Bioscope</h1>
+          <p id={styles.intro}>
+            Welcome to the Official Newsletter website of Manipal University
+            Jaipur. <br /> Find everything latest in our {currentMonth}{" "}
+            newsletter!
+          </p>
+          <Link href={url}>
+            <a id={styles.explore}>Explore Inaugural Issue</a>
+          </Link>
+        </div>
       </div>
-
-      <Collage />
+      <div></div>
     </div>
   );
 };
