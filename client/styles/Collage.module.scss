@@ -52,34 +52,39 @@
 }
 #img1 {
   top: 30px !important;
-  left: 10px !important;
+  left: -20px !important;
 }
 #img1 img {
+  aspect-ratio: 9/16;
   max-height: 190px;
-  width: 153px;
 }
 #img2 {
+  aspect-ratio: 9/16;
   animation-delay: 0.1s;
   top: 30px !important;
-  left: 200px !important;
+  left: 250px !important;
 }
 #img3 {
+  aspect-ratio: 9/16;
   animation-delay: 0.2s;
-  top: 220px !important;
-  left: 130px !important;
+  top: 290px !important;
+  left: 110px !important;
 }
 #img4 {
+  aspect-ratio: 9/16;
   animation-delay: 0.3s;
-  top: 210px !important;
-  left:320px !important;
+  top: 250px !important;
+  left:280px !important;
 }
 #img5 {
+  aspect-ratio: 9/16;
   animation-delay: 0.4s;
-  left: -80px !important;
-  top: 210px !important;
+  left: -70px !important;
+  top: 250px !important;
 }
 #img6 {
+  aspect-ratio: 9/16;
   animation-delay: 0.5s;
-  top: 220px !important;
+  top: 30px !important;
   left: 60px !important;
 }

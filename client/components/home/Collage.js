@@ -5,22 +5,22 @@ export const Collage = () => {
   return (
     <div className={styles.collage}>
       <div id={styles.img1}>
-        <img src="/assets/Mn-3P_jMAbU.png" height={145} alt="img1"></img>
+        <img src="/assets/collage/1.jpg" height={200} alt="img1"></img>
       </div>
       <div id={styles.img2}>
-        <img src="/assets/Bz3aP1lagp4.png" alt="img2"></img>
+        <img src="/assets/collage/2.jpg" height={200} alt="img2"></img>
       </div>
       <div id={styles.img3}>
-        <img src="/assets/image 3.png" width={150} alt="img3"></img>
+        <img src="/assets/collage/3.jpg" height={200} alt="img3"></img>
       </div>
       <div id={styles.img4}>
-        <img src="/assets/image 4.png" height={200} alt="img4"></img>
+        <img src="/assets/collage/4.jpg" height={200} alt="img4"></img>
       </div>
       <div id={styles.img5}>
-        <img src="/assets/image 4.jpg" width={175} alt="img5"></img>
+        <img src="/assets/collage/5.jpg" height={200} alt="img5"></img>
       </div>
       <div id={styles.img6}>
-        <img id={styles.img6} src="/assets/Rectangle.png" height={110} alt="img6"></img>
+        <img id={styles.img6}src="/assets/collage/6.jpg" height={200} alt="img6"></img>
       </div>
     </div>
   );
