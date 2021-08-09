@@ -53,7 +53,8 @@ const Category = ({ news }) => {
 		<>
 			{Object.keys(news).length ? (
 				<div>
-					<PageHeader heading={categoryName} />
+				{/* biggest off in history */}
+					<PageHeader heading={categoryName === 'Accreditation' ? 'Ranking & Accreditation' : categoryName} />
 					<section>
 						{/* todo: style heading */}
 						{/* <h2>Headliner</h2> */}

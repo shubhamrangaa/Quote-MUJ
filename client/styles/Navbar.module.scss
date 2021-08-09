@@ -20,7 +20,7 @@
 .brandName{
   font-size: 1.25rem;
   font-weight: 700;
-  margin-left: 0.5rem;
+  margin-left: 2rem;
 }
 
 .header a:not(.brandName) {
@@ -50,6 +50,7 @@
 
 .mobileContainer {
   display: flex;
+  width: 100vw;
   align-items: center;
 }
 @media (max-width: 768px) {
@@ -58,7 +59,7 @@
     height: 75px;
     position: relative;
     overflow: visible !important;
-    padding: 0.25rem 1.5rem;
+    padding: 0.25rem 0rem;
   }
   .header > div {
     overflow: visible !important;
@@ -66,6 +67,7 @@
   .header .brandImage {
     position: absolute;
     bottom: -20px !important;
+    margin-left: 2rem !important;
   }
   .header a {
     font-size: 1rem;
@@ -75,6 +77,10 @@
     display: none;
   }
   .mobileContainer {
+    margin-top: 24rem;
+    padding-bottom: 1rem;
+    background: #000000;
+    
     flex-direction: column;
   }
 }

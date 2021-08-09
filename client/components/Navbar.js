@@ -14,23 +14,26 @@ export const Navbar = () => {
 
 	return (
 		<div className={styles.header}>
+			{!active &&
 			<Link href='/' className={styles.brand}>
-				<a className={styles.brandName}>
-					{/* <Image
+					<div  className={styles.brandName}>
+						{/* <Image
             className={styles.brandImage}
             src="/assets/Quote.png"
             alt="logo"
             width={48}
             height={48}
           ></Image> */}
-					MUJ Bioscope
-				</a>
+						MUJ Bioscope
+					</div>
 			</Link>
+				}
 			<div className={styles[active ? "mobileContainer" : "container"]}>
 				<Link href='/'>Home</Link>
 				<Link href='/blogs'>News</Link>
 				<Link href='/category/all'>Categories</Link>
 				<Link href='/editorial'>Editorial</Link>
+				<Link href='/category/accreditation'>Rankings and Accreditation</Link>
 				<Link href='/category/Events'>Upcoming Events</Link>
 			</div>
 			<button className={burger["hamburger"] + " " + burger["hamburger--spin"] + " " + burger[active ? "is-active" : null]} onClick={handleClick}>

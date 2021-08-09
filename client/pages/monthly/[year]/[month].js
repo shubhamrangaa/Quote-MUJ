@@ -46,7 +46,9 @@ const Newsletter = ({ news }) => {
                 Newsletter.
               </h1>
               <h2 className={styles.monthyear}>
-                {month} {year}
+                {/* {month} {year} */}
+                {/* i want to die */}
+                Inaugural Issue
               </h2>
             </div>
             <div className={styles.rect}>
