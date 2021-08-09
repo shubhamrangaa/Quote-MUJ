@@ -34,7 +34,7 @@ export const Navbar = () => {
 				<Link href='/category/all'>Categories</Link>
 				<Link href='/editorial'>Editorial</Link>
 				<Link href='/category/accreditation'>Rankings and Accreditation</Link>
-				<Link href='/category/Events'>Upcoming Events</Link>
+				<Link href='/category/upcoming-events'>Upcoming Events</Link>
 			</div>
 			<button className={burger["hamburger"] + " " + burger["hamburger--spin"] + " " + burger[active ? "is-active" : null]} onClick={handleClick}>
 				<span className={burger["hamburger-box"]}>
