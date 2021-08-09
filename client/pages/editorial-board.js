@@ -12,13 +12,13 @@ const aboutData = [
 		name: "Dr. Mani Sachdev",
 		title: "Faculty Coordinator",
 		contact: "mailto:example@example.com",
-		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626255709/697fc7bf-5059-4590-8122-636f92543ef4_vrwdd8.jpg"
+		image: "/assets/drmanisachdeva.jpg"
 	},
 	{
 		name: "Dr. Nitu Bhatnagar",
 		title: "Faculty Coordinator",
 		contact: "mailto:example@example.com",
-		image: "https://res.cloudinary.com/quote-muj/image/upload/v1626255709/875125d8-49ab-4dff-b2ab-5c29c999ac3e_fnyunv.jpg"
+		image: "/assets/nbhatnagar.jpg"
 	},
 	{
 		name: "Dr. Lucky Vijayvargiya",
@@ -30,7 +30,7 @@ const aboutData = [
 		name: "Dr. Subhash Kumar",
 		title: "Faculty Coordinator",
 		contact: "mailto:example@example.com",
-		image: "https://res.cloudinary.com/quote-muj/image/upload/v1627562185/127487592-eac2f96c-2ca0-437d-85ef-c55adf4af722_s61bff.jpg"
+		image: "/assets/drshubhaskumar.jpg"
 	},
 	{
 		name: "Ms. Shweta Sharma",
