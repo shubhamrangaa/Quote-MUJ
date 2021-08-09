@@ -25,6 +25,7 @@ const SubmissionForm = () => {
     { value: "Placements", label: "Placements" },
     { value: "Accreditation", label: "Accreditation" },
     { value: "Editorial", label: "Editorial" },
+    { value: "Upcoming Events", label: "Upcoming Events" },
   ];
   const handleChange = (e) => {
     setContent({
