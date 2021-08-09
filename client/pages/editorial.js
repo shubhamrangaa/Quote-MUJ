@@ -18,7 +18,7 @@ const editorial = () => {
 				/>
 				<h5 style={{ textAlign: "center" }}>Dr. Richa Arora</h5>
 			</div>
-			<div style={{ fontSize: "1.2rem", margin: "1rem", marginBottom: "5rem", marginTop: 50 }}>
+			<div style={{margin: "1rem", marginBottom: "5rem", marginTop: 50 , lineHeight: 1.5, letterSpacing: 0.4}}>
 				Dear Readers,
 				<br />
 				<br />
