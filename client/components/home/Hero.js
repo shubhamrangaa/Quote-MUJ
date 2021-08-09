@@ -38,7 +38,7 @@ export const Hero = () => {
           Welcome to the Official Newsletter website of Manipal University
           Jaipur. Find everything latest in our {currentMonth} newsletter!
         </p>
-        <Link href={url}>
+        <Link href={`/monthly/${currentYear}/July`}>
           <a id={styles.explore}>Explore Inaugural Issue</a>
         </Link>
       </div>
