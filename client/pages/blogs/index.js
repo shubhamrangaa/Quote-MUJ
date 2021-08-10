@@ -20,7 +20,6 @@ export default function AllStories() {
       res.json().then((data) => {
         setArticles(data);
         setLoading(false);
-		console.log(data)
       })
     );
   };
