@@ -146,7 +146,7 @@ function FullStory({ story }) {
 
       {/* <div className={styles.text}>{story.caption}</div> */}
       <div className={styles.text}>
-        <>{ReactHtmlParser(story.article_data.data.replace(' ', '&nbsp;'))}</>
+        <>{ReactHtmlParser(story.article_data.data?.replace(' ', '&nbsp;'))}</>
       </div>
       <div className={styles.categories}>
         {story.videos ? (

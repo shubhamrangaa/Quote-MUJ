@@ -35,9 +35,14 @@ function stripWhitespace(string) {
 }
 
 function readTime(string, customWordTime) {
-  const strippedString = stripTags(stripWhitespace(string));
-  const { wordTime } = wordsReadTime(strippedString, customWordTime);
-  return humanizeTime(wordTime);
+	try{
+		const strippedString = stripTags(stripWhitespace(string));
+		const { wordTime } = wordsReadTime(strippedString, customWordTime);
+		return humanizeTime(wordTime);
+	}
+	catch{
+		return humanizeTime(0)
+	}
 }
 
 export default readTime;
