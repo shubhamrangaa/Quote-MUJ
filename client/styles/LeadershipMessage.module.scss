@@ -4,6 +4,9 @@
   padding: 3% 10%;
   padding-bottom: 1.5rem;
 }
+.wrapper{
+	cursor: pointer;
+}
 .tray {
   display: flex;
   gap: 1.5rem;
@@ -47,6 +50,7 @@
 // LEADERSHIP CARDS
 
 .card {
+	cursor: pointer;
 	h3{
 		text-align: left;
 	}

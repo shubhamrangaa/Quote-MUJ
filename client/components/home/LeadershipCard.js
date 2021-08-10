@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 import styles from "@styles/LeadershipMessage.module.scss";
+import { styled } from "@material-ui/core";
 
 const LeadershipCard = ({ href, image, title, children }) => {
   return (
