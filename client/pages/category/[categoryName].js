@@ -22,6 +22,9 @@ export async function getStaticProps({ params }) {
 	//   console.log(categoryName);
 
 	const res = await fetch(`https://quote-muj.herokuapp.com/api/blogs/categories/${categoryName}`);
+	if(categoryName === "upcoming-events"){
+	const res = await fetch(`https://quote-muj.herokuapp.com/api/blogs/categories/Upcoming`);
+	}
 	const news = await res.json();
 	//   console.log(news);
 	return { props: { news } };
