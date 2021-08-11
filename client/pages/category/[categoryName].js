@@ -21,9 +21,10 @@ export async function getStaticProps({ params }) {
 	categoryName = categoryName.charAt(0).toUpperCase() + categoryName.slice(1);
 	//   console.log(categoryName);
 
-	const res = await fetch(`https://quote-muj.herokuapp.com/api/blogs/categories/${categoryName}`);
+	let res = await fetch(`https://quote-muj.herokuapp.com/api/blogs/categories/${categoryName}`);
 	if(categoryName === "upcoming-events"){
-	const res = await fetch(`https://quote-muj.herokuapp.com/api/blogs/categories/Upcoming`);
+	 res = await fetch(`https://quote-muj.herokuapp.com/api/blogs/categories/Upcoming`);
+		console.log("hello");
 	}
 	const news = await res.json();
 	//   console.log(news);
