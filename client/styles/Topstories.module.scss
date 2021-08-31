@@ -2,9 +2,9 @@
   justify-content: center;
   text-align: justify;
   // text-align: center;
-  padding: 1% 10%;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 1250px;
   @media (max-width: 768px) {
     padding: 5% 2%;
     margin: 2rem 0;
@@ -38,11 +38,16 @@
 
 .heading {
   margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
   // text-align: center;
   transition: 0.2s all;
   &:hover {
     cursor: pointer;
     color: #7979ff;
+  }
+  @media only screen and (max-width: 1000px) {
+    font-size: 1.1rem;
   }
 }
 
@@ -55,6 +60,7 @@
   box-shadow: none !important;
   p {
     text-align: justify;
+    margin: 0;
   }
 }
 
@@ -102,6 +108,8 @@
 
 .element {
   display: grid;
+  margin-bottom: 0.75rem;
+
   // place-items: center;
 }
 
