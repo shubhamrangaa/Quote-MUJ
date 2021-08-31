@@ -24,15 +24,48 @@ export const Hero = () => {
   const url = `/monthly/${currentYear}/${currentMonth}`;
 
   return (
-    <div className={styles.hero} style={{paddingBottom:"rem"}}>
+    <div className={styles.hero} style={{ paddingBottom: "rem" }}>
       <div className={styles.main}>
-        <Image
-          className={styles.brandImage}
-          src="/assets/Quote.png"
-          alt="logo"
-          width={200}
-          height={200}
-        ></Image>
+        <div
+          style={{
+            display: "flex",
+            gap: "1rem",
+            marginBottom: "1rem",
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: "white",
+              borderRadius: "50%",
+              padding: "1rem",
+            }}
+          >
+            <Image
+              className={styles.brandImage}
+              src='/assets/Bioscope.png'
+              alt='logo'
+              width={150}
+              height={150}
+            ></Image>
+          </div>
+          <div
+            style={{
+              backgroundColor: "white",
+              borderRadius: "50%",
+              padding: "1rem",
+              overflow: "hidden",
+            }}
+          >
+            <Image
+              className={styles.brandImage}
+              src='/assets/Quote.png'
+              alt='logo'
+              width={150}
+              height={150}
+              style={{ border: "2px solid white inset " }}
+            ></Image>
+          </div>
+        </div>
         <h1 id={styles.title}>MUJ Bioscope</h1>
         <p id={styles.intro}>
           Welcome to the Official Newsletter website of Manipal University

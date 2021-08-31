@@ -20,7 +20,7 @@ function Footer() {
           <div className={styles.footerHeadingContainer}>
             <Image
               className={styles.icon}
-              src='/assets/Quote.png'
+              src='/assets/Bioscope.png'
               alt='logo'
               width={80}
               height={80}
