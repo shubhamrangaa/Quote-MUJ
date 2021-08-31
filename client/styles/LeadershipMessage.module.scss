@@ -1,11 +1,13 @@
 .container {
   justify-content: center;
   text-align: justify;
-  padding: 3% 10%;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 1250px;
   padding-bottom: 1.5rem;
 }
-.wrapper{
-	cursor: pointer;
+.wrapper {
+  cursor: pointer;
 }
 .tray {
   display: flex;
@@ -50,20 +52,23 @@
 // LEADERSHIP CARDS
 
 .card {
-	cursor: pointer;
-	h3{
-		text-align: left;
-	}
+  cursor: pointer;
+  h3 {
+    font-size: 1.5rem;
+    text-align: left;
+    @media only screen and (max-width: 1000px) {
+      font-size: 1.25rem;
+    }
+  }
   max-width: calc((100% - 4rem) / 3);
-	.cardImage{
-		img {
-			width: 100%;
-			aspect-ratio: 4 / 3;
-			border-radius: 4px;
-		}
-	}
-	@media (max-width: 768px) {
-		max-width: 100%;
-	}
+  .cardImage {
+    img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 4px;
+    }
+  }
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 }
-

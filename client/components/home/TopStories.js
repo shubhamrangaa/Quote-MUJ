@@ -5,6 +5,7 @@ import Paper from "@material-ui/core/Paper";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import TextMobileStepper from "../Carousel";
+import { stripLongString } from "utils/stripLongString";
 
 export default function TopStories() {
   const [articles, setArticles] = useState([]);
@@ -17,7 +18,15 @@ export default function TopStories() {
   const fetchArticles = async () => {
     fetch("https://quote-muj.herokuapp.com/api/blogs/all").then((res) =>
       res.json().then((data) => {
-        setArticles(data);
+        console.log(data);
+        const strippedDesc = data.map((article) => {
+          const shortText = stripLongString(200, article.caption);
+          const shortHeading = stripLongString(100, article.heading);
+          article.caption = shortText;
+          article.heading = shortHeading;
+          return article;
+        });
+        setArticles(strippedDesc);
         setLoading(false);
       })
     );
@@ -43,8 +52,8 @@ export default function TopStories() {
                               : "https://picsum.photos/300/200"
                           }
                           alt="img"
-                        // width={256}
-                        // height={256}
+                          // width={256}
+                          // height={256}
                         />
                       )}
                       <Link href={`/blogs/${item.slug}`}>
@@ -81,8 +90,8 @@ export default function TopStories() {
                               : "https://picsum.photos/300/200"
                           }
                           alt="img"
-                        // width={256}
-                        // height={256}
+                          // width={256}
+                          // height={256}
                         />
                       )}
                       <Link href={`/blogs/${item.slug}`}>
