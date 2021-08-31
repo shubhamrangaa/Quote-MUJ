@@ -7,7 +7,7 @@ import styles from "../styles/About.module.scss";
 const editorial = () => {
 	return (
 		<div className={styles.wrapper}>
-			<h2 className={styles.heading}>Editorial Newsletter</h2>
+			<h2 className={styles.heading}>Editors' Desk</h2>
 			<div style={{ width: "300px" }}>
 				<img
 					src={"https://res.cloudinary.com/quote-muj/image/upload/v1626255709/ef29a5e1-4d8e-4181-bdbc-3fd0f1a5f2e9_syg2gk.jpg"}

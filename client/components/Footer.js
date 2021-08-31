@@ -42,28 +42,23 @@ function Footer() {
             <li>
               <a href={url}>Monthly Newsletter</a>
             </li>
-            <li>
-              <a href='/category/Events'>Upcoming Events</a>
-            </li>
           </ul>
         </div>
 
         <div>
           <ul className={styles.linksWrapper}>
             <li>
-              <a href='/editorial-board'>Editorial Board</a>
+              <a href='/category/Events'>Upcoming Events</a>
             </li>
             <li>
-              <a href='/vlogs'>Vlogs</a>
+              <a href='/editorial-board'>Editorial Board</a>
             </li>
           </ul>
         </div>
       </div>
       <div className={styles.right}>
         <div>
-          <p className={styles.footerpara}>
-            Follow us on social media to continue <br></br> recieving updates
-          </p>
+          <p className={styles.footerpara}>Follow us</p>
         </div>
 
         <div className={styles.iconsHolder}>
