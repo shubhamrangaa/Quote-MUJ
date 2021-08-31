@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import { trimString } from "@utils/trimString";
 import Share from "@components/Share";
 import axios from "axios";
 
@@ -35,7 +36,7 @@ const CommunityPost = (props) => {
           <div className={styles.header}>
             <div className={styles.user}>
               <Link href={`/blogs/${props.slug}`}>
-                <h4>{props.heading}</h4>
+                <h4>{trimString(props.heading, 0, 80)}</h4>
               </Link>
               <p id={styles.designation}>By {props.author}</p>
             </div>
