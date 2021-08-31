@@ -58,7 +58,7 @@ function Footer() {
       </div>
       <div className={styles.right}>
         <div>
-          <p className={styles.footerpara}>Follow us</p>
+          <p className={styles.footerpara}>Follow us:</p>
         </div>
 
         <div className={styles.iconsHolder}>
