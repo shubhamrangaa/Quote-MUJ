@@ -24,14 +24,14 @@ export const Hero = () => {
   const url = `/monthly/${currentYear}/${currentMonth}`;
 
   return (
-    <div className={styles.hero}>
+    <div className={styles.hero} style={{paddingBottom:"rem"}}>
       <div className={styles.main}>
         <Image
           className={styles.brandImage}
           src="/assets/Quote.png"
           alt="logo"
-          width={120}
-          height={120}
+          width={200}
+          height={200}
         ></Image>
         <h1 id={styles.title}>MUJ Bioscope</h1>
         <p id={styles.intro}>

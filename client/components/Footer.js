@@ -22,8 +22,8 @@ function Footer() {
               className={styles.icon}
               src='/assets/Quote.png'
               alt='logo'
-              width={48}
-              height={48}
+              width={80}
+              height={80}
             ></Image>
             <h1 className={styles.footerHeading}>MUJ Bioscope</h1>
           </div>
