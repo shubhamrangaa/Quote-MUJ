@@ -38,6 +38,7 @@ export const Hero = () => {
               backgroundColor: "white",
               borderRadius: "50%",
               padding: "1rem",
+              overflow: "hidden",
             }}
           >
             <Image

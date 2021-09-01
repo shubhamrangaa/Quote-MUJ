@@ -18,13 +18,23 @@ function Footer() {
       <div className={styles.left}>
         <a href='/' className={styles.brand}>
           <div className={styles.footerHeadingContainer}>
-            <Image
-              className={styles.icon}
-              src='/assets/Bioscope.png'
-              alt='logo'
-              width={80}
-              height={80}
-            ></Image>
+            <div style={{
+              backgroundColor: "white",
+              borderRadius: "50%",
+              padding: "0.2rem",
+              overflow: "hidden",
+              width: "80px",
+              height: "80px"
+            }}>
+              <Image
+                className={styles.icon}
+                src='/assets/Bioscope.png'
+                alt='logo'
+                width={80}
+                height={80}
+              ></Image>
+            </div>
+            
             <h1 className={styles.footerHeading}>MUJ Bioscope</h1>
           </div>
         </a>
