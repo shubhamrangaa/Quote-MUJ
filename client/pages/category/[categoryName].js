@@ -65,7 +65,7 @@ const Category = ({ news }) => {
           <PageHeader
             heading={
               categoryName === "Accreditation"
-                ? "Ranking & Accreditation"
+                ? "Ranking & \n Accreditation"
                 : categoryName
             }
           />

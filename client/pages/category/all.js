@@ -60,7 +60,7 @@ const all = () => {
                     <div key={id}>
                       {/* category heading */}
                       <div className={styles.postHeading}>
-                        <p>{el.category}</p>
+                        <p>{el.category === "Sports" ? "Extra-curricular": el.category}</p>
 
                         {/* Link to all posts from the category */}
                         <Link href={"/category/" + el.category}>View all</Link>

@@ -87,7 +87,7 @@ const CategoryCarousel = () => {
                 className={styles.button}
                 onClick={(e) => fetchCategory(category)}
               >
-                {category}
+                {category === "Sports" ? "Extra-curricular": category}
               </button>
             );
           })}
