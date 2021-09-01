@@ -98,11 +98,11 @@ const Category = ({ news }) => {
             </div>
           </section>
           <TrendingCarousel news={news} />
-          {/* Other News Section */}
+          {/* More News Section */}
           {/* <section>
 						<div className={styles.subHeadingContainer}>
 							<div className={styles.subHeadingLine} />
-							<div className={styles.subHeadingText}>Other News</div>
+							<div className={styles.subHeadingText}>More News</div>
 							<div className={styles.subHeadingLine} />
 						</div>
 						{otherNewsData.map((data, i) => (
