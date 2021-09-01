@@ -96,11 +96,11 @@ const Newsletter = ({ news }) => {
             </div>
           </section>
 
-          {/* Other News Section */}
+          {/* More News Section */}
           <section>
             <div className={styles.subHeadingContainer}>
               <h3 className={decorated + " " + sectionHeading}>
-                <span>Other News</span>
+                <span>More News</span>
               </h3>
             </div>
             {otherNewsData.map((data, i) => {
