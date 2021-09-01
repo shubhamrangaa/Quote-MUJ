@@ -23,8 +23,7 @@ function Footer() {
               borderRadius: "50%",
               padding: "0.2rem",
               overflow: "hidden",
-              width: "80px",
-              height: "80px"
+              aspectRatio: "1/1",
             }}>
               <Image
                 className={styles.icon}
