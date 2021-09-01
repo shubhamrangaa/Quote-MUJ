@@ -68,8 +68,8 @@ export const Hero = () => {
         </div>
         {/* <h1 id={styles.title}>MUJ Bioscope</h1> */}
         <p id={styles.intro}>
-          Welcome to the Official Newsletter website of Manipal University
-          Jaipur. Find everything latest in our {currentMonth} newsletter!
+          Welcome to the official E-Newsletter of Manipal University
+          Jaipur
         </p>
         <Link href={`/monthly/${currentYear}/July`}>
           <a id={styles.explore}>Explore Inaugural Issue</a>
