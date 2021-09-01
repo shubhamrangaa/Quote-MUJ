@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
 $outer-color: #e1e4e8;
 $border-active-color: hsl(209, 98%, 48%);
 
@@ -18,8 +18,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
 }
 
 body {
@@ -86,8 +87,6 @@ a.ck.ck-button.ck-rounded-corners {
 }
 
 .select__placeholder {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 1.25rem;
   font-weight: 500;
   letter-spacing: -0.5px;

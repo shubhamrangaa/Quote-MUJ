@@ -11,6 +11,10 @@
   }
 }
 
+.contenttext {
+  color: rgb(51, 51, 51);
+}
+
 .decorated {
   overflow: hidden;
   text-align: center;
@@ -56,7 +60,7 @@
   text-align: left;
   // font-size: 14px;
   display: inline-block;
-  min-height: 720px;
+  // min-height: ;
   box-shadow: none !important;
   p {
     text-align: justify;

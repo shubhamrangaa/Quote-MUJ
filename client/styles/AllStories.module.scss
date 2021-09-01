@@ -4,6 +4,12 @@
   padding-top: 5rem;
 }
 
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
 .story {
   // background-color: #cccccc22;
   border-radius: 8px;
@@ -12,11 +18,11 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
-  gap: 2rem;
-  align-items: stretch;
+  gap: 1rem;
+  align-items: center;
   width: 100%;
-  margin: 1.5rem auto;
-  padding: 1.5rem 0;
+  // margin: 1.5rem auto;
+  // padding: 1.5rem 0;
   max-width: 1250px;
 }
 .contentContainer {
@@ -39,6 +45,7 @@
   line-height: 1.5;
   text-align: justify;
   margin: 0.5rem 0;
+  color: #222222;
 }
 .details {
   margin-top: 0.5rem;
@@ -101,6 +108,7 @@
 .imageContainer {
   min-width: 25%;
   max-width: 25%;
+  flex-grow: 1;
   max-height: 200px;
   display: flex;
   overflow: hidden;

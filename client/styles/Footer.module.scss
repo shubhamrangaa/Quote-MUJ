@@ -106,7 +106,7 @@ $body-color: #151515;
 }
 
 .footerHeading {
-  font-family: "Merriweather", serif;
+  font-family: "Inter", serif;
   margin-top: 0;
   vertical-align: top;
   padding: 0 1rem;
@@ -148,15 +148,15 @@ $body-color: #151515;
     flex-direction: column;
   }
   .contactWrapper {
-  	text-align: center;
-    a{
+    text-align: center;
+    a {
       justify-content: center !important;
     }
   }
 }
 
-.contactWrapper{
-	padding: 1rem 0;
+.contactWrapper {
+  padding: 1rem 0;
   a {
     margin-top: 1rem;
   }

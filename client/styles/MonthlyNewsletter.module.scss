@@ -14,7 +14,8 @@ $anim-type: cubic-bezier(0.01, 1.13, 0.74, 0.97);
   flex-direction: column;
   justify-content: space-between;
   font-size: 5rem;
-  margin-left: 4rem;
+  margin-left: 6rem;
+  word-wrap: break-word;
   font-size: 4.5rem;
   font-weight: 900;
 
@@ -35,7 +36,7 @@ $anim-type: cubic-bezier(0.01, 1.13, 0.74, 0.97);
 .monthyear {
   margin: 0;
   margin-bottom: 4rem;
-  font-family: Merriweather;
+  font-family: Inter;
   font-size: inherit;
   // text-transform: uppercase;
 }
@@ -101,7 +102,7 @@ $anim-type: cubic-bezier(0.01, 1.13, 0.74, 0.97);
 }
 
 .viewAllButton {
-  font-family: "Merriweather";
+  font-family: "Inter";
   cursor: pointer;
   background-color: black;
   color: white;
@@ -123,7 +124,7 @@ $anim-type: cubic-bezier(0.01, 1.13, 0.74, 0.97);
 
 .subHeadingText {
   font-size: 2.5rem;
-  font-family: "Merriweather";
+  font-family: "Inter";
   font-weight: 900;
   padding: 2rem;
 }

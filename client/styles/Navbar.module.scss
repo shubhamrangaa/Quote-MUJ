@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.25rem 5.5rem;
+  padding: 0.25rem 6rem;
   height: 75px;
   color: white;
   position: fixed;
@@ -18,7 +18,7 @@
 .brandName {
   font-size: 1.25rem;
   font-weight: 700;
-  margin-left: 2rem;
+  flex-grow: 1;
 }
 
 .header a:not(.brandName) {
@@ -64,7 +64,7 @@
     height: 75px;
     position: relative;
     overflow: visible !important;
-    padding: 0.25rem 0rem;
+    padding: 0.25rem 1.5rem;
   }
   .header > div {
     overflow: visible !important;
