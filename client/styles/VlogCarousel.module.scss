@@ -24,6 +24,9 @@
   width: 70% !important;
   min-height: 500px;
   aspect-ratio: 16/9;
+  @media (max-width: 768px) {
+    min-height: 100px;
+  }
 }
 
 .decorated {
