@@ -2,6 +2,7 @@ import Collage from "./Collage";
 import styles from "@styles/Hero.module.scss";
 import Link from "next/link";
 import Image from "next/image";
+import { stars, stars2, stars3 } from "../../styles/StarBackground.module.scss";
 
 export const Hero = () => {
   const months = [
@@ -25,6 +26,12 @@ export const Hero = () => {
 
   return (
     <div className={styles.hero} style={{ paddingBottom: "rem" }}>
+      <div>
+        <div className={stars}></div>
+        <div className={stars2}></div>
+        <div className={stars3}></div>
+      </div>
+      
       <div className={styles.main}>
         <div
           style={{
