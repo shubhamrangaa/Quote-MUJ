@@ -5,7 +5,7 @@ export const Collage = () => {
   return (
     <div className={styles.collage}>
       <div id={styles.img1}>
-        <img src="/assets/collage/1.jpg" height={400} alt="img1"></img>
+        <img src="/assets/collage/1.jpg" height={350} alt="img1"></img>
       </div>
       <div id={styles.img2}>
         <img src="/assets/collage/2.jpg" height={250} alt="img2"></img>
