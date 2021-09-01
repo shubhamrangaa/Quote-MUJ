@@ -1,10 +1,8 @@
 import mainstyles from "@styles/AllStories.module.scss";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
-import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import React, { useState } from "react";
+import { trimString } from "../utils/trimString";
 
 export default function Story(props) {
   const slug = props.slug;
@@ -12,10 +10,9 @@ export default function Story(props) {
   const date = new Date(props.date_created).toString().substring(3, 15);
   let image;
   try {
-    image = JSON.parse(props.image)[0]
-  }
-  catch {
-    image = props.image
+    image = JSON.parse(props.image)[0];
+  } catch {
+    image = props.image;
   }
 
   const addLike = () => {
@@ -39,7 +36,9 @@ export default function Story(props) {
             <h3>{props.heading}</h3>
           </a>
         </Link>
-        <p className={mainstyles.caption}>{props.caption}</p>
+        <p className={mainstyles.caption}>
+          {trimString(props.caption, 0, 400)}
+        </p>
         <div className={mainstyles.details}>
           <ul>
             <li>
@@ -72,7 +71,7 @@ export default function Story(props) {
       <div className={mainstyles.imageContainer}>
         <img
           src={image ? image : "https://picsum.photos/300/200"}
-          alt="story picture"
+          alt='story picture'
         />
       </div>
     </div>

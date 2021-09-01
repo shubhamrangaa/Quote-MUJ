@@ -25,7 +25,7 @@ export default function AllStories() {
   };
   const DisplayArticles = () => {
     return articles.length > 0 ? (
-      <div>
+      <div className={mainstyles.flex}>
         {articles.map((el, id) => (
           <Story
             heading={el.heading}
