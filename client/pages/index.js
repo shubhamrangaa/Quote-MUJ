@@ -10,9 +10,9 @@ export default function Home() {
 	return (
 		<div>
 			<Head>
-				<title>MUJ Blog</title>
-				<meta name='description' content='MUJ BLOG' />
-				<link rel='icon' href='/favicon.ico' />
+				<title>MUJ E-Newsletter</title>
+				<meta name='description' content='MUJ E-Newsletter' />
+				<link rel='icon' href='/assets/Bioscope.png' />
 			</Head>
 			<Hero />
 			<LeadershipMessage />
