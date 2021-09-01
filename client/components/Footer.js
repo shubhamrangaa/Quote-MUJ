@@ -77,6 +77,7 @@ function Footer() {
             target='_blank'
             rel='noopener'
             className={styles.iconsWrapper}
+            style={{background: "#3b5998", color:"#fff"}}
           >
             <FontAwesomeIcon
               className={styles.FontAwesomeIcon}
@@ -88,6 +89,7 @@ function Footer() {
             rel='noopener'
             href='https://www.linkedin.com/school/manipal-university-jaipur/'
             className={styles.iconsWrapper}
+            style={{background: "#0072b1", color:"#fff"}}
           >
             <FontAwesomeIcon
               className={styles.FontAwesomeIcon}
@@ -99,6 +101,7 @@ function Footer() {
             target='_blank'
             rel='noopener'
             className={styles.iconsWrapper}
+            style={{background: "#E1306C", color:"#fff"}}
           >
             <FontAwesomeIcon
               className={styles.FontAwesomeIcon}
@@ -110,6 +113,7 @@ function Footer() {
             target='_blank'
             rel='noopener'
             className={styles.iconsWrapper}
+            style={{background: "#1DA1F2", color:"#fff"}}
           >
             <FontAwesomeIcon
               className={styles.FontAwesomeIcon}
@@ -121,6 +125,7 @@ function Footer() {
             target='_blank'
             rel='noopener'
             className={styles.iconsWrapper}
+            style={{background: "#e52d27", color:"#fff"}}
           >
             <FontAwesomeIcon
               className={styles.FontAwesomeIcon}
