@@ -24,7 +24,7 @@ const TextMobileStepper = () => {
           return res.json();
         })
         .then((data) => {
-          setArticles(data.slice(0, 10));
+          setArticles(data.slice(6, 16));
           setLoading(false);
         })
         .catch((err) => {
@@ -78,7 +78,7 @@ const TextMobileStepper = () => {
                   width={100}
               />
           ) : articles.length > 0 ? (
-              <Carousel responsive={responsive} showDots={true}>
+              <Carousel responsive={responsive}>
                 {articles.map((el, id) => (
                     <CommunityPost
                         heading={el.heading}

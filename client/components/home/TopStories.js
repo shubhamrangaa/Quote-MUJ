@@ -42,7 +42,7 @@ export default function TopStories() {
             <Paper className={styles.paper}>
               {articles.map(
                 (item, index) =>
-                  index < 2 && (
+                  index < 3 && (
                     <div key={index} className={styles.element}>
                       {index === 0 && (
                         <img
@@ -108,9 +108,9 @@ export default function TopStories() {
           </Grid>
           <Grid item xs={3}>
             <Paper className={styles.paper}>
-              {articles.slice(5).map(
+              {articles.slice(8).map(
                 (item, index) =>
-                  index < 2 && (
+                  index < 3 && (
                     <div key={index} className={styles.element}>
                       {index === 0 && (
                         <img
