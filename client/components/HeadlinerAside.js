@@ -17,8 +17,8 @@ const HeadlinerAside = (props) => {
         <Link href={`/blogs/${slug}`}>
           <a>{headline}</a>
         </Link>
-        <p className={styles.description}>{description}</p>
         <p className={styles.author}>By {author}</p>
+        <p className={styles.description}>{description}</p>
       </div>
     </div>
   );

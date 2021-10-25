@@ -72,18 +72,18 @@ const Category = ({ news }) => {
             {/* todo: style heading */}
             {/* <h2>Headliner</h2> */}
             <div className={styles.headlinerContainer}>
-			  {headlinerData.map((data, index) => {
-                  return (
-                    <HeadlinerAside
-                      key={index}
-                      headline={data.heading}
-                      description={data.caption.slice(0, 150) + "..."}
-                      image={data.images}
-                      author={data.author}
-                      slug={data.slug}
-                    />
-                  );
-                })}
+              {headlinerData.map((data, index) => {
+                return (
+                  <HeadlinerAside
+                    key={index}
+                    headline={data.heading}
+                    description={data.caption.slice(0, 150) + "..."}
+                    image={data.images}
+                    author={data.author}
+                    slug={data.slug}
+                  />
+                );
+              })}
               <div className={styles.headlinerAsideContainer}>
                 {/* map headlineAside */}
                 {headlinerAsideData.map((data, index) => {

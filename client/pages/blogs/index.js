@@ -18,13 +18,15 @@ export default function AllStories() {
   const fetchArticles = async () => {
     fetch("https://quote-muj.herokuapp.com/api/blogs/all").then((res) =>
       res.json().then((data) => {
-		  let sortedData = data.sort(function (a, b) {
-			  let c = new Date(a.date_created);
-			  let d = new Date(b.date_created);
-			  return c - d;
-		  }).reverse()
-		  console.log(sortedData);
-		  setArticles(sortedData);
+        let sortedData = data
+          .sort(function (a, b) {
+            let c = new Date(a.date_created);
+            let d = new Date(b.date_created);
+            return c - d;
+          })
+          .reverse();
+        console.log(sortedData);
+        setArticles(sortedData);
         setLoading(false);
       })
     );
@@ -57,14 +59,14 @@ export default function AllStories() {
 
   return (
     <div className={mainstyles.storieswrapper}>
-      <h2 className={styles.decorated + " " + sectionHeading}>
-        <span>All Stories</span>
-      </h2>
+      {/* <h2 className={styles.decorated + " " + sectionHeading}> */}
+      <h1 className={mainstyles.heading}>All Stories</h1>
+      {/* </h2> */}
       {loading ? (
         <Loader
           className={mainstyles.loader}
-          type="TailSpin"
-          color="#0F0F0F"
+          type='TailSpin'
+          color='#0F0F0F'
           height={100}
           width={100}
         />

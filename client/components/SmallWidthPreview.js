@@ -5,13 +5,12 @@ import Link from "next/link";
 import styles from "@styles/TrendingCarousel.module.scss";
 
 const SmallWidthPreview = (props) => {
-	let image = ""
-	try {
-		image = JSON.parse(props.image)[0]
-	}
-	catch {
-		image = props.image
-	}
+  let image = "";
+  try {
+    image = JSON.parse(props.image)[0];
+  } catch {
+    image = props.image;
+  }
   return (
     <div style={{ marginLeft: 20, marginRight: 20, marginBottom: 50 }}>
       {props.index !== undefined ? (
@@ -24,10 +23,10 @@ const SmallWidthPreview = (props) => {
       <Link href={`/blogs/${props.slug}`}>
         <div className={styles.content}>
           <img className={styles.images} src={image} draggable={false} />
-          <div>
+          <div className={styles.textContainer}>
             <h3 className={styles.heading}>{props.title}</h3>
-            <div className={styles.body}>{props.body}</div>
             <div className={styles.author}>By {props.author}</div>
+            <div className={styles.body}>{props.body}</div>
           </div>
         </div>
       </Link>

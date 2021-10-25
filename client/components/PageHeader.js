@@ -10,7 +10,13 @@ const PageHeader = (props) => {
         <h1 className={styles.heading}>
           {/* bruh moment intensifies */}
           {props.heading !== undefined
-            ? props.heading.split(" ").map((word) => word.slice(0, 1).toUpperCase() + word.slice(1).toLowerCase()).join(" ")
+            ? props.heading
+                .split(" ")
+                .map(
+                  (word) =>
+                    word.slice(0, 1).toUpperCase() + word.slice(1).toLowerCase()
+                )
+                .join(" ")
             : "heading"}
         </h1>
       </div>
