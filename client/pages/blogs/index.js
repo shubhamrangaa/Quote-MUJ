@@ -18,7 +18,13 @@ export default function AllStories() {
   const fetchArticles = async () => {
     fetch("https://quote-muj.herokuapp.com/api/blogs/all").then((res) =>
       res.json().then((data) => {
-        setArticles(data);
+		  let sortedData = data.sort(function (a, b) {
+			  let c = new Date(a.date_created);
+			  let d = new Date(b.date_created);
+			  return c - d;
+		  }).reverse()
+		  console.log(sortedData);
+		  setArticles(sortedData);
         setLoading(false);
       })
     );
