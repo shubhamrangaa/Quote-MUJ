@@ -14,12 +14,6 @@ const PageHeader = (props) => {
             : "heading"}
         </h1>
       </div>
-      <div className={styles.rect}>
-        <div className={styles.rect__one}></div>
-        <div className={styles.rect__two}></div>
-        <div className={styles.rect__three}></div>
-        <div className={styles.rect__four}></div>
-      </div>
     </section>
   );
 };

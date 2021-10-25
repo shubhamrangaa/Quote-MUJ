@@ -5,7 +5,6 @@ $anim-type: cubic-bezier(0.01, 1.13, 0.74, 0.97);
   flex-direction: row;
   justify-content: space-between;
   padding-top: 75px;
-  min-height: 100vh;
   // margin: 5rem 0 5rem;
 }
 
@@ -13,7 +12,7 @@ $anim-type: cubic-bezier(0.01, 1.13, 0.74, 0.97);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 5rem;
+  font-size: 2rem;
   margin-left: 6rem;
   word-wrap: break-word;
   font-size: 4.5rem;
@@ -21,6 +20,9 @@ $anim-type: cubic-bezier(0.01, 1.13, 0.74, 0.97);
 
   @media only screen and (max-width: 700px) {
     margin: 0;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
     font-size: 2.5rem;
     padding: 1rem;
   }
@@ -31,6 +33,9 @@ $anim-type: cubic-bezier(0.01, 1.13, 0.74, 0.97);
   margin-top: 4rem;
   line-height: 1.2;
   font-size: inherit;
+  @media only screen and (max-width: 700px) {
+	  margin-top:2rem;
+  }
 }
 
 .monthyear {
