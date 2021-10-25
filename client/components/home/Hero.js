@@ -31,7 +31,7 @@ export const Hero = () => {
         <div className={stars2}></div>
         <div className={stars3}></div>
       </div>
-      
+
       <div className={styles.main}>
         <div
           style={{
@@ -44,7 +44,12 @@ export const Hero = () => {
             style={{
               backgroundColor: "white",
               borderRadius: "50%",
-              padding: "1rem",
+              width: "190px",
+              height: "190px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "0.5rem",
               overflow: "hidden",
             }}
           >
@@ -52,15 +57,20 @@ export const Hero = () => {
               className={styles.brandImage}
               src='/assets/Bioscope.png'
               alt='logo'
-              width={150}
-              height={150}
+              width={190}
+              height={190}
             ></Image>
           </div>
           <div
             style={{
               backgroundColor: "white",
               borderRadius: "50%",
-              padding: "1rem",
+              width: "190px",
+              height: "190px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "0.5rem",
               overflow: "hidden",
             }}
           >
@@ -74,11 +84,8 @@ export const Hero = () => {
             ></Image>
           </div>
         </div>
-        {/* <h1 id={styles.title}>MUJ Bioscope</h1> */}
-        <p id={styles.intro}>
-          Welcome to the official E-Newsletter of Manipal University
-          Jaipur
-        </p>
+        <p id={styles.intro}>Welcome to the official E-Newsletter of</p>
+        <h3 className={styles.heading}>Manipal University Jaipur</h3>
         <Link href={`/monthly/${currentYear}/July`}>
           <a id={styles.explore}>Explore Inaugural Issue</a>
         </Link>

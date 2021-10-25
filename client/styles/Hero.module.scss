@@ -51,7 +51,7 @@
   font-weight: 400;
   font-size: 24px;
   color: rgb(255, 255, 255);
-  padding: 1rem 0 2rem 0;
+  padding: 1rem 0 0.5rem 0;
   font-size: 1rem;
   line-height: 22px;
   @media (min-width: 768px) {
@@ -84,4 +84,10 @@
 #title,
 #intro {
   margin: 0;
+}
+
+.heading {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2rem;
 }
