@@ -32,16 +32,23 @@ export async function getStaticProps({ params }) {
     console.log("hello");
   }
   const news = await res.json();
+  let sortedNews = news
+    .sort(function (a, b) {
+      let c = new Date(a.date_created);
+      let d = new Date(b.date_created);
+      return c - d;
+    })
+    .reverse();
   //   console.log(news);
-  return { props: { news } };
+  return { props: { sortedNews } };
 }
 
-const Category = ({ news }) => {
+const Category = ({ sortedNews }) => {
   const { query } = useRouter();
   let { categoryName } = query;
   //   console.log(categoryName);
   categoryName = categoryName.charAt(0).toUpperCase() + categoryName.slice(1);
-  news = news.map((item) => {
+  sortedNews = sortedNews.map((item) => {
     try {
       return {
         ...item,
@@ -54,11 +61,11 @@ const Category = ({ news }) => {
       };
     }
   });
-  const headlinerData = news.slice(0, 3);
-  const headlinerAsideData = news.slice(3, 4);
+  const headlinerData = sortedNews.slice(0, 3);
+  const headlinerAsideData = sortedNews.slice(3, 4);
   return (
     <>
-      {Object.keys(news).length ? (
+      {Object.keys(sortedNews).length ? (
         <div>
           {/* biggest off in history */}
           <PageHeader
@@ -101,7 +108,7 @@ const Category = ({ news }) => {
               </div>
             </div>
           </section>
-          <TrendingCarousel news={news} />
+          <TrendingCarousel news={sortedNews} />
           {/* More News Section */}
           {/* <section>
 						<div className={styles.subHeadingContainer}>
