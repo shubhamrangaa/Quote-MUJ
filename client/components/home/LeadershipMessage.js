@@ -13,7 +13,7 @@ const LeadershipMessage = () => {
       <div className={styles.tray}>
         <LeadershipCard
           href='president'
-          image='/assets/og_gkprabhu.jpg'
+          image='/assets/og_gkprabhu.png'
           title='Dr G. K. Prabhu, President'
         >
           Manipal University Jaipur, MUJ, as it is fondly called has completed
@@ -22,7 +22,7 @@ const LeadershipMessage = () => {
         </LeadershipCard>
         <LeadershipCard
           href='pro_president'
-          image='/assets/nnsharma.jpg'
+          image='/assets/nnsharma.png'
           title='Dr N. N. Sharma, Pro President'
         >
           Manipal University Jaipur is envisaged to be an enduring global center
@@ -30,7 +30,7 @@ const LeadershipMessage = () => {
         </LeadershipCard>
         <LeadershipCard
           href='registrar'
-          image='/assets/nbhatnagar.jpg'
+          image='/assets/nbhatnagar.png'
           title='Dr Nitu Bhatnagar, Registrar'
         >
           The Manipal Group has extended its legacy in terms of focused Vision,

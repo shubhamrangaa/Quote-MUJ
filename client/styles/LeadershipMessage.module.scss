@@ -62,9 +62,12 @@
   }
   max-width: calc((100% - 4rem) / 3);
   .cardImage {
+    display: flex;
+    width: 100%;
+    justify-content: center;
     img {
-      width: 100%;
-      aspect-ratio: 4 / 3;
+      width: 70%;
+      aspect-ratio: 1 / 1;
       border-radius: 4px;
     }
   }
