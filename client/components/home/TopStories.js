@@ -42,7 +42,7 @@ export default function TopStories() {
             <Paper className={styles.paper}>
               {articles.map(
                 (item, index) =>
-                  index < 3 && (
+                  index < 2 && (
                     <div key={index} className={styles.element}>
                       {index === 0 && (
                         <img
@@ -51,7 +51,7 @@ export default function TopStories() {
                               ? JSON.parse(item.images)[0]
                               : "https://picsum.photos/300/200"
                           }
-                          alt="img"
+                          alt='img'
                           // width={256}
                           // height={256}
                         />
@@ -89,7 +89,7 @@ export default function TopStories() {
                               ? JSON.parse(item.images)[0]
                               : "https://picsum.photos/300/200"
                           }
-                          alt="img"
+                          alt='img'
                           // width={256}
                           // height={256}
                         />
@@ -110,7 +110,7 @@ export default function TopStories() {
             <Paper className={styles.paper}>
               {articles.slice(8).map(
                 (item, index) =>
-                  index < 3 && (
+                  index < 2 && (
                     <div key={index} className={styles.element}>
                       {index === 0 && (
                         <img
@@ -119,7 +119,7 @@ export default function TopStories() {
                               ? JSON.parse(item.images)[0]
                               : "https://picsum.photos/300/200"
                           }
-                          alt="img"
+                          alt='img'
                           width={256}
                           height={256}
                         />
