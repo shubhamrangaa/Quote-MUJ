@@ -76,7 +76,7 @@ export const messages = {
   },
   registrar: {
     heading: "Registrar's Message",
-    author: "Dr. Nitu Bhatnagar",
+    author: "Dr Nitu Bhatnagar",
     image: "/assets/nbhatnagar.jpg",
     data: `<h4>Dr. Nitu Bhatnagar</h4>
 		<h5>Registrar</h5>

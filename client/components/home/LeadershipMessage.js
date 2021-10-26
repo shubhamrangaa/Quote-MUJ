@@ -31,7 +31,7 @@ const LeadershipMessage = () => {
         <LeadershipCard
           href='registrar'
           image='/assets/nbhatnagar.jpg'
-          title='Dr. Nitu Bhatnagar, Registrar'
+          title='Dr Nitu Bhatnagar, Registrar'
         >
           The Manipal Group has extended its legacy in terms of focused Vision,
           Mission and Values in education, research, and healthcare...
