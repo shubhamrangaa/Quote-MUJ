@@ -31,8 +31,8 @@ const Newsletter = ({ news }) => {
   // console.log(news)
   const { query } = useRouter();
   const { year, month } = query;
-  const headlinerData = news.slice(0, 1)[0];
-  const headlinerAsideData = news.slice(1, 4);
+  const headlinerData = news.slice(0, 3);
+  const headlinerAsideData = news.slice(3, 4);
   const otherNewsData = news.slice(5);
   return (
     <>
@@ -51,12 +51,6 @@ const Newsletter = ({ news }) => {
                 Inaugural Issue
               </h2>
             </div>
-            <div className={styles.rect}>
-              <div className={styles.rect__one}></div>
-              <div className={styles.rect__two}></div>
-              <div className={styles.rect__three}></div>
-              <div className={styles.rect__four}></div>
-            </div>
           </section>
 
           {/* Headliner body */}
@@ -70,13 +64,19 @@ const Newsletter = ({ news }) => {
               </h3>
             </div>
             <div className={styles.headlinerContainer}>
-              <HeadlinerMain
-                headline={headlinerData.heading}
-                content={headlinerData.caption}
-                image={JSON.parse(headlinerData.images)[0]}
-                tags={headlinerData.categories}
-                slug={headlinerData.slug}
-              />
+				{headlinerData.map((data, id) => {
+					// console.log(headlinerAsideData);
+					return (
+						<HeadlinerAside
+							key={id}
+							headline={data.heading}
+							description={data.caption.slice(0, 150) + "..."}
+							image={JSON.parse(data.images)[0]}
+							author={data.author}
+							slug={data.slug}
+						/>
+					);
+				})}
               <div className={styles.headlinerAsideContainer}>
                 {/* map headlineAside */}
                 {headlinerAsideData.map((data, id) => {
