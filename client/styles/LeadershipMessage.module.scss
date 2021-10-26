@@ -55,10 +55,15 @@
   cursor: pointer;
   h3 {
     font-size: 1.5rem;
+    margin-bottom: 0.5rem;
     text-align: center;
     @media only screen and (max-width: 1000px) {
       font-size: 1.25rem;
     }
+  }
+  h5 {
+    text-align: center;
+    margin: 0;
   }
   max-width: calc((100% - 4rem) / 3);
   .cardImage {

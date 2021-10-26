@@ -14,7 +14,8 @@ const LeadershipMessage = () => {
         <LeadershipCard
           href='president'
           image='/assets/og_gkprabhu.png'
-          title='Dr G. K. Prabhu, President'
+          title='Dr G. K. Prabhu'
+          post='President'
         >
           Manipal University Jaipur, MUJ, as it is fondly called has completed
           ten golden years of its establishment. This journey of ten long years
@@ -23,7 +24,8 @@ const LeadershipMessage = () => {
         <LeadershipCard
           href='pro_president'
           image='/assets/nnsharma.png'
-          title='Dr N. N. Sharma, Pro President'
+          title='Dr N. N. Sharma'
+          post='Pro President'
         >
           Manipal University Jaipur is envisaged to be an enduring global center
           of excellence in higher education, and is driven by erudite team...
@@ -31,7 +33,8 @@ const LeadershipMessage = () => {
         <LeadershipCard
           href='registrar'
           image='/assets/nbhatnagar.png'
-          title='Dr Nitu Bhatnagar, Registrar'
+          title='Dr Nitu Bhatnagar'
+          post='Registrar'
         >
           The Manipal Group has extended its legacy in terms of focused Vision,
           Mission and Values in education, research, and healthcare...
