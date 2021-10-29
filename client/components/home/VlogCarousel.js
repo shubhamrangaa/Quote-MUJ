@@ -5,6 +5,10 @@ import Carousel from "react-material-ui-carousel";
 
 const VlogCarousel = () => {
   var videos = [
+    "https://www.youtube.com/watch?v=fnagbpRJi3I",
+    "https://www.youtube.com/watch?v=m-5oE1zNshU",
+    "https://www.youtube.com/watch?v=G7yYMG2cROg",
+    "https://www.youtube.com/watch?v=TwMmF_D8EzI",
     "https://youtu.be/iBWV99n5GZI",
     "https://www.youtube.com/watch?v=g0r1LbqO48E&t=2s",
     "https://www.youtube.com/watch?v=nhFQ_pWbPL8",
@@ -36,15 +40,6 @@ const VlogCarousel = () => {
     "https://youtu.be/qYgGZ3WTN7w",
     "https://youtu.be/w05btlb-j-M",
     "https://youtu.be/oBoQKi78QR0",
-    // "https://youtu.be/iBWV99n5GZI",
-    // "https://youtu.be/ypxNQTEqNZQ",
-    // "https://youtube.com/watch?v=vhnhUq8E-ZA",
-    // "https://youtu.be/gyYgmdx7hDs",
-    // "https://youtu.be/KqVcZ1tO9JU",
-    // "https://youtu.be/mZ0PDmokGSA",
-    // "https://youtube.com/watch?v=oOgpTRs--Do",
-    // "https://youtube.com/watch?v=0Rh8CTlbLng",
-    // "https://youtu.be/ZDx_sFG_jok",
   ];
 
   return (
@@ -57,6 +52,7 @@ const VlogCarousel = () => {
       <Carousel
         navButtonsAlwaysVisible={true}
         autoPlay={false}
+        IndicatorIcon={false}
         cycleNavigation={true}
       >
         {videos.map((vid, id) => (
