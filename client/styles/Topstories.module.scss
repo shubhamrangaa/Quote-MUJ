@@ -131,6 +131,17 @@
   color: white;
   border-radius: 5px;
 }
+
+.TopStoriesGrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+  @media (max-width: 1024px) {
+    grid-template-columns: auto;
+  }
+}
+
 @media (max-width: 600px) {
   .root {
     display: block;

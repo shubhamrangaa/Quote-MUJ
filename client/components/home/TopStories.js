@@ -1,11 +1,9 @@
 import styles from "@styles/Topstories.module.scss";
 import { sectionHeading, decorated } from "@styles/Heading.module.scss";
-import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
-import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import TextMobileStepper from "../Carousel";
+import HeadlinerAside from "../HeadlinerAside";
 import { stripLongString } from "utils/stripLongString";
+import axios from "axios";
 
 export default function TopStories() {
   const [articles, setArticles] = useState([]);
@@ -16,27 +14,58 @@ export default function TopStories() {
   }, []);
 
   const fetchArticles = async () => {
-    fetch("https://quote-muj.herokuapp.com/api/blogs/all").then((res) =>
-      res.json().then((data) => {
-        console.log(data);
-        const strippedDesc = data.map((article) => {
-          const shortText = stripLongString(200, article.caption);
-          const shortHeading = stripLongString(100, article.heading);
-          article.caption = shortText;
-          article.heading = shortHeading;
-          return article;
-        });
-        setArticles(strippedDesc);
-        setLoading(false);
-      })
+    const { data } = await axios(
+      "https://quote-muj.herokuapp.com/api/blogs/all"
     );
+
+    console.log(data);
+    // const strippedDesc = data.map((article) => {
+    //   const shortText = stripLongString(200, article.caption);
+    //   const shortHeading = stripLongString(100, article.heading);
+
+    //   const formattedArticle = {
+    //     ...strippedDesc,
+    //     image: JSON.parse(data.images)[0],
+    //     caption: shortText,
+    //     heading: shortHeading,
+    //   };
+    //   console.log("f", formattedArticle);
+    //   return formattedArticle;
+    // });
+    // console.log(strippedDesc);
+    const sortedData = data
+      .slice(0, 6)
+      .sort(function (a, b) {
+        let c = new Date(a.date_created);
+        let d = new Date(b.date_created);
+        return c - d;
+      })
+      .reverse();
+
+    console.log("sorted", sortedData);
+    setArticles(sortedData);
+    setLoading(false);
   };
   return (
     <div className={styles.TopStories}>
       <h3 className={decorated + " " + sectionHeading}>
         <span>Top Stories</span>
       </h3>
-      <div className={styles.fullSection}>
+      <div className={styles.TopStoriesGrid}>
+        {articles.map((data, index) => {
+          return (
+            <HeadlinerAside
+              key={index}
+              headline={stripLongString(100, data.heading)}
+              description={stripLongString(150, data.caption)}
+              image={JSON.parse(data.images)[0]}
+              author={data.author}
+              slug={data.slug}
+            />
+          );
+        })}
+      </div>
+      {/* <div className={styles.fullSection}>
         <Grid container spacing={4}>
           <Grid item xs={3}>
             <Paper className={styles.paper}>
@@ -52,8 +81,6 @@ export default function TopStories() {
                               : "https://picsum.photos/300/200"
                           }
                           alt='img'
-                          // width={256}
-                          // height={256}
                         />
                       )}
                       <Link href={`/blogs/${item.slug}`}>
@@ -63,9 +90,6 @@ export default function TopStories() {
                         {item.caption}
                         <br></br>
                       </p>
-                      {/* <span className={styles.userName}>
-                          by {item.author}
-                        </span> */}
                     </div>
                   )
               )}
@@ -90,8 +114,6 @@ export default function TopStories() {
                               : "https://picsum.photos/300/200"
                           }
                           alt='img'
-                          // width={256}
-                          // height={256}
                         />
                       )}
                       <Link href={`/blogs/${item.slug}`}>
@@ -137,8 +159,8 @@ export default function TopStories() {
             </Paper>
           </Grid>
         </Grid>
-      </div>
-      <TextMobileStepper />
+      </div> */}
+      {/* <TextMobileStepper /> */}
     </div>
   );
 }

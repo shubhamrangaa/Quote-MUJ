@@ -16,7 +16,6 @@
   img {
     margin: 0 auto;
     width: 100%;
-    max-height: 500px;
   }
   .content {
     margin: 0.35rem 0;
@@ -36,7 +35,7 @@
   display: flex;
   flex-direction: row;
   margin-top: -10px;
-  gap: 2rem;
+  gap: 1.25rem;
   margin: 0.5rem;
   a {
     display: flex;
@@ -55,17 +54,21 @@
 
   .imageContainer {
     width: 250px;
-
+    display: flex;
+    background-color: rgb(240, 240, 240);
+    aspect-ratio: 4/3;
     img {
       // width: 100%;
-      margin: 0 auto;
+      margin: auto;
       object-fit: cover;
       max-height: 180px;
-      width: 100%;
       width: inherit;
+      @media only screen and (max-width: 768px) {
+        max-height: 100%;
+      }
     }
-    @media only screen and (max-width: 700px) {
-      max-width: 300px;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
     }
   }
 
