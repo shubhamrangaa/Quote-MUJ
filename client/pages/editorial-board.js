@@ -6,68 +6,61 @@ const aboutData = [
     name: "Dr. Richa Arora",
     title: "Faculty Coordinator",
     contact: "mailto:example@example.com",
-    image:
-      "https://res.cloudinary.com/quote-muj/image/upload/v1626255709/ef29a5e1-4d8e-4181-bdbc-3fd0f1a5f2e9_syg2gk.jpg",
+    image: "assets/Editorial/RichaArora.png",
   },
   {
     name: "Dr. Mani Sachdev",
     title: "Faculty Coordinator",
     contact: "mailto:example@example.com",
-    image: "/assets/drmanisachdeva.jpg",
+    image: "assets/Editorial/MahiSachdev.png",
   },
   {
     name: "Dr. Nitu Bhatnagar",
     title: "Faculty Coordinator",
     contact: "mailto:example@example.com",
-    image: "/assets/nbhatnagar.jpg",
+    image: "assets/Editorial/NituBhatnagar.png",
   },
   {
     name: "Dr. Lucky Vijayvargiya",
     title: "Faculty Coordinator",
     contact: "mailto:example@example.com",
-    image:
-      "https://res.cloudinary.com/quote-muj/image/upload/v1626255708/a9d34e6f-9424-4993-abac-d09d187a12e0_wngoi6.jpg",
+    image: "assets/Editorial/DLucky.png",
   },
   {
     name: "Dr. Subhash Kumar",
     title: "Faculty Coordinator",
     contact: "mailto:example@example.com",
-    image: "/assets/drshubhaskumar.jpg",
+    image: "assets/Editorial/SubhashHanda.png",
   },
   {
     name: "Ms. Shweta Sharma",
     title: "Faculty Coordinator",
     contact: "mailto:example@example.com",
-    image:
-      "https://res.cloudinary.com/quote-muj/image/upload/v1626255709/754bf274-dcc7-4dd8-8864-fe995ac612e7_gloqio.jpg",
+    image: "assets/Editorial/ShwetaSharma.png",
   },
   {
     name: "Ar. Sonali Jain",
     title: "Faculty Coordinator",
     contact: "mailto:example@example.com",
-    image:
-      "https://res.cloudinary.com/quote-muj/image/upload/v1626255710/827610ef-619e-4f5b-a454-d6d2140c025c_frlnnx.jpg",
+    image: "assets/Editorial/SonaliJain.png",
   },
   {
     name: "Ar. Deepak Singh",
     title: "Faculty Coordinator",
     contact: "mailto:example@example.com",
-    image:
-      "https://res.cloudinary.com/quote-muj/image/upload/v1626255708/8e2f246a-2a9d-4f58-aff7-5a6b77eda25d_re19bf.jpg",
+    image: "assets/Editorial/DeepakSingh.png",
   },
   {
     name: "Mr. Apoorv",
     title: "Faculty Coordinator",
     contact: "mailto:example@example.com",
-    image:
-      "https://res.cloudinary.com/quote-muj/image/upload/v1626259242/7891124530_profile_pic_kuwbl6.jpg",
+    image: "assets/Editorial/Appoorv.png",
   },
   {
     name: "Mr. Ankit Mundra",
     title: "Faculty Coordinator",
     contact: "mailto:example@example.com",
-    image:
-      "https://res.cloudinary.com/quote-muj/image/upload/v1626259492/Ankit_Mundra_fkkrth.jpg",
+    image: "assets/Editorial/AnkitMundra.png",
   },
 ];
 
