@@ -5,6 +5,7 @@ import Carousel from "react-material-ui-carousel";
 
 const VlogCarousel = () => {
   var videos = [
+    "https://youtu.be/B7e_vFQYdS8"
     "https://www.youtube.com/watch?v=fnagbpRJi3I",
     "https://www.youtube.com/watch?v=m-5oE1zNshU",
     "https://www.youtube.com/watch?v=G7yYMG2cROg",
