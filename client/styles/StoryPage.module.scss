@@ -9,7 +9,7 @@
   h2 {
     margin: 0;
     margin-top: 80px;
-    
+
     // padding: 10px 0px;
   }
   h6 {
@@ -28,11 +28,13 @@
 .text {
   text-align: justify;
   line-height: 1.5;
-  word-wrap:break-word;
-  h4, h5, p{
+  word-wrap: break-word;
+  h4,
+  h5,
+  p {
     margin: 0.25rem 0;
   }
-  p{
+  p {
     color: #4a5568;
   }
 }
@@ -69,6 +71,7 @@
   }
 }
 .FontAwesomeIcon {
+  width: 14px;
   transition: 0.4s;
   &:hover {
     transform: translateY(-5px);
