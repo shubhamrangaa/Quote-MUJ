@@ -9,27 +9,17 @@ import HeadlinerAside from "@components/HeadlinerAside";
 import FullWidthPreview from "@components/FullWidthPreview";
 import TrendingCarousel from "@components/TrendingCarousel";
 
-export const getStaticPaths = async () => {
-  return {
-    paths: [],
-    fallback: "blocking",
-  };
-};
-
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   let { categoryName } = params;
   categoryName = categoryName.charAt(0).toUpperCase() + categoryName.slice(1);
-  //   console.log(categoryName);
 
   let res = await fetch(
     `https://quote-muj.herokuapp.com/api/blogs/categories/${categoryName}`
   );
-  console.log(categoryName);
   if (categoryName === "Upcoming-events") {
     res = await fetch(
       `https://quote-muj.herokuapp.com/api/blogs/categories/Upcoming`
     );
-    console.log("hello");
   }
   const news = await res.json();
   let sortedNews = news
@@ -39,14 +29,12 @@ export async function getStaticProps({ params }) {
       return c - d;
     })
     .reverse();
-  //   console.log(news);
   return { props: { sortedNews } };
 }
 
 const Category = ({ sortedNews }) => {
   const { query } = useRouter();
   let { categoryName } = query;
-  //   console.log(categoryName);
   categoryName = categoryName.charAt(0).toUpperCase() + categoryName.slice(1);
   sortedNews = sortedNews.map((item) => {
     try {

@@ -15,40 +15,38 @@ const all = () => {
   const [categoryWiseArticles, setCategoryWiseArticles] = useState([]);
 
   const fetchCategoryWisePosts = async (category) => {
-    fetch(
+    setLoading(true);
+    const res = await fetch(
       `https://quote-muj.herokuapp.com/api/blogs/categories/${category}`
-    ).then((res) =>
-      res.json().then((data) => {
-        setCategoryWiseArticles((prev) =>
-          prev.concat({
-            category: `${category}`,
-            article: {
-              ...(data.length === 0 ? { caption: "no post" } : { ...data[0] }),
-            },
-          })
-        );
+    );
+    const data = await res.json();
+    setCategoryWiseArticles((prev) =>
+      prev.concat({
+        category: `${category}`,
+        article: {
+          ...(data.length === 0 ? { caption: "no post" } : { ...data[0] }),
+        },
       })
     );
     setLoading(false);
   };
 
   useEffect(() => {
-    CATEGORY_LIST.forEach((category) => {
-      fetchCategoryWisePosts(category);
+    CATEGORY_LIST.forEach(async (category) => {
+      await fetchCategoryWisePosts(category);
     });
   }, []);
 
   return (
     <>
-      <PageHeader heading="All Categories" />
+      <PageHeader heading='All Categories' />
       <div className={styles.allCategoryContainer}>
-        {/* 1 post per category */}
         <div>
           {loading ? (
             <Loader
               className={styles.loader}
-              type="TailSpin"
-              color="#0F0F0F"
+              type='TailSpin'
+              color='#0F0F0F'
               height={100}
               width={100}
             />
@@ -60,7 +58,11 @@ const all = () => {
                     <div key={id}>
                       {/* category heading */}
                       <div className={styles.postHeading}>
-                        <p>{el.category === "Sports" ? "Extra-curricular": el.category}</p>
+                        <p>
+                          {el.category === "Sports"
+                            ? "Extra-curricular"
+                            : el.category}
+                        </p>
 
                         {/* Link to all posts from the category */}
                         <Link href={"/category/" + el.category}>View all</Link>

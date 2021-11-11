@@ -26,7 +26,7 @@ const CommunityPost = (props) => {
         setLikes(res.data.likes);
       })
       .catch((err) => {
-        console.log(err);
+        console.error(err);
       });
   };
   return (

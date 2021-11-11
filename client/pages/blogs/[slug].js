@@ -10,27 +10,10 @@ import "react-multi-carousel/lib/styles.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import ReactPlayer from "react-player";
 
-// const apiURL = process.env.SERVER_URL;
-// const apiURL = "https://quote-muj.herokuapp.com";
 const apiURL = process.env.SERVER_URL || "https://quote-muj.herokuapp.com";
 
-export const getStaticPaths = async () => {
-  const res = await fetch(`${apiURL}/api/blogs/all`);
-  const data = await res.json();
-
-  const paths = data.map((article) => {
-    return {
-      params: { slug: article.slug },
-    };
-  });
-  return {
-    paths,
-    fallback: false,
-  };
-};
-
-export const getStaticProps = async (context) => {
-  const slug = context.params.slug;
+export const getServerSideProps = async ({ params }) => {
+  const { slug } = params;
   const res = await fetch(`${apiURL}/api/blogs/${slug}`);
   const data = await res.json();
 
@@ -57,10 +40,9 @@ function FullStory({ story }) {
       })
       .then((res) => {
         setLikes(res.data.likes);
-        console.log(res);
       })
       .catch((err) => {
-        console.log(err);
+        console.error(err);
       });
   };
   return (
@@ -75,7 +57,7 @@ function FullStory({ story }) {
             <li>{read}</li>
             <li onClick={addLike}>
               <FontAwesomeIcon
-                size={16}
+                size='1x'
                 className={styles.FontAwesomeIcon}
                 icon={faThumbsUp}
               />{" "}
@@ -90,12 +72,12 @@ function FullStory({ story }) {
             additionalTransfrom={0}
             arrows
             centerMode={false}
-            className=""
-            containerClass="container-with-dots"
-            dotListClass=""
+            className=''
+            containerClass='container-with-dots'
+            dotListClass=''
             draggable
             focusOnSelect={false}
-            itemClass=""
+            itemClass=''
             keyBoardControl
             minimumTouchDrag={80}
             renderButtonGroupOutside={false}
@@ -127,26 +109,26 @@ function FullStory({ story }) {
               },
             }}
             showDots={false}
-            sliderClass=""
+            sliderClass=''
             slidesToSlide={1}
             swipeable
           >
             {images.map((item, id) => (
               <div className={styles.storypic} key={id}>
-                <img src={item} alt="story-picture"></img>
+                <img src={item} alt='story-picture'></img>
               </div>
             ))}
           </Carousel>
         ) : (
           <div className={styles.storypic}>
-            <img src={images[0]} alt="story-picture"></img>
+            <img src={images[0]} alt='story-picture'></img>
           </div>
         )
       ) : null}
 
       {/* <div className={styles.text}>{story.caption}</div> */}
       <div className={styles.text}>
-        <>{ReactHtmlParser(story.article_data.data?.replace(' ', '&nbsp;'))}</>
+        <>{ReactHtmlParser(story.article_data.data?.replace(" ", "&nbsp;"))}</>
       </div>
       <div className={styles.categories}>
         {story.videos ? (
@@ -154,8 +136,8 @@ function FullStory({ story }) {
             <ReactPlayer
               className={styles.reactPlayer}
               url={story.videos}
-              width="100%"
-              height="100%"
+              width='100%'
+              height='100%'
             />
           </div>
         ) : null}

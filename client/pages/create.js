@@ -87,7 +87,6 @@ const SubmissionForm = () => {
                       type: "success",
                       message: "Successfully Posted Article",
                     });
-                    console.log(res);
                   })
                   .catch((err) => {
                     setResultText({
@@ -95,7 +94,6 @@ const SubmissionForm = () => {
                       message:
                         "Some error occurred while posting article. Please contact administrator.",
                     });
-                    console.log(err);
                   })
                   .finally(() => {
                     setLoading(false);
@@ -108,7 +106,7 @@ const SubmissionForm = () => {
                 message:
                   "Some error occurred while posting article. Please contact administrator.",
               });
-              console.log(err);
+              console.error(err);
             });
         });
       } else {
@@ -118,7 +116,6 @@ const SubmissionForm = () => {
             images: imageURL,
           })
           .then((res) => {
-            console.log(res);
             setResultText({
               type: "success",
               message: "Successfully Posted Article",
@@ -130,7 +127,7 @@ const SubmissionForm = () => {
               message:
                 "Some error occurred while posting article. Please contact administrator.",
             });
-            console.log(err);
+            console.error(err);
           })
           .finally(() => {
             setLoading(false);
@@ -170,9 +167,9 @@ const SubmissionForm = () => {
       <h1 className={styles.heading}>Create a blog</h1>
       <input
         className={styles.inputbox}
-        placeholder="Heading"
+        placeholder='Heading'
         value={content.heading}
-        type="text"
+        type='text'
         onChange={(event) => {
           setContent({
             ...content,
@@ -182,9 +179,9 @@ const SubmissionForm = () => {
       />
       <input
         className={styles.inputbox}
-        placeholder="Author"
+        placeholder='Author'
         value={content.author}
-        type="text"
+        type='text'
         onChange={(event) => {
           setContent({
             ...content,
@@ -194,9 +191,9 @@ const SubmissionForm = () => {
       />
       <input
         className={styles.inputbox}
-        placeholder="Caption"
+        placeholder='Caption'
         value={content.caption}
-        type="text"
+        type='text'
         onChange={(event) => {
           setContent({
             ...content,
@@ -210,13 +207,13 @@ const SubmissionForm = () => {
         isMulti
         options={options}
         className={styles.multiselect}
-        classNamePrefix="select"
+        classNamePrefix='select'
         onChange={handleChange}
       />
       {editorLoaded ? (
         <CKEditor
           editor={ClassicEditor}
-          data="<p>Type your article here</p>"
+          data='<p>Type your article here</p>'
           onChange={(event, editor) => {
             setContent({
               ...content,
@@ -231,7 +228,7 @@ const SubmissionForm = () => {
         onDrop={(files) => {
           setFiles(files);
         }}
-        accept="image/jpeg, image/png"
+        accept='image/jpeg, image/png'
         maxSize={30720000}
         multiple
       >
@@ -245,8 +242,8 @@ const SubmissionForm = () => {
           const additionalClass = isDragAccept
             ? styles.accept
             : isDragReject
-              ? styles.reject
-              : "";
+            ? styles.reject
+            : "";
 
           return (
             <div
@@ -278,11 +275,10 @@ const SubmissionForm = () => {
       )}
       <input
         className={styles.inputbox}
-        placeholder="Video URL"
+        placeholder='Video URL'
         value={content.video}
-        type="text"
+        type='text'
         onChange={(event) => {
-          console.log(event.target.value);
           setContent({
             ...content,
             video: event.target.value,
@@ -350,9 +346,9 @@ const Login = (props) => {
       <div className={styles.loginflex}>
         <input
           className={styles.inputbox}
-          placeholder="Password"
+          placeholder='Password'
           value={password}
-          type="password"
+          type='password'
           onChange={(event) => {
             setPassword(event.target.value);
           }}

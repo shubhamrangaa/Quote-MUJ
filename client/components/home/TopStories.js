@@ -18,21 +18,6 @@ export default function TopStories() {
       "https://quote-muj.herokuapp.com/api/blogs/all"
     );
 
-    console.log(data);
-    // const strippedDesc = data.map((article) => {
-    //   const shortText = stripLongString(200, article.caption);
-    //   const shortHeading = stripLongString(100, article.heading);
-
-    //   const formattedArticle = {
-    //     ...strippedDesc,
-    //     image: JSON.parse(data.images)[0],
-    //     caption: shortText,
-    //     heading: shortHeading,
-    //   };
-    //   console.log("f", formattedArticle);
-    //   return formattedArticle;
-    // });
-    // console.log(strippedDesc);
     const sortedData = data
       .slice(0, 6)
       .sort(function (a, b) {
@@ -42,7 +27,6 @@ export default function TopStories() {
       })
       .reverse();
 
-    console.log("sorted", sortedData);
     setArticles(sortedData);
     setLoading(false);
   };

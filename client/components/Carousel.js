@@ -19,30 +19,30 @@ const TextMobileStepper = () => {
 
   const fetchLatest = async () => {
     fetch("https://quote-muj.herokuapp.com/api/blogs/all")
-        .then((res) => {
-          if (!res.ok) throw res;
-          return res.json();
-        })
-        .then((data) => {
-          setArticles(data.slice(6, 16));
-          setLoading(false);
-        })
-        .catch((err) => {
-          console.log(err);
-          setArticles([]);
-          setLoading(false);
-        });
+      .then((res) => {
+        if (!res.ok) throw res;
+        return res.json();
+      })
+      .then((data) => {
+        setArticles(data.slice(6, 16));
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setArticles([]);
+        setLoading(false);
+      });
   };
 
   const fetchCategory = async (category) => {
     setLoading(true);
     fetch(
-        `https://quote-muj.herokuapp.com/api/blogs/categories/${category}`
+      `https://quote-muj.herokuapp.com/api/blogs/categories/${category}`
     ).then((res) =>
-        res.json().then((data) => {
-          setArticles(data.slice(0, 10));
-          setLoading(false);
-        })
+      res.json().then((data) => {
+        setArticles(data.slice(0, 10));
+        setLoading(false);
+      })
     );
   };
 
@@ -65,48 +65,47 @@ const TextMobileStepper = () => {
   };
 
   return (
-      <div className={styles2.root}>
+    <div className={styles2.root}>
       <div className={styles.community}>
-
         <div className={styles.container}>
           {loading ? (
-              <Loader
-                  className={styles.loader}
-                  type="TailSpin"
-                  color="#0F0F0F"
-                  height={100}
-                  width={100}
-              />
+            <Loader
+              className={styles.loader}
+              type='TailSpin'
+              color='#0F0F0F'
+              height={100}
+              width={100}
+            />
           ) : articles.length > 0 ? (
-              <Carousel responsive={responsive}>
-                {articles.map((el, id) => (
-                    <CommunityPost
-                        heading={el.heading}
-                        article_data={el.article_data}
-                        caption={el.caption}
-                        author={el.author}
-                        likes={el.likes}
-                        date_created={el.date_created}
-                        categories={el.categories}
-                        slug={el.slug}
-                        key={id}
-                    />
-                ))}
-              </Carousel>
+            <Carousel responsive={responsive}>
+              {articles.map((el, id) => (
+                <CommunityPost
+                  heading={el.heading}
+                  article_data={el.article_data}
+                  caption={el.caption}
+                  author={el.author}
+                  likes={el.likes}
+                  date_created={el.date_created}
+                  categories={el.categories}
+                  slug={el.slug}
+                  key={id}
+                />
+              ))}
+            </Carousel>
           ) : (
-              <div>
-                <h3>
-                  No articles!{" "}
-                  <FontAwesomeIcon
-                      className={styles.FontAwesomeIcon}
-                      icon={faFrown}
-                  />
-                </h3>
-              </div>
+            <div>
+              <h3>
+                No articles!{" "}
+                <FontAwesomeIcon
+                  className={styles.FontAwesomeIcon}
+                  icon={faFrown}
+                />
+              </h3>
+            </div>
           )}
         </div>
       </div>
-      </div>
+    </div>
   );
 };
 

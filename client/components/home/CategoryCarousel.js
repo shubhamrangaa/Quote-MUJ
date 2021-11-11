@@ -35,7 +35,7 @@ const CategoryCarousel = () => {
         setLoading(false);
       })
       .catch((err) => {
-        console.log(err);
+        console.error(err);
         setArticles([]);
         setLoading(false);
       });
@@ -87,7 +87,7 @@ const CategoryCarousel = () => {
                 className={styles.button}
                 onClick={(e) => fetchCategory(category)}
               >
-                {category === "Sports" ? "Extra-curricular": category}
+                {category === "Sports" ? "Extra-curricular" : category}
               </button>
             );
           })}
@@ -97,8 +97,8 @@ const CategoryCarousel = () => {
         {loading ? (
           <Loader
             className={styles.loader}
-            type="TailSpin"
-            color="#0F0F0F"
+            type='TailSpin'
+            color='#0F0F0F'
             height={100}
             width={100}
           />

@@ -6,29 +6,17 @@ import { sectionHeading, decorated } from "@styles/Heading.module.scss";
 import HeadlinerMain from "@components/HeadlinerMain";
 import HeadlinerAside from "@components/HeadlinerAside";
 import FullWidthPreview from "@components/FullWidthPreview";
-import axios from "axios";
 
-// fetch top 5 posts and pass them to components
-
-export const getStaticPaths = async () => {
-  return {
-    paths: [],
-    fallback: "blocking",
-  };
-};
-
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const { month } = params;
   const res = await fetch(
     `https://quote-muj.herokuapp.com/api/blogs/monthly/${month}`
   );
   const news = await res.json();
-  //   console.log(news);
   return { props: { news } };
 }
 
 const Newsletter = ({ news }) => {
-  // console.log(news)
   const { query } = useRouter();
   const { year, month } = query;
   const headlinerData = news.slice(0, 3);
@@ -40,16 +28,8 @@ const Newsletter = ({ news }) => {
         <div>
           <section className={styles.top}>
             <div className={styles.headingcontainer}>
-              <h1 className={styles.heading}>
-                Monthly
-                <br />
-                Newsletter.
-              </h1>
-              <h2 className={styles.monthyear}>
-                {/* {month} {year} */}
-                {/* i want to die */}
-                Inaugural Issue
-              </h2>
+              <h1 className={styles.heading}>Monthly Newsletter</h1>
+              <h2>Inaugural Issue</h2>
             </div>
           </section>
 
@@ -64,23 +44,21 @@ const Newsletter = ({ news }) => {
               </h3>
             </div>
             <div className={styles.headlinerContainer}>
-				{headlinerData.map((data, id) => {
-					// console.log(headlinerAsideData);
-					return (
-						<HeadlinerAside
-							key={id}
-							headline={data.heading}
-							description={data.caption.slice(0, 150) + "..."}
-							image={JSON.parse(data.images)[0]}
-							author={data.author}
-							slug={data.slug}
-						/>
-					);
-				})}
+              {headlinerData.map((data, id) => {
+                return (
+                  <HeadlinerAside
+                    key={id}
+                    headline={data.heading}
+                    description={data.caption.slice(0, 150) + "..."}
+                    image={JSON.parse(data.images)[0]}
+                    author={data.author}
+                    slug={data.slug}
+                  />
+                );
+              })}
               <div className={styles.headlinerAsideContainer}>
                 {/* map headlineAside */}
                 {headlinerAsideData.map((data, id) => {
-                  // console.log(headlinerAsideData);
                   return (
                     <HeadlinerAside
                       key={id}
@@ -104,11 +82,11 @@ const Newsletter = ({ news }) => {
               </h3>
             </div>
             {otherNewsData.map((data, i) => {
-              let image = ""
+              let image = "";
               try {
                 image = JSON.parse(data.images)[0];
               } catch (e) {
-                image = data.images
+                image = data.images;
               }
               return (
                 <div key={i.toString()}>

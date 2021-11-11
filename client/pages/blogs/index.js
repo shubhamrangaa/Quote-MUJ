@@ -25,7 +25,6 @@ export default function AllStories() {
             return c - d;
           })
           .reverse();
-        console.log(sortedData);
         setArticles(sortedData);
         setLoading(false);
       })
