@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import styles from "@styles/MonthlyNewsletter.module.scss";
 import { sectionHeading, decorated } from "@styles/Heading.module.scss";
 // components
-import HeadlinerMain from "@components/HeadlinerMain";
 import HeadlinerAside from "@components/HeadlinerAside";
 import FullWidthPreview from "@components/FullWidthPreview";
 
@@ -29,7 +28,7 @@ const Newsletter = ({ news }) => {
           <section className={styles.top}>
             <div className={styles.headingcontainer}>
               <h1 className={styles.heading}>Monthly Newsletter</h1>
-              <h2>Inaugural Issue</h2>
+              <h4>Inaugural Issue</h4>
             </div>
           </section>
 
