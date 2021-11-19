@@ -60,7 +60,7 @@ const Category = ({ sortedNews }) => {
             heading={
               categoryName === "Accreditation"
                 ? "Ranking & \n Accreditation"
-                : categoryName
+				: categoryName.replace(/-/g," ")
             }
           />
           <section>

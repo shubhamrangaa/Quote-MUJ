@@ -60,7 +60,7 @@
     img {
       // width: 100%;
       margin: auto;
-      object-fit: cover;
+      object-fit: contain;
       max-height: 180px;
       width: inherit;
       @media only screen and (max-width: 768px) {
