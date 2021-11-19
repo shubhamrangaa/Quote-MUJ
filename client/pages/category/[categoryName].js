@@ -57,7 +57,7 @@ const Category = ({ sortedNews, sortedByLikesNews }) => {
 			{Object.keys(sortedNews).length ? (
 				<div>
 					{/* biggest off in history */}
-					<PageHeader heading={categoryName === "Accreditation" ? "Ranking & \n Accreditation" : categoryName} />
+					<PageHeader heading={categoryName === "Accreditation" ? "Ranking & \n Accreditation" : categoryName.replace(/-/g, " ")} />
 					<section>
 						{/* todo: style heading */}
 						{/* <h2>Headliner</h2> */}

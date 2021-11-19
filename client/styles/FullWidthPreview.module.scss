@@ -40,7 +40,7 @@
 .imageContainer {
   height: 200px;
   width: 300px;
-  object-fit: cover;
+  object-fit: contain;
   margin: auto;
 }
 @media (max-width: 768px) {
