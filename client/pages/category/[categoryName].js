@@ -49,8 +49,8 @@ const Category = ({ sortedNews }) => {
       };
     }
   });
-  const headlinerData = sortedNews.slice(0, 3);
-  const headlinerAsideData = sortedNews.slice(3, 4);
+  const headlinerData = sortedNews.slice(0, 10);
+  // const headlinerAsideData = sortedNews.slice(3, 4);
   return (
     <>
       {Object.keys(sortedNews).length ? (
@@ -79,8 +79,7 @@ const Category = ({ sortedNews }) => {
                   />
                 );
               })}
-              <div className={styles.headlinerAsideContainer}>
-                {/* map headlineAside */}
+              {/* <div className={styles.headlinerAsideContainer}>
                 {headlinerAsideData.map((data, index) => {
                   return (
                     <HeadlinerAside
@@ -93,7 +92,7 @@ const Category = ({ sortedNews }) => {
                     />
                   );
                 })}
-              </div>
+              </div> */}
             </div>
           </section>
           <TrendingCarousel news={sortedNews} />
