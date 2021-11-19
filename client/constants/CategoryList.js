@@ -4,7 +4,7 @@ const CATEGORY_LIST = [
   "Sports",
   "Events",
   "Research",
-  // "Placements",
+  "Upcoming Events",
   "Academics",
   // "Leadership",
   // "Accreditation",
