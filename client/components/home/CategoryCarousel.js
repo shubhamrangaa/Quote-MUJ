@@ -103,7 +103,7 @@ const CategoryCarousel = () => {
             width={100}
           />
         ) : articles.length > 0 ? (
-          <Carousel responsive={responsive} showDots={true}>
+          <Carousel responsive={responsive} showDots={false}>
             {articles.map((el, id) => (
               <CommunityPost
                 heading={el.heading}
