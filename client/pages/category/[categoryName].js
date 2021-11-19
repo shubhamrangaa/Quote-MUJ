@@ -74,8 +74,8 @@ const Category = ({ sortedNews, sortedByLikesNews }) => {
 									/>
 								);
 							})}
-							<div className={styles.headlinerAsideContainer}>
-								{/* map headlineAside */}
+							{/* <div className={styles.headlinerAsideContainer}>
+								
 								{headlinerAsideData.map((data, index) => {
 									return (
 										<HeadlinerAside
@@ -88,7 +88,7 @@ const Category = ({ sortedNews, sortedByLikesNews }) => {
 										/>
 									);
 								})}
-							</div>
+							</div> */}
 						</div>
 					</section>
 					<TrendingCarousel news={sortedByLikesNews} />
