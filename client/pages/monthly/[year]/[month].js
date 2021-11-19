@@ -47,7 +47,7 @@ const Newsletter = ({ news }) => {
 										key={id}
 										headline={data.heading}
 										description={data.caption.slice(0, 150) + "..."}
-										image={JSON.parse(data.images)[0]}
+										image={data.images ? JSON.parse(data.images)[0] : null}
 										author={data.author}
 										slug={data.slug}
 									/>

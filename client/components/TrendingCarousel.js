@@ -30,22 +30,28 @@ const TrendingCarousel = ({ news: data }) => {
 		<div className={styles.community}>
 			<div className={styles.nav}>
 				{/* <FontAwesomeIcon icon={faArrowAltCircleUp} className={styles.faIcon} style={{f}} size={16} fontSize={16} /> */}
-				<div className={styles.title}>
-					TRENDING
-				</div>
+				<div className={styles.title}>TRENDING</div>
 			</div>
 			<div className={styles.container}>
 				<Carousel responsive={responsive} showDots={true} removeArrowOnDeviceType={["tablet", "mobile"]}>
-					{data.map((item, i) => {
-						let image = ""
+					{data.slice(0, 5).map((item, i) => {
+						let image = "";
 						try {
 							image = JSON.parse(item.images)[0];
 						} catch (e) {
-							image = item.images
+							image = item.images;
 						}
 						return (
-							<SmallWidthPreview slug={item.slug} title={item.heading} image={image} body={item.caption.slice(0, 150) + "..."} author={item.author} index={i} key={i} />
-						)
+							<SmallWidthPreview
+								slug={item.slug}
+								title={item.heading}
+								image={image}
+								body={item.caption.slice(0, 150) + "..."}
+								author={item.author}
+								index={i}
+								key={i}
+							/>
+						);
 					})}
 				</Carousel>
 			</div>

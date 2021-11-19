@@ -18,6 +18,7 @@ export async function getServerSideProps({ params }) {
 		res = await fetch(`https://quote-muj.herokuapp.com/api/blogs/categories/Upcoming`);
 	}
 	const news = await res.json();
+
 	let sortedNews = news
 		.sort(function (a, b) {
 			let c = new Date(a.date_created);
@@ -25,10 +26,14 @@ export async function getServerSideProps({ params }) {
 			return c - d;
 		})
 		.reverse();
-	return { props: { sortedNews } };
+
+	let sortedByLikesNews = news.sort((a, b) => {
+		return a.likes - b.likes;
+	});
+	return { props: { sortedNews, sortedByLikesNews } };
 }
 
-const Category = ({ sortedNews }) => {
+const Category = ({ sortedNews, sortedByLikesNews }) => {
 	const { query } = useRouter();
 	let { categoryName } = query;
 	categoryName = categoryName.charAt(0).toUpperCase() + categoryName.slice(1);
@@ -86,7 +91,7 @@ const Category = ({ sortedNews }) => {
 							</div>
 						</div>
 					</section>
-					<TrendingCarousel news={sortedNews} />
+					<TrendingCarousel news={sortedByLikesNews} />
 					{/* More News Section */}
 					{/* <section>
 						<div className={styles.subHeadingContainer}>
