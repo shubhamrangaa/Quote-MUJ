@@ -9,7 +9,11 @@ import FullWidthPreview from "@components/FullWidthPreview";
 export async function getServerSideProps({ params }) {
 	const { month } = params;
 	const res = await fetch(`https://quote-muj.herokuapp.com/api/blogs/monthly/${month}`);
-	const news = await res.json();
+	let news = await res.json();
+	news = news.sort((a, b) => {
+    return new Date(b.date_created) - new Date(a.date_created);
+	});
+
 	return { props: { news } };
 }
 
@@ -26,15 +30,12 @@ const Newsletter = ({ news }) => {
 					<section className={styles.top}>
 						<div className={styles.headingcontainer}>
 							<h1 className={styles.heading}>Monthly Newsletter</h1>
-							<h4>Inaugural Issue</h4>
 						</div>
 					</section>
 
 					{/* Headliner body */}
 
 					<section>
-						{/* todo: style heading */}
-						{/* <h2 className={sectionHeading}>Headliners</h2> */}
 						<div className={styles.subHeadingContainer}>
 							<h3 className={decorated + " " + sectionHeading}>
 								<span>Headlines</span>
