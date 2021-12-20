@@ -117,12 +117,13 @@
   display: flex;
   overflow: hidden;
   justify-content: center;
+      background: lightgray;
+      border-radius: 0.125rem;
   img {
     border-radius: 4px;
-    width: 100%;
     background-position: center;
     // width: 100%;
-    height: max-content;
+    object-fit: contain;
   }
 }
 
