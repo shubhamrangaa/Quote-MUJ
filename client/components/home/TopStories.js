@@ -19,13 +19,9 @@ export default function TopStories() {
     );
 
     const sortedData = data
-      .slice(0, 6)
       .sort(function (a, b) {
-        let c = new Date(a.date_created);
-        let d = new Date(b.date_created);
-        return c - d;
-      })
-      .reverse();
+        return new Date(b.date_created) - new Date(a.date_created);
+      }).slice(0, 6)
 
     setArticles(sortedData);
     setLoading(false);

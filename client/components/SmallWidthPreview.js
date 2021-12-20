@@ -22,7 +22,9 @@ const SmallWidthPreview = (props) => {
 
       <Link href={`/blogs/${props.slug}`}>
         <div className={styles.content}>
-          <img className={styles.images} src={image} draggable={false} />
+          <div className={styles.imageContainer}>
+            <img  src={image} draggable={false} />
+          </div>
           <div className={styles.textContainer}>
             <h3 className={styles.heading}>{props.title}</h3>
             <div className={styles.author}>By {props.author}</div>

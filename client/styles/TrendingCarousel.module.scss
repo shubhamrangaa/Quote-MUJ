@@ -61,9 +61,30 @@
   margin-left: 1rem;
 }
 .images {
-  width: 50%;
+  width: 200px;
+  aspect-ratio: 4/3;
   max-height: 200px;
   object-fit: contain;
+}
+.imageContainer {
+  width: 250px;
+  display: flex;
+  background-color: rgb(240, 240, 240);
+  aspect-ratio: 4/3;
+  img {
+    // width: 100%;
+    margin: auto;
+    max-height: 180px;
+    width: inherit;
+    object-fit: contain;
+    @media only screen and (max-width: 768px) {
+      max-height: 100%;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
 }
 .container {
   justify-content: center;
