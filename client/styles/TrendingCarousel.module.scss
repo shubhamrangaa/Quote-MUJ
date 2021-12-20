@@ -77,9 +77,6 @@
     max-height: 180px;
     width: inherit;
     object-fit: contain;
-    @media only screen and (max-width: 768px) {
-      max-height: 100%;
-    }
   }
   @media only screen and (max-width: 768px) {
     width: 100%;
