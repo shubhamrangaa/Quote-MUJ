@@ -38,7 +38,7 @@ export default function TopStories() {
               key={index}
               headline={stripLongString(100, data.heading)}
               description={stripLongString(150, data.caption)}
-              image={JSON.parse(data.images)[0]}
+              image={data.images && JSON.parse(data.images)[0]}
               author={data.author}
               slug={data.slug}
             />
