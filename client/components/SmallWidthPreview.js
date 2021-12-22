@@ -23,7 +23,7 @@ const SmallWidthPreview = (props) => {
       <Link href={`/blogs/${props.slug}`}>
         <div className={styles.content}>
           <div className={styles.imageContainer}>
-            <img  src={image} draggable={false} />
+				    <img src={image ? image : "https://res.cloudinary.com/quote-muj/image/upload/q_40/v1637300211/manipal-1595339469_h298bf.jpg"}  draggable={false}  />
           </div>
           <div className={styles.textContainer}>
             <h3 className={styles.heading}>{props.title}</h3>
