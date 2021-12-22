@@ -64,7 +64,7 @@ export const Hero = () => {
             </div>
             <p id={styles.intro}>Welcome to the official E-Newsletter of</p>
             <h3 className={styles.heading}>Manipal University Jaipur</h3>
-            <Link href={`/monthly/${currentYear}/November`}>
+            <Link href={`/monthly/${currentYear}/November?range=2`}>
               <a id={styles.explore}>Explore November Issue</a>
             </Link>
           </div>

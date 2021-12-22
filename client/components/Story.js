@@ -41,20 +41,8 @@ export default function Story(props) {
         <div className={mainstyles.details}>
           <ul>
             <li>
-              {/* <FontAwesomeIcon
-                className={mainstyles.FontAwesomeIcon}
-                icon={faUserCircle}
-              /> */}
-              By {props.author},
+              By {props.author}
             </li>
-            <li>{date}</li>
-            {/* <li onClick={addLike}>
-              <FontAwesomeIcon
-                className={mainstyles.FontAwesomeIconLike}
-                icon={faThumbsUp}
-              />{" "}
-              {likes} Likes
-            </li> */}
             <li className={mainstyles.categoryContainer}>
               {props.categories.map((el, id) => (
                 <Link href={`/category/${el}`} key={id}>
@@ -69,7 +57,7 @@ export default function Story(props) {
       </div>
       <div className={mainstyles.imageContainer}>
         <img
-          src={image ? image : "https://picsum.photos/300/200"}
+          src={image ? image : "https://res.cloudinary.com/quote-muj/image/upload/q_40/v1637300211/manipal-1595339469_h298bf.jpg"}
           alt='story picture'
         />
       </div>

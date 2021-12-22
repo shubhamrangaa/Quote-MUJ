@@ -15,7 +15,7 @@ const FullWidthPreview = (props) => {
 
       <img
         className={styles.imageContainer}
-        src={props.image ? props.image : "https://picsum.photos/300/200"}
+        src={props.image ? props.image : "https://res.cloudinary.com/quote-muj/image/upload/q_40/v1637300211/manipal-1595339469_h298bf.jpg"}
       />
     </div>
   );
