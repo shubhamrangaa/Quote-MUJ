@@ -21,12 +21,15 @@
   flex-grow: 1;
 }
 
-.header a:not(.brandName) {
+.header a:not(.brandName):not(:global(.nav-link)):not(:global(.dropdown-item)) {
   text-align: center;
   padding: 0.5rem 1rem;
   margin: 0.5rem;
   position: relative;
   transition: all 0.2s ease;
+	&:hover {
+		color: white !important;
+	}
   &:hover::after {
     content: "";
     height: 2px;

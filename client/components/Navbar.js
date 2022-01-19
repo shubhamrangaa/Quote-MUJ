@@ -4,6 +4,8 @@ import Image from "next/image";
 import styles from "../styles/Navbar.module.scss";
 import burger from "../styles/Hamburger.module.scss";
 import months from "../constants/Months";
+import NavDropdown from 'react-bootstrap/NavDropdown'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -35,6 +37,13 @@ export const Navbar = () => {
         <Link href='/editorial'>Editors' Desk</Link>
         <Link href='/category/accreditation'>Rankings and Accreditation</Link>
         <Link href='/category/upcoming-events'>Upcoming Events</Link>
+		<NavDropdown
+			title="Archives"
+		>
+			<NavDropdown.Item href="/monthly/2021/September">September Issue</NavDropdown.Item>
+			<NavDropdown.Item href="/monthly/2021/October">October Issue</NavDropdown.Item>
+			<NavDropdown.Item href="/monthly/2021/November">November Issue</NavDropdown.Item>
+		</NavDropdown>
       </div>
       <button
         className={
