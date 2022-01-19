@@ -57,12 +57,13 @@
     display: flex;
     background-color: rgb(240, 240, 240);
     aspect-ratio: 4/3;
+
     img {
       // width: 100%;
       margin: auto;
-      object-fit: contain;
       max-height: 180px;
       width: inherit;
+      object-fit: contain;
       @media only screen and (max-width: 768px) {
         max-height: 100%;
       }

@@ -19,13 +19,9 @@ export default function TopStories() {
     );
 
     const sortedData = data
-      .slice(0, 6)
       .sort(function (a, b) {
-        let c = new Date(a.date_created);
-        let d = new Date(b.date_created);
-        return c - d;
-      })
-      .reverse();
+        return new Date(b.date_created) - new Date(a.date_created);
+      }).slice(0, 6)
 
     setArticles(sortedData);
     setLoading(false);
@@ -42,7 +38,7 @@ export default function TopStories() {
               key={index}
               headline={stripLongString(100, data.heading)}
               description={stripLongString(150, data.caption)}
-              image={JSON.parse(data.images)[0]}
+              image={data.images && JSON.parse(data.images)[0]}
               author={data.author}
               slug={data.slug}
             />

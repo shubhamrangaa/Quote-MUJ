@@ -40,7 +40,7 @@ const editorial = () => {
         Greetings!
         <br />
         <br />
-        It gives me immense pleasure to pen down for the inaugural issue of the
+        It gives me immense pleasure to pen down for the November issue of the
         first E-Newsletter of Manipal University Jaipur, <b>MUJ Bioscope</b>,
         during the auspicious decennial celebration of the University.
         <br />
@@ -67,7 +67,7 @@ const editorial = () => {
         and activities of the University.
         <br />
         <br />
-        I hope you enjoy the newsletter and will also send us your opinions and
+        I sincerely hope you enjoy the newsletter and send us your opinions and
         suggestions to improve it further.
         <br />
         <br />
