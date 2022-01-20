@@ -3,6 +3,7 @@ import { faFacebook, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { EmailRounded } from "@material-ui/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import months from "../constants/Months";
@@ -41,7 +42,7 @@ function Footer() {
           <ul className={styles.linksWrapper}>
             <li>
               <a href='/'>Home</a>
-            </li>
+            </li>0141 - 3999100
             <li>
               <a href='/blogs'>News</a>
             </li>
@@ -146,6 +147,18 @@ function Footer() {
             />
             0141 - 3999100
           </a>
+          <a href='mailto:mujbioscope@jaipur.manipal.edu'>
+            <EmailRounded
+              style={{
+                fontSize: "16px",
+                width: "16px",
+                height: "16px",
+                marginRight: "0.5rem",
+              }}
+            />
+            mujbioscope@jaipur.manipal.edu
+          </a>
+          
         </div>
       </div>
     </div>
