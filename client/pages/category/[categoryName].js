@@ -39,7 +39,7 @@ export async function getServerSideProps({ params }) {
 
   if (categoryName === "Upcoming-events") {
     sortedNews = sortedNews.filter((news) => {
-      return new Date(news.date_created).getMonth() >= 11;
+      return new Date(news.date_created).getMonth() >= 11 || new Date(news.date_created).getMonth() < 5 ;
     });
     sortedByLikesNews = []
   }
