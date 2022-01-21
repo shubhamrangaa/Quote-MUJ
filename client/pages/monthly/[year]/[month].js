@@ -1,5 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
-import { useRouter } from "next/router";
+import React from "react";
 import styles from "@styles/MonthlyNewsletter.module.scss";
 import { sectionHeading, decorated } from "@styles/Heading.module.scss";
 import moment from "moment";
@@ -10,8 +9,8 @@ import FullWidthPreview from "@components/FullWidthPreview";
 
 export async function getServerSideProps({ query }) {
   const { month, year, range } = query;
-  const monthNumber = moment().month(month).format("M") - 1;
 
+  const monthNumber = moment().month(month).format("M") - 1;
   const res = await fetch(`https://quote-muj.herokuapp.com/api/blogs/all`);
   let news = await res.json();
 
@@ -26,9 +25,9 @@ export async function getServerSideProps({ query }) {
     });
   } else {
     let totalArticles = [];
-    for (let index = monthNumber; index < monthNumber + range - 1; index++) {
+    for (let index = monthNumber; index <= (Number(monthNumber) + Number(range) - 1); index++) {
       totalArticles.push(...news.filter((article) => {
-        return new Date(article.date_created).getMonth() == index;
+        return new Date(article.date_created).getMonth() == index % 12;
       }));
 		}
 		news = totalArticles;
