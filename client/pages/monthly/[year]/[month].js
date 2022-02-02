@@ -41,6 +41,11 @@ export async function getServerSideProps({ query }) {
 }
 
 const Newsletter = ({ news }) => {
+  // take top 4 from news which are not in upcoming events
+  const newsWithUpcomingEvents = news.filter((story) => story.categories.includes("Upcoming Events"));
+  news = news.filter((story) => !story.categories.includes("Upcoming Events"));
+  news.push(...newsWithUpcomingEvents);
+  console.log(newsWithUpcomingEvents);
   const headlinerData = news.slice(0, 3);
   const headlinerAsideData = news.slice(3, 4);
   const otherNewsData = news.slice(5);
