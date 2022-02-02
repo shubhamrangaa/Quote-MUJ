@@ -124,7 +124,7 @@ const Newsletter = ({ news }) => {
                 </div>
               );
             })}
-            <div className={styles.viewAllButton}>Explore all topics</div>
+            {/* <div className={styles.viewAllButton}>Explore all topics</div> */}
           </section>
         </div>
       ) : (

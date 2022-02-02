@@ -32,7 +32,7 @@ export const Navbar = () => {
       )}
       <div className={styles[active ? "mobileContainer" : "container"]}>
         <Link href='/'>Home</Link>
-        <Link href='/blogs'>News</Link>
+        {/* <Link href='/blogs'>News</Link> */}
         <Link href='/category/all'>Categories</Link>
         <Link href='/editorial'>Editors' Desk</Link>
         <Link href='/category/accreditation'>Rankings and Accreditation</Link>
