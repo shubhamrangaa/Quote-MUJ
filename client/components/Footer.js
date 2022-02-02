@@ -42,7 +42,7 @@ function Footer() {
           <ul className={styles.linksWrapper}>
             <li>
               <a href='/'>Home</a>
-            </li>0141 - 3999100
+            </li>
             {/* <li>
               <a href='/blogs'>News</a>
             </li> */}
