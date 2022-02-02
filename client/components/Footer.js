@@ -43,9 +43,9 @@ function Footer() {
             <li>
               <a href='/'>Home</a>
             </li>0141 - 3999100
-            <li>
+            {/* <li>
               <a href='/blogs'>News</a>
-            </li>
+            </li> */}
             <li>
               <a href='/category/all'>Categories</a>
             </li>
