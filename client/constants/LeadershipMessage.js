@@ -82,32 +82,14 @@ export const messages = {
 		<h5>Registrar</h5>
 		<h5>Manipal University Jaipur</h5>
 		<br>
-		The Manipal Group has extended its legacy in terms of focused Vision, Mission and Values
-		in education, research, and healthcare. Manipal University Jaipur was established in 2011 in
-		Jaipur, Rajasthan to nurture young minds with knowledge and empower them to be
-		technocrats, entrepreneur, and researchers. The University aims to enrich and empower tacit
-		knowledge in multidisciplinary domains of engineering, architecture, design, science,
-		management, law, commerce, arts, and humanities.
+		The Manipal Group has extended its legacy in terms of focused Vision, Mission and Values in education, research, and healthcare. Manipal University Jaipur was established in 2011 in Jaipur, Rajasthan to nurture young minds with knowledge and empower them to be technocrats, entrepreneur, and researchers. The University aims to enrich and empower tacit knowledge in multidisciplinary domains of engineering, architecture, design, science, management, law, commerce, arts, and humanities.
 		<br>
 		<br>
-		On the completion of ten years of its establishment, we are celebrating the decennial journey
-		to commemorate its achievements and excellence. Different committees have been
-		constituted to celebrate the achievements and propose further roadmaps for perennial success
-		and overall development. The committees will celebrate the successful completion of the
-		journey of ten years through programs at various platforms like academic activities like
-		conferences, workshops, symposia, extramural lecture series, student activities, fest and
-		sports, events and media, alumni events, employee engagements and industry connect.
+		On the completion of ten years of its establishment, we are celebrating the decennial journey to commemorate its achievements and excellence. Different committees have been constituted to celebrate the achievements and propose further roadmaps for perennial success and overall development. The committees will celebrate the successful completion of the journey of ten years through programs at various platforms like academic activities like conferences, workshops, symposia, extramural lecture series, student activities, fest and sports, events and media, alumni events, employee engagements and industry connect.
 		<br>
 		<br>
-		In this context, I am immensely pleased to see the first version of the MUJ e-newsletter, which has
-		come out really well. I congratulate the entire editorial team who have put in all their efforts to
-		showcase all the important activities of the University under different headings in a very appealing
-		manner.
+		I, on behalf of Manipal fraternity, welcome you all to be a part of this memorable journey in Manipal University Jaipur.
 		<br>
-		<br>
-		I, on behalf of Manipal fraternity, welcome you all to be a part of this memorable journey in
-		Manipal University Jaipur.
-		<br>
-		<br>`,
+		`,
   },
 };
