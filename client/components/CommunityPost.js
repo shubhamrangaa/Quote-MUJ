@@ -36,10 +36,10 @@ const CommunityPost = (props) => {
           <div className={styles.header}>
             <div className={styles.user}>
               <Link href={`/blogs/${props.slug}`}>
-                <h4>{trimString(props.heading, 0, 80)}</h4>
+                <h5>{trimString(props.heading, 0, 80)}</h5>
               </Link>
-              <p id={styles.designation}>By {props.author}</p>
             </div>
+            <p id={styles.designation}>By {props.author}</p>
           </div>
           <div className={styles.content}>
             {props.caption.length > 120 ? (

@@ -1,6 +1,6 @@
 .main {
   margin: 0 1rem 1.5rem 1rem !important;
-  padding: 3% 10%;
+  padding: 2.5rem 2rem;
   min-height: 450px;
   display: flex;
   flex-direction: column;
@@ -23,12 +23,11 @@
 }
 .user {
   text-align: left;
-  display: grid;
-  h4 {
+  h5 {
     transition: 0.2s ease;
     margin-bottom: 1rem;
   }
-  h4:hover {
+  h5:hover {
     cursor: pointer;
     color: #7979ff;
   }
