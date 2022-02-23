@@ -40,9 +40,10 @@ export const Navbar = () => {
 		<NavDropdown
 			title="Archives"
 		>
-			<NavDropdown.Item href="/monthly/2021/September">September Issue</NavDropdown.Item>
-			<NavDropdown.Item href="/monthly/2021/October">October Issue</NavDropdown.Item>
-			<NavDropdown.Item href="/monthly/2021/November">November Issue</NavDropdown.Item>
+			<NavDropdown.Item href="/monthly/2022/January">December 2021 Issue</NavDropdown.Item>
+			<NavDropdown.Item href="/monthly/2021/November">November 2021 Issue</NavDropdown.Item>
+			<NavDropdown.Item href="/monthly/2021/October">October 2021 Issue</NavDropdown.Item>
+			<NavDropdown.Item href="/monthly/2021/September">September 2021 Issue</NavDropdown.Item>
 		</NavDropdown>
       </div>
       <button
