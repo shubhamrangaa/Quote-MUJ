@@ -31,7 +31,12 @@ const CategoryCarousel = () => {
         return res.json();
       })
       .then((data) => {
-        setArticles(data.slice(0, 10));
+        const sortedData = data.sort(function (a, b) {
+        let c = new Date(a.date_created);
+        let d = new Date(b.date_created);
+          return d - c;
+        });
+        setArticles(sortedData.slice(0, 10));
         setLoading(false);
       })
       .catch((err) => {
@@ -47,7 +52,12 @@ const CategoryCarousel = () => {
       `https://quote-muj.herokuapp.com/api/blogs/categories/${category}`
     ).then((res) =>
       res.json().then((data) => {
-        setArticles(data.slice(0, 10));
+        const sortedData = data.sort(function (a, b) {
+        let c = new Date(a.date_created);
+        let d = new Date(b.date_created);
+          return d - c;
+        });
+        setArticles(sortedData.slice(0, 10));
         setLoading(false);
       })
     );
