@@ -4,6 +4,7 @@ import Carousel from "react-material-ui-carousel";
 import styles from "@styles/Hero.module.scss";
 const CollageCarousel = () => {
   const images = [
+    "/assets/collage/11.png",
     "/assets/collage/7.jpg",
     "/assets/collage/8.jpg",
     "/assets/collage/9.jpg",
