@@ -40,6 +40,7 @@ export const Navbar = () => {
 		<NavDropdown
 			title="Archives"
         >
+      <NavDropdown.Item href="/monthly/2022/April">April 2022 Issue</NavDropdown.Item>
       <NavDropdown.Item href="/monthly/2022/March">March 2022 Issue</NavDropdown.Item>
       <NavDropdown.Item href="/monthly/2022/February">February 2022 Issue</NavDropdown.Item>
 			<NavDropdown.Item href="/monthly/2022/January">January 2022 Issue</NavDropdown.Item>
