@@ -59,13 +59,13 @@ export const Hero = () => {
                   width={150}
                   height={150}
                   style={{ border: "2px solid white inset " }}
-                ></Image>r
+                ></Image>
               </div>
             </div>
             <p id={styles.intro}>Welcome to the official E-Newsletter of</p>
             <h3 className={styles.heading}>Manipal University Jaipur</h3>
-            <Link href={`/monthly/2022/June`}>
-              <a id={styles.explore}>Explore May Issue</a>
+            <Link href={`/monthly/2022/July`}>
+              <a id={styles.explore}>Explore June Issue</a>
             </Link>
           </div>
         </div>
