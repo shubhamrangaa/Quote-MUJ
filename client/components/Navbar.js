@@ -38,6 +38,9 @@ export const Navbar = () => {
         <Link href='/category/accreditation'>Rankings and Accreditation</Link>
         <Link href='/category/upcoming-events'>Upcoming Events</Link>
         <NavDropdown title='Archives'>
+          <NavDropdown.Item href='/monthly/2022/June'>
+            June 2022 Issue
+          </NavDropdown.Item>
           <NavDropdown.Item href='/monthly/2022/May'>
             May 2022 Issue
           </NavDropdown.Item>
