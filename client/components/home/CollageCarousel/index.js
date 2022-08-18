@@ -6,7 +6,6 @@ const CollageCarousel = () => {
   const images = [
     "/assets/collage/19.jpg",
     "/assets/collage/12.jpg",
-    "/assets/collage/13.jpg",
     "/assets/collage/14.jpg",
     "/assets/collage/15.jpg",
     "/assets/collage/16.jpg",
