@@ -4,7 +4,18 @@ import Carousel from "react-material-ui-carousel";
 import styles from "@styles/Hero.module.scss";
 const CollageCarousel = () => {
   const images = [
-    "/assets/collage/11.png",
+    "/assets/collage/19.jpg",
+    "/assets/collage/12.jpg",
+    "/assets/collage/13.jpg",
+    "/assets/collage/14.jpg",
+    "/assets/collage/15.jpg",
+    "/assets/collage/16.jpg",
+    "/assets/collage/17.jpg",
+    "/assets/collage/18.png",
+    "/assets/collage/20.jpg",
+    "/assets/collage/21.png",
+    "/assets/collage/22.png",
+    "/assets/collage/23.png",
     "/assets/collage/7.jpg",
     "/assets/collage/8.jpg",
     "/assets/collage/9.jpg",
@@ -21,8 +32,8 @@ const CollageCarousel = () => {
       <Carousel>
         {images.map((image, i) => (
           <CollageCarouselItem
-            indicators='false'
-            fullHeightHover='true'
+            indicators={false}
+            fullHeightHover
             key={i}
             src={image}
           />
