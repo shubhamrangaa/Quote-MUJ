@@ -7,28 +7,13 @@ export const messages = {
 		<h5>President</h5>
 		<h5>Manipal University Jaipur</h5>
 		<br>
-		Manipal University Jaipur, MUJ, as it is fondly called has completed ten golden years of its
-		establishment. This journey of ten long years has been very enriching. Within a short span of
-		ten years, the University has earned many golden feathers in the form of prestigious awards
-		and accolades and has been rated as one of the best Private Universities of Rajasthan.
-		Carrying forward the legacy of the Manipal Group, the University is dedicated to expand the
-		frontiers of knowledge through rich teaching- learning process and quality research. The
-		University envisions nation building by nurturing budding engineers, technocrats,
-		entrepreneurs, academicians, artists, designers, lawyers with a holistic and pragmatic
-		development.
+		Manipal University Jaipur is envisaged to be an enduring global center of excellence in higher education, with national and international collaborations and partnerships. Winning accolades and awards of national and international stature and creating world class infrastructure, has become the hallmark and pride of Manipal University Jaipur. The niche carved and crafted by the Manipal Group is brimmed with vision, mission and values, fostering academic, research and professional excellence in all domains and disciplines.
 		<br>
 		<br>
-		It gives me immense pleasure to launch the Inaugural edition of our online newsletter as an
-		initiative under Decennial Celebration. Through this newsletter we intend to share with you
-		glimpses of events, happenings, news as well as articles which will give you a greater insight
-		into various departments and our approaches to teaching and learning.
-		At MUJ, we have always been committed to create an environment which helps the young
-		minds to blossom by providing a platform for individual thinking and holistic development of
-		the personalities.
+		This month is significant for us in very many ways and one of the reasons to applaud is the monthly E-newsletter “Bioscope”, which has completed the journey of one year, a journey which started as a part of the decennial celebration, showcasing the events celebrated on completion of ten glorious years of our existence and achievements in this part of the country and globe. The number of honors and prizes that the varsity has received since 2011, is commendable, and demonstrates its commitment to impart knowledge with wisdom and excellence. It is always heartening to see the glimpses of the journey, the progress made in academics, research and innovation, the progress that is undoubtedly the result of the best practices carried out at MUJ. The newsletter has made us re-live our past and celebrate our present. The new normal, after the pandemic, has not only changed our lives, but has also extracted the best of our abilities in imparting knowledge through technological advancements and tools, to the young aspiring minds. The new conducive environment of knowledge sharing, will keep nourishing, enriching, and transforming the young lives and creative minds.
 		<br>
 		<br>
-		I, on behalf of Manipal fraternity, invite you all, to be a part of exploratory journey into the
-		astounding and astonishing world of Manipal University Jaipur
+		I congratulate the Team Bioscope for registering the activities monthly, reflecting and recording events and memories with utmost zeal and enthusiasm. The true spirit of the University rests in blooming and blossoming of the knowledge seekers through creativity and learning.
 		<br>
 		<br>`,
   },
@@ -40,37 +25,16 @@ export const messages = {
 		<h5>Pro President</h5>
 		<h5>Manipal University Jaipur</h5>
 		<br>
-		Manipal University Jaipur is envisaged to be an enduring global center of excellence in
-		higher education, and is driven by erudite team, with national and international academic
-		collaborations and partnerships. The niche carved and crafted by the Manipal Group is
-		brimmed with vision, mission and values, fostering academic, research and professional
-		excellence in all domains of learning. From Engineering to design, from Management to
-		Science and from Humanities to Law, we find the faculty and young students carrying
-		forward the Manipal legacy and spreading over across the globe.
+		It is with pleasure and satisfaction that the Manipal University Jaipur (MUJ) presents the current issue of MUJ BIOSCOPE.
 		<br>
 		<br>
-		As we advance with the decennial celebration of ten glorious years of existence, looking back
-		to this journey of a decade seems quite enriching, rewarding and gratifying. The number of
-		accolades and prizes that the University has received since inception, is commendable, and
-		demonstrates its commitment to impart knowledge with wisdom and excellence. In the span
-		of a decade, MUJ has grown manifold in the number of programs offered, the number of
-		students enrolled, the number of knowledge imparters, and the number of research ventures
-		and activities. It is always heartening to see the glimpses of the journey, the progress made in
-		academics, research and innovation, the progress that is undoubtedly the result of the best
-		practices carried out at MUJ, adhering to its Vision, Mission and Values. The online edition
-		of the newsletter during this Decennial Celebration will make us re-live the past, celebrate the
-		present, and carve the future.
+		For Manipal University Jaipur, the “BIOSCOPE E-Newsletter” is unique as it has been highlighting many of the important achievements every month; It echoes the efforts of a team advancing MUJ every day.
 		<br>
 		<br>
-		COVID-19 Pandemic has surely altered lives and disrupted normal life across the world. We
-		understand the challenges faced by our stakeholders, mainly the students and teachers, who in
-		no time adapted the virtual mode of learning and imparting knowledge. The diligence,
-		motivation and determination for learning and growing in all adverse situation, have
-		extracted the best of our abilities in this transitional phase.
-		The Decennial Celebration will add more creativity and innovation to this conducive
-		environment of knowledge sharing and will enrich and transform the young lives. In
-		creativity and learning, the spirit of the University rests. My best wishes to all in this quality
-		journey of MUJ.
+		BIOSCOPE reports a quality journey of MUJ keeping a balance between quality and quantity. It represents promotion, empowerment, creativity, and research for a better tomorrow for Manipal University Jaipur. In the last year, it is very heartening to note that our students have been performing exceedingly well in all the disciplines-Engineering, Architecture, Design, Arts, Law, Business, Commerce, and Management. Our faculty and our students have won honors and accolades on various platforms, and I am delighted to showcase these in the BIOSCOPE year issue.
+		<br>
+		<br>
+		I would like to extend my heartfelt gratitude for our all stakeholders continued support and patronage.
 		<br>
 		<br>`,
   },
@@ -82,10 +46,13 @@ export const messages = {
 		<h5>Registrar</h5>
 		<h5>Manipal University Jaipur</h5>
 		<br>
-		The Manipal Group has extended its legacy in terms of focused Vision, Mission and Values in education, research, and healthcare. Manipal University Jaipur was established in 2011 in Jaipur, Rajasthan to nurture young minds with knowledge and empower them to be technocrats, entrepreneur, and researchers. The University aims to enrich and empower tacit knowledge in multidisciplinary domains of engineering, architecture, design, science, management, law, commerce, arts, and humanities.
+		It’s a matter of great pride and satisfaction that the objective with which the MUJ e-newsletter “Bioscope” was launched has been achieved with a large number of viewers who are not only reading the newsletter, but also have given their good feedback about the same. I take this opportunity to appreciate each and every team member for working tirelessly every month to collect the data, collate them and then release them live.
 		<br>
 		<br>
-		On the completion of ten years of its establishment, we are celebrating the decennial journey to commemorate its achievements and excellence. Different committees have been constituted to celebrate the achievements and propose further roadmaps for perennial success and overall development. The committees will celebrate the successful completion of the journey of ten years through programs at various platforms like academic activities like conferences, workshops, symposia, extramural lecture series, student activities, fest and sports, events and media, alumni events, employee engagements and industry connect.
+		I am hopeful that this contribution shall not only develop the taste for reading among students and faculty members, but also develop a sense of belongingness to the institution as well.
+		<br>
+		<br>
+		I, on behalf of Manipal fraternity congratulate the entire team for their fruitful efforts and wish them the very best in coming with the second version of the MUJ e-newsletter, “Bioscope”.
 		<br>
 		<br>
 		I, on behalf of Manipal fraternity, welcome you all to be a part of this memorable journey in Manipal University Jaipur.
