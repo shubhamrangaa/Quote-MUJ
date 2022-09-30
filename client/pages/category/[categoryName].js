@@ -37,12 +37,14 @@ export async function getServerSideProps({ params }) {
     return a.likes - b.likes;
   });
 
-  if (categoryName === "Upcoming-events") {
-    sortedNews = sortedNews.filter((news) => {
-      return new Date(news.date_created).getMonth() >= 11 || new Date(news.date_created).getMonth() < 5 ;
-    });
-    sortedByLikesNews = []
-  }
+  // if (categoryName === "Upcoming-events") {
+  //   sortedNews = sortedNews.filter((news) => {
+  //     return new Date(news.date_created).getMonth() >= 11;
+  //   });
+
+  //   // log
+  //   sortedByLikesNews = []
+  // }
 
   return { props: { sortedNews, sortedByLikesNews } };
 }
